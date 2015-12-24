@@ -10,7 +10,7 @@
         <div class="page-title">
             <div class="title_left">
                 <h3>
-			        Inbox Design
+			        Dashboard
 			        <small>
 			            Some examples to get you started
 			        </small>

@@ -47,9 +47,6 @@
                         {!! csrf_field() !!}
                         <h1>Please Login</h1>
                         <div>
-                            <input type="text" class="form-control" placeholder="Email" name="email" required="" />
-                        </div>
-                        <div>
                             <input type="text" class="form-control" placeholder="Username" name="username" required="" />
                         </div>
                         <div>

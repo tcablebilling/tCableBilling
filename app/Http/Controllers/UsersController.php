@@ -20,11 +20,11 @@ class UsersController extends Controller
      */
     public function index()
     {
-        if ( Auth::check() ) {
-            return view('home');
-        }
-
-        return Redirect::to('/login');
+        $data = array(
+            'name'  => Auth::user()->name,
+            'id'    => Auth::user()->id
+        );
+        return view('home')->with('data', $data);
     }
 
     /**
