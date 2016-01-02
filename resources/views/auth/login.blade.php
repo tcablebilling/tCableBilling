@@ -43,7 +43,7 @@
         <div id="wrapper">
             <div id="login" class="animate form">
                 <section class="login_content">
-                    <form method="POST" action="/login">
+                    <form method="POST" action="/">
                         {!! csrf_field() !!}
                         <h1>Please Login</h1>
                         <div>

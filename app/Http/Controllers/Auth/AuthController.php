@@ -8,6 +8,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
+// Custom Class Pulling In.
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Lang;
+
 class AuthController extends Controller
 {
     /*
@@ -21,9 +26,7 @@ class AuthController extends Controller
     |
     */
 
-    protected $loginPath = 'login';
-    protected $redirectPath = 'login';
-    protected $redirectAfterLogout = 'login';
+    protected $loginPath = '/';
     protected $username = 'username';
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;

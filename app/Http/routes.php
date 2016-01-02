@@ -10,33 +10,19 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
-Route::group(['middleware' => 'role'], function() {
-	// Home URL [Must Be Logged In]
-	Route::get( '/home', 'UsersController@index' );
-
-	Route::get( '/dashboard', function () {
-		$data = array(
-			'name' => 'Shobuj',
-			'id'   => '5'
-		);
-
-		return view( 'dashboard' )->with( 'data', $data );
-	} );
-});
+// Home URL [Must Be Logged In]
+Route::get('/home', 'HomeController@index');
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Authentication routes...
-Route::get('login', 'Auth\AuthController@getLogin');
-Route::post('login', 'Auth\AuthController@postLogin');
+Route::get('/', 'Auth\AuthController@getLogin');
+Route::post('/', 'Auth\AuthController@postLogin');
 Route::get('logout', 'Auth\AuthController@getLogout');
 
-Route::group(['middleware' => 'auth'], function() {
-	// Registration routes...
-	Route::get('register', 'Auth\AuthController@getRegister');
-	Route::post('register', 'Auth\AuthController@postRegister');
-});
+// // Registration routes...
+// Route::get('auth/register', 'Auth\AuthController@getRegister');
+// Route::post('auth/register', 'Auth\AuthController@postRegister');

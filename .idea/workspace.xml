@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4baf9f4a-6de3-40b4-94c1-39bfd79cbc0f" name="Default" comment="" />
+    <list default="true" id="334c1349-9a2d-42b6-92d6-8ab34c73397e" name="Default" comment="" />
     <ignored path="cable-tv-network-accounting.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -16,29 +16,12 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DatabaseView">
-    <option name="FLATTEN" value="false" />
-    <option name="GROUP_BY_TYPE" value="true" />
-    <option name="SORT_CHILDREN" value="false" />
-    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="cable-tv-network-accounting" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5110132">
-              <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,13 +29,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-        <option value="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
+        <option value="$PROJECT_DIR$/resources/views/add_new_client.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/allclients.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/errors/404.blade.php" />
       </list>
     </option>
   </component>
@@ -76,89 +59,6 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Assignment issuesJavaScript</id>
-          </State>
-          <State>
-            <id>Bitwise operation issuesJavaScript</id>
-          </State>
-          <State>
-            <id>Code StylePHP</id>
-          </State>
-          <State>
-            <id>Code quality toolsJavaScript</id>
-          </State>
-          <State>
-            <id>Code style issuesJavaScript</id>
-          </State>
-          <State>
-            <id>CoffeeScript</id>
-          </State>
-          <State>
-            <id>Control flow issuesJavaScript</id>
-          </State>
-          <State>
-            <id>Data flow issuesJavaScript</id>
-          </State>
-          <State>
-            <id>Error handlingJavaScript</id>
-          </State>
-          <State>
-            <id>General</id>
-          </State>
-          <State>
-            <id>GeneralJavaScript</id>
-          </State>
-          <State>
-            <id>GeneralPHP</id>
-          </State>
-          <State>
-            <id>JavaScript</id>
-          </State>
-          <State>
-            <id>JavaScript function metricsJavaScript</id>
-          </State>
-          <State>
-            <id>JavaScript validity issuesJavaScript</id>
-          </State>
-          <State>
-            <id>Naming conventionsJavaScript</id>
-          </State>
-          <State>
-            <id>PHP</id>
-          </State>
-          <State>
-            <id>Potentially confusing code constructsJavaScript</id>
-          </State>
-          <State>
-            <id>Probable bugsCoffeeScript</id>
-          </State>
-          <State>
-            <id>Probable bugsJavaScript</id>
-          </State>
-          <State>
-            <id>Probable bugsPHP</id>
-          </State>
-          <State>
-            <id>Spelling</id>
-          </State>
-          <State>
-            <id>XML</id>
-          </State>
-          <State>
-            <id>XPath</id>
-          </State>
-        </expanded-state>
-      </profile-state>
-    </entry>
-  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
@@ -170,7 +70,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -183,13 +83,121 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cable-tv-network-accounting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cable-tv-network-accounting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cable-tv-network-accounting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cable-tv-network-accounting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cable-tv-network-accounting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cable-tv-network-accounting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cable-tv-network-accounting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cable-tv-network-accounting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cable-tv-network-accounting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cable-tv-network-accounting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cable-tv-network-accounting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cable-tv-network-accounting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cable-tv-network-accounting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../amirimv/wp-content" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -211,7 +219,6 @@
       <gulpfile />
       <tasks />
       <arguments />
-      <pass-parent-envs>true</pass-parent-envs>
       <envs />
       <method />
     </configuration>
@@ -228,36 +235,35 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4baf9f4a-6de3-40b4-94c1-39bfd79cbc0f" name="Default" comment="" />
-      <created>1448081438098</created>
+      <changelist id="334c1349-9a2d-42b6-92d6-8ab34c73397e" name="Default" comment="" />
+      <created>1451202559280</created>
       <option name="number" value="Default" />
-      <updated>1448081438098</updated>
+      <updated>1451202559280</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="false" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25718608" sideWeight="0.512275" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19619326" sideWeight="0.48772505" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25340393" sideWeight="0.50653595" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -273,1317 +279,210 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Connection.php</url>
-          <line>21</line>
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding>
-            <marker date="1450955338773" expanded="true" signature="27:424" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="605:3724" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="673:750" placeholder=" The database table used by the model. ..." />
-            <marker date="1450955338773" expanded="true" signature="793:872" placeholder=" The attributes that are mass assignable. ..." />
-            <marker date="1450955338773" expanded="true" signature="940:1030" placeholder=" The attributes excluded from the model's JSON form. ..." />
-            <marker date="1450955338773" expanded="false" signature="1097:1134" placeholder=" Get the role a user has ..." />
-            <marker date="1450955338773" expanded="true" signature="1164:1234" placeholder="{...}" />
-            <marker date="1450955338773" expanded="false" signature="1243:1344" placeholder=" Find out if the user is admin, based on if has any roles. ..." />
-            <marker date="1450955338773" expanded="true" signature="1376:1461" placeholder="{...}" />
-            <marker date="1450955338773" expanded="false" signature="1470:1550" placeholder=" Find out if user has a specific role ..." />
-            <marker date="1450955338773" expanded="true" signature="1588:1680" placeholder="{...}" />
-            <marker date="1450955338773" expanded="false" signature="1689:1744" placeholder=" Get key in array with corresponding value ..." />
-            <marker date="1450955338773" expanded="true" signature="1795:1985" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="1846:1933" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="1881:1923" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="1994:2049" placeholder=" Add roles to users to make them concierge ..." />
-            <marker date="1450955338773" expanded="true" signature="2094:3722" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="2223:3666" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="2265:2747" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="2773:3255" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="3284:3551" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="3572:3656" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-          <folding>
-            <marker date="1450955338773" expanded="true" signature="27:424" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="605:3724" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="673:750" placeholder=" The database table used by the model. ..." />
-            <marker date="1450955338773" expanded="true" signature="793:872" placeholder=" The attributes that are mass assignable. ..." />
-            <marker date="1450955338773" expanded="true" signature="940:1030" placeholder=" The attributes excluded from the model's JSON form. ..." />
-            <marker date="1450955338773" expanded="false" signature="1097:1134" placeholder=" Get the role a user has ..." />
-            <marker date="1450955338773" expanded="true" signature="1164:1234" placeholder="{...}" />
-            <marker date="1450955338773" expanded="false" signature="1243:1344" placeholder=" Find out if the user is admin, based on if has any roles. ..." />
-            <marker date="1450955338773" expanded="true" signature="1376:1461" placeholder="{...}" />
-            <marker date="1450955338773" expanded="false" signature="1470:1550" placeholder=" Find out if user has a specific role ..." />
-            <marker date="1450955338773" expanded="true" signature="1588:1680" placeholder="{...}" />
-            <marker date="1450955338773" expanded="false" signature="1689:1744" placeholder=" Get key in array with corresponding value ..." />
-            <marker date="1450955338773" expanded="true" signature="1795:1985" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="1846:1933" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="1881:1923" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="1994:2049" placeholder=" Add roles to users to make them concierge ..." />
-            <marker date="1450955338773" expanded="true" signature="2094:3722" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="2223:3666" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="2265:2747" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="2773:3255" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="3284:3551" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="3572:3656" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <marker date="1450955338773" expanded="true" signature="27:424" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="605:3724" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="673:750" placeholder=" The database table used by the model. ..." />
-            <marker date="1450955338773" expanded="true" signature="793:872" placeholder=" The attributes that are mass assignable. ..." />
-            <marker date="1450955338773" expanded="true" signature="940:1030" placeholder=" The attributes excluded from the model's JSON form. ..." />
-            <marker date="1450955338773" expanded="false" signature="1097:1134" placeholder=" Get the role a user has ..." />
-            <marker date="1450955338773" expanded="true" signature="1164:1234" placeholder="{...}" />
-            <marker date="1450955338773" expanded="false" signature="1243:1344" placeholder=" Find out if the user is admin, based on if has any roles. ..." />
-            <marker date="1450955338773" expanded="true" signature="1376:1461" placeholder="{...}" />
-            <marker date="1450955338773" expanded="false" signature="1470:1550" placeholder=" Find out if user has a specific role ..." />
-            <marker date="1450955338773" expanded="true" signature="1588:1680" placeholder="{...}" />
-            <marker date="1450955338773" expanded="false" signature="1689:1744" placeholder=" Get key in array with corresponding value ..." />
-            <marker date="1450955338773" expanded="true" signature="1795:1985" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="1846:1933" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="1881:1923" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="1994:2049" placeholder=" Add roles to users to make them concierge ..." />
-            <marker date="1450955338773" expanded="true" signature="2094:3722" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="2223:3666" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="2265:2747" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="2773:3255" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="3284:3551" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="3572:3656" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <marker date="1450955338773" expanded="true" signature="27:424" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="605:3724" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="673:750" placeholder=" The database table used by the model. ..." />
-            <marker date="1450955338773" expanded="true" signature="793:872" placeholder=" The attributes that are mass assignable. ..." />
-            <marker date="1450955338773" expanded="true" signature="940:1030" placeholder=" The attributes excluded from the model's JSON form. ..." />
-            <marker date="1450955338773" expanded="false" signature="1097:1134" placeholder=" Get the role a user has ..." />
-            <marker date="1450955338773" expanded="true" signature="1164:1234" placeholder="{...}" />
-            <marker date="1450955338773" expanded="false" signature="1243:1344" placeholder=" Find out if the user is admin, based on if has any roles. ..." />
-            <marker date="1450955338773" expanded="true" signature="1376:1461" placeholder="{...}" />
-            <marker date="1450955338773" expanded="false" signature="1470:1550" placeholder=" Find out if user has a specific role ..." />
-            <marker date="1450955338773" expanded="true" signature="1588:1680" placeholder="{...}" />
-            <marker date="1450955338773" expanded="false" signature="1689:1744" placeholder=" Get key in array with corresponding value ..." />
-            <marker date="1450955338773" expanded="true" signature="1795:1985" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="1846:1933" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="1881:1923" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="1994:2049" placeholder=" Add roles to users to make them concierge ..." />
-            <marker date="1450955338773" expanded="true" signature="2094:3722" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="2223:3666" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="2265:2747" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="2773:3255" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="3284:3551" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="3572:3656" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding>
-            <marker date="1450955338773" expanded="true" signature="27:424" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="605:3724" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="673:750" placeholder=" The database table used by the model. ..." />
-            <marker date="1450955338773" expanded="true" signature="793:872" placeholder=" The attributes that are mass assignable. ..." />
-            <marker date="1450955338773" expanded="true" signature="940:1030" placeholder=" The attributes excluded from the model's JSON form. ..." />
-            <marker date="1450955338773" expanded="false" signature="1097:1134" placeholder=" Get the role a user has ..." />
-            <marker date="1450955338773" expanded="true" signature="1164:1234" placeholder="{...}" />
-            <marker date="1450955338773" expanded="false" signature="1243:1344" placeholder=" Find out if the user is admin, based on if has any roles. ..." />
-            <marker date="1450955338773" expanded="true" signature="1376:1461" placeholder="{...}" />
-            <marker date="1450955338773" expanded="false" signature="1470:1550" placeholder=" Find out if user has a specific role ..." />
-            <marker date="1450955338773" expanded="true" signature="1588:1680" placeholder="{...}" />
-            <marker date="1450955338773" expanded="false" signature="1689:1744" placeholder=" Get key in array with corresponding value ..." />
-            <marker date="1450955338773" expanded="true" signature="1795:1985" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="1846:1933" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="1881:1923" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="1994:2049" placeholder=" Add roles to users to make them concierge ..." />
-            <marker date="1450955338773" expanded="true" signature="2094:3722" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="2223:3666" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="2265:2747" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="2773:3255" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="3284:3551" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="3572:3656" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="25" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
+          <caret line="84" column="16" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="721" column="13" selection-start-line="721" selection-start-column="13" selection-end-line="721" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="28" />
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+          <caret line="84" column="53" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="43" selection-start-line="66" selection-start-column="43" selection-end-line="66" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="106" column="50" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="106" column="18" selection-start-line="106" selection-start-column="18" selection-end-line="106" selection-end-column="18" />
-          <folding>
-            <marker date="1446380604311" expanded="true" signature="43:549" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="598:27936" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="641:704" placeholder=" The active PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="735:813" placeholder=" The active PDO connection used for reads. ..." />
-            <marker date="1446380604311" expanded="true" signature="848:934" placeholder=" The reconnector instance for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="973:1083" placeholder=" The query grammar implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="1123:1235" placeholder=" The schema grammar implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="1276:1397" placeholder=" The query post processor implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="1438:1541" placeholder=" The event dispatcher instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="1575:1653" placeholder=" The default fetch mode of the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="1707:1778" placeholder=" The number of active transactions. ..." />
-            <marker date="1446380604311" expanded="true" signature="1822:1907" placeholder=" All of the queries run against the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="1948:2029" placeholder=" Indicates whether queries are being logged. ..." />
-            <marker date="1446380604311" expanded="true" signature="2079:2163" placeholder=" Indicates if the connection is in a &quot;dry run&quot;. ..." />
-            <marker date="1446380604311" expanded="true" signature="2209:2284" placeholder=" The name of the connected database. ..." />
-            <marker date="1446380604311" expanded="true" signature="2320:2415" placeholder=" The instance of Doctrine connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="2461:2537" placeholder=" The table prefix for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="2581:2666" placeholder=" The database connection configuration options. ..." />
-            <marker date="1446380604311" expanded="true" signature="2705:2920" placeholder=" Create a new database connection instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="3019:3717" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="3726:3819" placeholder=" Set the query grammar to the default implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="3866:3941" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="3950:4069" placeholder=" Get the default query grammar instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="4119:4164" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="4173:4267" placeholder=" Set the schema grammar to the default implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="4315:4392" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="4401:4522" placeholder=" Get the default schema grammar instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="4573:4596" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="4605:4705" placeholder=" Set the query post processor to the default implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="4753:4830" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="4839:4963" placeholder=" Get the default post processor instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="5014:5056" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="5065:5186" placeholder=" Get a schema builder instance for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="5227:5382" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="5278:5333" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="5391:5538" placeholder=" Begin a fluent query against a database table. ..." />
-            <marker date="1446380604311" expanded="true" signature="5574:5631" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="5640:5744" placeholder=" Get a new query builder instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="5774:5901" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="5910:6044" placeholder=" Get a new raw query expression. ..." />
-            <marker date="1446380604311" expanded="true" signature="6078:6129" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="6138:6293" placeholder=" Run a select statement and return a single result. ..." />
-            <marker date="1446380604311" expanded="true" signature="6349:6476" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="6485:6634" placeholder=" Run a select statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="6706:6774" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="6783:6964" placeholder=" Run a select statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="7037:7707" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="7070:7699" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="7142:7698" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="7179:7219" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="7716:7839" placeholder=" Get the PDO connection to use for a select query. ..." />
-            <marker date="1446380604311" expanded="true" signature="7900:7980" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="7989:8138" placeholder=" Run an insert statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="8191:8255" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="8264:8412" placeholder=" Run an update statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="8465:8538" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="8547:8694" placeholder=" Run a delete statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="8747:8820" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="8829:8988" placeholder=" Execute an SQL statement and return the boolean result. ..." />
-            <marker date="1446380604311" expanded="true" signature="9044:9359" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="9077:9351" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9131:9350" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9168:9210" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9368:9528" placeholder=" Run an SQL statement and get the number of rows affected. ..." />
-            <marker date="1446380604311" expanded="true" signature="9593:10209" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="9626:10201" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9680:10200" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9717:9756" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="10218:10344" placeholder=" Run a raw, unprepared query against the PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="10385:10608" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="10418:10600" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="10454:10599" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="10491:10533" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="10617:10732" placeholder=" Prepare the query bindings for execution. ..." />
-            <marker date="1446380604311" expanded="true" signature="10787:11408" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="10887:11374" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="11195:11285" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="11314:11364" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="11417:11566" placeholder=" Execute a Closure within a transaction. ..." />
-            <marker date="1446380604311" expanded="true" signature="11619:12416" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="11896:11975" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12234:12297" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12321:12384" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12425:12499" placeholder=" Start a new database transaction. ..." />
-            <marker date="1446380604311" expanded="true" signature="12540:12953" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="12618:12671" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12752:12889" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12782:12878" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12962:13042" placeholder=" Commit the active database transaction. ..." />
-            <marker date="1446380604311" expanded="true" signature="13073:13251" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="13119:13162" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="13260:13342" placeholder=" Rollback the active database transaction. ..." />
-            <marker date="1446380604311" expanded="true" signature="13375:13815" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="13421:13466" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="13547:13692" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="13577:13681" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="13824:13902" placeholder=" Get the number of active transactions. ..." />
-            <marker date="1446380604311" expanded="true" signature="13943:13991" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="14000:14122" placeholder=" Execute the given callback in &quot;dry run&quot; mode. ..." />
-            <marker date="1446380604311" expanded="true" signature="14171:14720" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="14729:14981" placeholder=" Run a SQL statement and log its execution context. ..." />
-            <marker date="1446380604311" expanded="true" signature="15048:16052" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="15410:15496" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="15525:15661" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="15588:15650" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="16061:16283" placeholder=" Run a SQL statement. ..." />
-            <marker date="1446380604311" expanded="true" signature="16363:17156" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="16640:16708" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="17000:17124" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="17165:17484" placeholder=" Handle a query exception that occurred during query execution. ..." />
-            <marker date="1446380604311" expanded="true" signature="17599:17811" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="17669:17785" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="17820:17907" placeholder=" Disconnect from the underlying PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="17942:18001" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="18010:18115" placeholder=" Reconnect to the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="18149:18364" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="18202:18273" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="18373:18471" placeholder=" Reconnect to the database if a PDO connection is missing. ..." />
-            <marker date="1446380604311" expanded="true" signature="18527:18653" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="18605:18646" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="18662:18841" placeholder=" Log a query in the connection's query log. ..." />
-            <marker date="1446380604311" expanded="true" signature="18905:19199" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="18947:19055" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="19096:19125" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="19208:19339" placeholder=" Register a database query listener with the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="19387:19511" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="19429:19504" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="19520:19625" placeholder=" Fire an event for this connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="19678:19819" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="19720:19812" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="19828:19949" placeholder=" Get the elapsed time since a given starting point. ..." />
-            <marker date="1446380604311" expanded="true" signature="19997:20069" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="20078:20141" placeholder=" Is Doctrine available? ..." />
-            <marker date="1446380604311" expanded="true" signature="20185:20254" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="20263:20427" placeholder=" Get a Doctrine Schema Column instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="20484:20620" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="20629:20765" placeholder=" Get the Doctrine DBAL schema manager for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="20814:20919" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="20928:21041" placeholder=" Get the Doctrine DBAL database connection instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="21087:21419" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="21143:21369" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="21428:21500" placeholder=" Get the current PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="21531:21570" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="21579:21668" placeholder=" Get the current PDO connection used for reading. ..." />
-            <marker date="1446380604311" expanded="true" signature="21703:21847" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="21749:21794" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="21856:21952" placeholder=" Set the PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="21987:22193" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="22033:22135" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="22202:22315" placeholder=" Set the PDO connection used for reading. ..." />
-            <marker date="1446380604311" expanded="true" signature="22354:22420" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="22429:22554" placeholder=" Set the reconnect instance on the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="22614:22692" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="22701:22782" placeholder=" Get the database connection name. ..." />
-            <marker date="1446380604311" expanded="true" signature="22814:22867" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="22876:22994" placeholder=" Get an option from the configuration options. ..." />
-            <marker date="1446380604311" expanded="true" signature="23035:23096" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="23105:23172" placeholder=" Get the PDO driver name. ..." />
-            <marker date="1446380604311" expanded="true" signature="23210:23286" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="23295:23420" placeholder=" Get the query grammar used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="23460:23508" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="23517:23672" placeholder=" Set the query grammar used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="23743:23795" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="23804:23931" placeholder=" Get the schema grammar used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="23972:24021" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="24030:24187" placeholder=" Set the schema grammar used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="24260:24313" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="24322:24458" placeholder=" Get the query post processor used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="24499:24548" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="24557:24725" placeholder=" Set the query post processor used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="24786:24841" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="24850:24974" placeholder=" Get the event dispatcher used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="25017:25059" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25068:25225" placeholder=" Set the event dispatcher instance on the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="25286:25331" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25340:25424" placeholder=" Determine if the connection in a &quot;dry run&quot;. ..." />
-            <marker date="1446380604311" expanded="true" signature="25459:25514" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25523:25609" placeholder=" Get the default fetch mode for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="25646:25691" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25700:25817" placeholder=" Set the default fetch mode for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="25864:25915" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25924:25995" placeholder=" Get the connection query log. ..." />
-            <marker date="1446380604311" expanded="true" signature="26031:26075" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26084:26145" placeholder=" Clear the query log. ..." />
-            <marker date="1446380604311" expanded="true" signature="26183:26225" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26234:26314" placeholder=" Enable the query log on the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="26353:26403" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26412:26493" placeholder=" Disable the query log on the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="26533:26584" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26593:26674" placeholder=" Determine whether we're logging queries. ..." />
-            <marker date="1446380604311" expanded="true" signature="26706:26756" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26765:26847" placeholder=" Get the name of the connected database. ..." />
-            <marker date="1446380604311" expanded="true" signature="26887:26931" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26940:27055" placeholder=" Set the name of the connected database. ..." />
-            <marker date="1446380604311" expanded="true" signature="27104:27153" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="27162:27245" placeholder=" Get the table prefix for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="27284:27331" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="27340:27458" placeholder=" Set the table prefix in use by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="27504:27614" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="27623:27786" placeholder=" Set the table prefix and return the grammar. ..." />
-            <marker date="1446380604311" expanded="true" signature="27842:27934" placeholder="{...}" />
-          </folding>
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-          <folding>
-            <marker date="1446380604311" expanded="true" signature="43:549" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="598:27936" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="641:704" placeholder=" The active PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="735:813" placeholder=" The active PDO connection used for reads. ..." />
-            <marker date="1446380604311" expanded="true" signature="848:934" placeholder=" The reconnector instance for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="973:1083" placeholder=" The query grammar implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="1123:1235" placeholder=" The schema grammar implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="1276:1397" placeholder=" The query post processor implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="1438:1541" placeholder=" The event dispatcher instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="1575:1653" placeholder=" The default fetch mode of the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="1707:1778" placeholder=" The number of active transactions. ..." />
-            <marker date="1446380604311" expanded="true" signature="1822:1907" placeholder=" All of the queries run against the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="1948:2029" placeholder=" Indicates whether queries are being logged. ..." />
-            <marker date="1446380604311" expanded="true" signature="2079:2163" placeholder=" Indicates if the connection is in a &quot;dry run&quot;. ..." />
-            <marker date="1446380604311" expanded="true" signature="2209:2284" placeholder=" The name of the connected database. ..." />
-            <marker date="1446380604311" expanded="true" signature="2320:2415" placeholder=" The instance of Doctrine connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="2461:2537" placeholder=" The table prefix for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="2581:2666" placeholder=" The database connection configuration options. ..." />
-            <marker date="1446380604311" expanded="true" signature="2705:2920" placeholder=" Create a new database connection instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="3019:3717" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="3726:3819" placeholder=" Set the query grammar to the default implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="3866:3941" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="3950:4069" placeholder=" Get the default query grammar instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="4119:4164" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="4173:4267" placeholder=" Set the schema grammar to the default implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="4315:4392" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="4401:4522" placeholder=" Get the default schema grammar instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="4573:4596" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="4605:4705" placeholder=" Set the query post processor to the default implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="4753:4830" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="4839:4963" placeholder=" Get the default post processor instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="5014:5056" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="5065:5186" placeholder=" Get a schema builder instance for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="5227:5382" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="5278:5333" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="5391:5538" placeholder=" Begin a fluent query against a database table. ..." />
-            <marker date="1446380604311" expanded="true" signature="5574:5631" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="5640:5744" placeholder=" Get a new query builder instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="5774:5901" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="5910:6044" placeholder=" Get a new raw query expression. ..." />
-            <marker date="1446380604311" expanded="true" signature="6078:6129" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="6138:6293" placeholder=" Run a select statement and return a single result. ..." />
-            <marker date="1446380604311" expanded="true" signature="6349:6476" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="6485:6634" placeholder=" Run a select statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="6706:6774" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="6783:6964" placeholder=" Run a select statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="7037:7707" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="7070:7699" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="7142:7698" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="7179:7219" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="7716:7839" placeholder=" Get the PDO connection to use for a select query. ..." />
-            <marker date="1446380604311" expanded="true" signature="7900:7980" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="7989:8138" placeholder=" Run an insert statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="8191:8255" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="8264:8412" placeholder=" Run an update statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="8465:8538" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="8547:8694" placeholder=" Run a delete statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="8747:8820" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="8829:8988" placeholder=" Execute an SQL statement and return the boolean result. ..." />
-            <marker date="1446380604311" expanded="true" signature="9044:9359" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="9077:9351" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9131:9350" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9168:9210" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9368:9528" placeholder=" Run an SQL statement and get the number of rows affected. ..." />
-            <marker date="1446380604311" expanded="true" signature="9593:10209" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="9626:10201" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9680:10200" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9717:9756" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="10218:10344" placeholder=" Run a raw, unprepared query against the PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="10385:10608" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="10418:10600" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="10454:10599" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="10491:10533" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="10617:10732" placeholder=" Prepare the query bindings for execution. ..." />
-            <marker date="1446380604311" expanded="true" signature="10787:11408" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="10887:11374" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="11195:11285" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="11314:11364" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="11417:11566" placeholder=" Execute a Closure within a transaction. ..." />
-            <marker date="1446380604311" expanded="true" signature="11619:12416" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="11896:11975" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12234:12297" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12321:12384" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12425:12499" placeholder=" Start a new database transaction. ..." />
-            <marker date="1446380604311" expanded="true" signature="12540:12953" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="12618:12671" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12752:12889" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12782:12878" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12962:13042" placeholder=" Commit the active database transaction. ..." />
-            <marker date="1446380604311" expanded="true" signature="13073:13251" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="13119:13162" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="13260:13342" placeholder=" Rollback the active database transaction. ..." />
-            <marker date="1446380604311" expanded="true" signature="13375:13815" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="13421:13466" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="13547:13692" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="13577:13681" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="13824:13902" placeholder=" Get the number of active transactions. ..." />
-            <marker date="1446380604311" expanded="true" signature="13943:13991" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="14000:14122" placeholder=" Execute the given callback in &quot;dry run&quot; mode. ..." />
-            <marker date="1446380604311" expanded="true" signature="14171:14720" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="14729:14981" placeholder=" Run a SQL statement and log its execution context. ..." />
-            <marker date="1446380604311" expanded="true" signature="15048:16052" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="15410:15496" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="15525:15661" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="15588:15650" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="16061:16283" placeholder=" Run a SQL statement. ..." />
-            <marker date="1446380604311" expanded="true" signature="16363:17156" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="16640:16708" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="17000:17124" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="17165:17484" placeholder=" Handle a query exception that occurred during query execution. ..." />
-            <marker date="1446380604311" expanded="true" signature="17599:17811" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="17669:17785" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="17820:17907" placeholder=" Disconnect from the underlying PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="17942:18001" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="18010:18115" placeholder=" Reconnect to the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="18149:18364" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="18202:18273" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="18373:18471" placeholder=" Reconnect to the database if a PDO connection is missing. ..." />
-            <marker date="1446380604311" expanded="true" signature="18527:18653" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="18605:18646" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="18662:18841" placeholder=" Log a query in the connection's query log. ..." />
-            <marker date="1446380604311" expanded="true" signature="18905:19199" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="18947:19055" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="19096:19125" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="19208:19339" placeholder=" Register a database query listener with the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="19387:19511" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="19429:19504" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="19520:19625" placeholder=" Fire an event for this connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="19678:19819" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="19720:19812" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="19828:19949" placeholder=" Get the elapsed time since a given starting point. ..." />
-            <marker date="1446380604311" expanded="true" signature="19997:20069" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="20078:20141" placeholder=" Is Doctrine available? ..." />
-            <marker date="1446380604311" expanded="true" signature="20185:20254" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="20263:20427" placeholder=" Get a Doctrine Schema Column instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="20484:20620" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="20629:20765" placeholder=" Get the Doctrine DBAL schema manager for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="20814:20919" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="20928:21041" placeholder=" Get the Doctrine DBAL database connection instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="21087:21419" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="21143:21369" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="21428:21500" placeholder=" Get the current PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="21531:21570" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="21579:21668" placeholder=" Get the current PDO connection used for reading. ..." />
-            <marker date="1446380604311" expanded="true" signature="21703:21847" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="21749:21794" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="21856:21952" placeholder=" Set the PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="21987:22193" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="22033:22135" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="22202:22315" placeholder=" Set the PDO connection used for reading. ..." />
-            <marker date="1446380604311" expanded="true" signature="22354:22420" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="22429:22554" placeholder=" Set the reconnect instance on the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="22614:22692" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="22701:22782" placeholder=" Get the database connection name. ..." />
-            <marker date="1446380604311" expanded="true" signature="22814:22867" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="22876:22994" placeholder=" Get an option from the configuration options. ..." />
-            <marker date="1446380604311" expanded="true" signature="23035:23096" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="23105:23172" placeholder=" Get the PDO driver name. ..." />
-            <marker date="1446380604311" expanded="true" signature="23210:23286" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="23295:23420" placeholder=" Get the query grammar used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="23460:23508" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="23517:23672" placeholder=" Set the query grammar used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="23743:23795" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="23804:23931" placeholder=" Get the schema grammar used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="23972:24021" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="24030:24187" placeholder=" Set the schema grammar used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="24260:24313" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="24322:24458" placeholder=" Get the query post processor used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="24499:24548" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="24557:24725" placeholder=" Set the query post processor used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="24786:24841" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="24850:24974" placeholder=" Get the event dispatcher used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="25017:25059" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25068:25225" placeholder=" Set the event dispatcher instance on the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="25286:25331" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25340:25424" placeholder=" Determine if the connection in a &quot;dry run&quot;. ..." />
-            <marker date="1446380604311" expanded="true" signature="25459:25514" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25523:25609" placeholder=" Get the default fetch mode for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="25646:25691" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25700:25817" placeholder=" Set the default fetch mode for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="25864:25915" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25924:25995" placeholder=" Get the connection query log. ..." />
-            <marker date="1446380604311" expanded="true" signature="26031:26075" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26084:26145" placeholder=" Clear the query log. ..." />
-            <marker date="1446380604311" expanded="true" signature="26183:26225" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26234:26314" placeholder=" Enable the query log on the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="26353:26403" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26412:26493" placeholder=" Disable the query log on the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="26533:26584" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26593:26674" placeholder=" Determine whether we're logging queries. ..." />
-            <marker date="1446380604311" expanded="true" signature="26706:26756" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26765:26847" placeholder=" Get the name of the connected database. ..." />
-            <marker date="1446380604311" expanded="true" signature="26887:26931" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26940:27055" placeholder=" Set the name of the connected database. ..." />
-            <marker date="1446380604311" expanded="true" signature="27104:27153" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="27162:27245" placeholder=" Get the table prefix for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="27284:27331" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="27340:27458" placeholder=" Set the table prefix in use by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="27504:27614" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="27623:27786" placeholder=" Set the table prefix and return the grammar. ..." />
-            <marker date="1446380604311" expanded="true" signature="27842:27934" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-          <folding>
-            <marker date="1446380604311" expanded="true" signature="43:549" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="598:27936" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="641:704" placeholder=" The active PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="735:813" placeholder=" The active PDO connection used for reads. ..." />
-            <marker date="1446380604311" expanded="true" signature="848:934" placeholder=" The reconnector instance for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="973:1083" placeholder=" The query grammar implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="1123:1235" placeholder=" The schema grammar implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="1276:1397" placeholder=" The query post processor implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="1438:1541" placeholder=" The event dispatcher instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="1575:1653" placeholder=" The default fetch mode of the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="1707:1778" placeholder=" The number of active transactions. ..." />
-            <marker date="1446380604311" expanded="true" signature="1822:1907" placeholder=" All of the queries run against the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="1948:2029" placeholder=" Indicates whether queries are being logged. ..." />
-            <marker date="1446380604311" expanded="true" signature="2079:2163" placeholder=" Indicates if the connection is in a &quot;dry run&quot;. ..." />
-            <marker date="1446380604311" expanded="true" signature="2209:2284" placeholder=" The name of the connected database. ..." />
-            <marker date="1446380604311" expanded="true" signature="2320:2415" placeholder=" The instance of Doctrine connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="2461:2537" placeholder=" The table prefix for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="2581:2666" placeholder=" The database connection configuration options. ..." />
-            <marker date="1446380604311" expanded="true" signature="2705:2920" placeholder=" Create a new database connection instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="3019:3717" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="3726:3819" placeholder=" Set the query grammar to the default implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="3866:3941" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="3950:4069" placeholder=" Get the default query grammar instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="4119:4164" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="4173:4267" placeholder=" Set the schema grammar to the default implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="4315:4392" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="4401:4522" placeholder=" Get the default schema grammar instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="4573:4596" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="4605:4705" placeholder=" Set the query post processor to the default implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="4753:4830" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="4839:4963" placeholder=" Get the default post processor instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="5014:5056" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="5065:5186" placeholder=" Get a schema builder instance for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="5227:5382" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="5278:5333" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="5391:5538" placeholder=" Begin a fluent query against a database table. ..." />
-            <marker date="1446380604311" expanded="true" signature="5574:5631" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="5640:5744" placeholder=" Get a new query builder instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="5774:5901" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="5910:6044" placeholder=" Get a new raw query expression. ..." />
-            <marker date="1446380604311" expanded="true" signature="6078:6129" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="6138:6293" placeholder=" Run a select statement and return a single result. ..." />
-            <marker date="1446380604311" expanded="true" signature="6349:6476" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="6485:6634" placeholder=" Run a select statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="6706:6774" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="6783:6964" placeholder=" Run a select statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="7037:7707" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="7070:7699" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="7142:7698" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="7179:7219" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="7716:7839" placeholder=" Get the PDO connection to use for a select query. ..." />
-            <marker date="1446380604311" expanded="true" signature="7900:7980" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="7989:8138" placeholder=" Run an insert statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="8191:8255" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="8264:8412" placeholder=" Run an update statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="8465:8538" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="8547:8694" placeholder=" Run a delete statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="8747:8820" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="8829:8988" placeholder=" Execute an SQL statement and return the boolean result. ..." />
-            <marker date="1446380604311" expanded="true" signature="9044:9359" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="9077:9351" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9131:9350" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9168:9210" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9368:9528" placeholder=" Run an SQL statement and get the number of rows affected. ..." />
-            <marker date="1446380604311" expanded="true" signature="9593:10209" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="9626:10201" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9680:10200" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9717:9756" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="10218:10344" placeholder=" Run a raw, unprepared query against the PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="10385:10608" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="10418:10600" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="10454:10599" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="10491:10533" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="10617:10732" placeholder=" Prepare the query bindings for execution. ..." />
-            <marker date="1446380604311" expanded="true" signature="10787:11408" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="10887:11374" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="11195:11285" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="11314:11364" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="11417:11566" placeholder=" Execute a Closure within a transaction. ..." />
-            <marker date="1446380604311" expanded="true" signature="11619:12416" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="11896:11975" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12234:12297" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12321:12384" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12425:12499" placeholder=" Start a new database transaction. ..." />
-            <marker date="1446380604311" expanded="true" signature="12540:12953" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="12618:12671" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12752:12889" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12782:12878" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12962:13042" placeholder=" Commit the active database transaction. ..." />
-            <marker date="1446380604311" expanded="true" signature="13073:13251" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="13119:13162" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="13260:13342" placeholder=" Rollback the active database transaction. ..." />
-            <marker date="1446380604311" expanded="true" signature="13375:13815" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="13421:13466" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="13547:13692" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="13577:13681" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="13824:13902" placeholder=" Get the number of active transactions. ..." />
-            <marker date="1446380604311" expanded="true" signature="13943:13991" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="14000:14122" placeholder=" Execute the given callback in &quot;dry run&quot; mode. ..." />
-            <marker date="1446380604311" expanded="true" signature="14171:14720" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="14729:14981" placeholder=" Run a SQL statement and log its execution context. ..." />
-            <marker date="1446380604311" expanded="true" signature="15048:16052" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="15410:15496" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="15525:15661" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="15588:15650" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="16061:16283" placeholder=" Run a SQL statement. ..." />
-            <marker date="1446380604311" expanded="true" signature="16363:17156" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="16640:16708" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="17000:17124" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="17165:17484" placeholder=" Handle a query exception that occurred during query execution. ..." />
-            <marker date="1446380604311" expanded="true" signature="17599:17811" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="17669:17785" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="17820:17907" placeholder=" Disconnect from the underlying PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="17942:18001" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="18010:18115" placeholder=" Reconnect to the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="18149:18364" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="18202:18273" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="18373:18471" placeholder=" Reconnect to the database if a PDO connection is missing. ..." />
-            <marker date="1446380604311" expanded="true" signature="18527:18653" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="18605:18646" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="18662:18841" placeholder=" Log a query in the connection's query log. ..." />
-            <marker date="1446380604311" expanded="true" signature="18905:19199" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="18947:19055" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="19096:19125" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="19208:19339" placeholder=" Register a database query listener with the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="19387:19511" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="19429:19504" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="19520:19625" placeholder=" Fire an event for this connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="19678:19819" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="19720:19812" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="19828:19949" placeholder=" Get the elapsed time since a given starting point. ..." />
-            <marker date="1446380604311" expanded="true" signature="19997:20069" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="20078:20141" placeholder=" Is Doctrine available? ..." />
-            <marker date="1446380604311" expanded="true" signature="20185:20254" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="20263:20427" placeholder=" Get a Doctrine Schema Column instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="20484:20620" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="20629:20765" placeholder=" Get the Doctrine DBAL schema manager for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="20814:20919" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="20928:21041" placeholder=" Get the Doctrine DBAL database connection instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="21087:21419" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="21143:21369" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="21428:21500" placeholder=" Get the current PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="21531:21570" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="21579:21668" placeholder=" Get the current PDO connection used for reading. ..." />
-            <marker date="1446380604311" expanded="true" signature="21703:21847" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="21749:21794" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="21856:21952" placeholder=" Set the PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="21987:22193" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="22033:22135" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="22202:22315" placeholder=" Set the PDO connection used for reading. ..." />
-            <marker date="1446380604311" expanded="true" signature="22354:22420" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="22429:22554" placeholder=" Set the reconnect instance on the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="22614:22692" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="22701:22782" placeholder=" Get the database connection name. ..." />
-            <marker date="1446380604311" expanded="true" signature="22814:22867" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="22876:22994" placeholder=" Get an option from the configuration options. ..." />
-            <marker date="1446380604311" expanded="true" signature="23035:23096" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="23105:23172" placeholder=" Get the PDO driver name. ..." />
-            <marker date="1446380604311" expanded="true" signature="23210:23286" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="23295:23420" placeholder=" Get the query grammar used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="23460:23508" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="23517:23672" placeholder=" Set the query grammar used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="23743:23795" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="23804:23931" placeholder=" Get the schema grammar used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="23972:24021" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="24030:24187" placeholder=" Set the schema grammar used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="24260:24313" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="24322:24458" placeholder=" Get the query post processor used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="24499:24548" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="24557:24725" placeholder=" Set the query post processor used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="24786:24841" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="24850:24974" placeholder=" Get the event dispatcher used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="25017:25059" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25068:25225" placeholder=" Set the event dispatcher instance on the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="25286:25331" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25340:25424" placeholder=" Determine if the connection in a &quot;dry run&quot;. ..." />
-            <marker date="1446380604311" expanded="true" signature="25459:25514" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25523:25609" placeholder=" Get the default fetch mode for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="25646:25691" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25700:25817" placeholder=" Set the default fetch mode for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="25864:25915" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25924:25995" placeholder=" Get the connection query log. ..." />
-            <marker date="1446380604311" expanded="true" signature="26031:26075" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26084:26145" placeholder=" Clear the query log. ..." />
-            <marker date="1446380604311" expanded="true" signature="26183:26225" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26234:26314" placeholder=" Enable the query log on the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="26353:26403" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26412:26493" placeholder=" Disable the query log on the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="26533:26584" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26593:26674" placeholder=" Determine whether we're logging queries. ..." />
-            <marker date="1446380604311" expanded="true" signature="26706:26756" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26765:26847" placeholder=" Get the name of the connected database. ..." />
-            <marker date="1446380604311" expanded="true" signature="26887:26931" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26940:27055" placeholder=" Set the name of the connected database. ..." />
-            <marker date="1446380604311" expanded="true" signature="27104:27153" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="27162:27245" placeholder=" Get the table prefix for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="27284:27331" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="27340:27458" placeholder=" Set the table prefix in use by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="27504:27614" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="27623:27786" placeholder=" Set the table prefix and return the grammar. ..." />
-            <marker date="1446380604311" expanded="true" signature="27842:27934" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/UserTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.9603524">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding>
-            <marker date="1446380604311" expanded="true" signature="43:549" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="598:27936" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="641:704" placeholder=" The active PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="735:813" placeholder=" The active PDO connection used for reads. ..." />
-            <marker date="1446380604311" expanded="true" signature="848:934" placeholder=" The reconnector instance for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="973:1083" placeholder=" The query grammar implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="1123:1235" placeholder=" The schema grammar implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="1276:1397" placeholder=" The query post processor implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="1438:1541" placeholder=" The event dispatcher instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="1575:1653" placeholder=" The default fetch mode of the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="1707:1778" placeholder=" The number of active transactions. ..." />
-            <marker date="1446380604311" expanded="true" signature="1822:1907" placeholder=" All of the queries run against the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="1948:2029" placeholder=" Indicates whether queries are being logged. ..." />
-            <marker date="1446380604311" expanded="true" signature="2079:2163" placeholder=" Indicates if the connection is in a &quot;dry run&quot;. ..." />
-            <marker date="1446380604311" expanded="true" signature="2209:2284" placeholder=" The name of the connected database. ..." />
-            <marker date="1446380604311" expanded="true" signature="2320:2415" placeholder=" The instance of Doctrine connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="2461:2537" placeholder=" The table prefix for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="2581:2666" placeholder=" The database connection configuration options. ..." />
-            <marker date="1446380604311" expanded="true" signature="2705:2920" placeholder=" Create a new database connection instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="3019:3717" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="3726:3819" placeholder=" Set the query grammar to the default implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="3866:3941" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="3950:4069" placeholder=" Get the default query grammar instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="4119:4164" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="4173:4267" placeholder=" Set the schema grammar to the default implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="4315:4392" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="4401:4522" placeholder=" Get the default schema grammar instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="4573:4596" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="4605:4705" placeholder=" Set the query post processor to the default implementation. ..." />
-            <marker date="1446380604311" expanded="true" signature="4753:4830" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="4839:4963" placeholder=" Get the default post processor instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="5014:5056" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="5065:5186" placeholder=" Get a schema builder instance for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="5227:5382" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="5278:5333" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="5391:5538" placeholder=" Begin a fluent query against a database table. ..." />
-            <marker date="1446380604311" expanded="true" signature="5574:5631" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="5640:5744" placeholder=" Get a new query builder instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="5774:5901" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="5910:6044" placeholder=" Get a new raw query expression. ..." />
-            <marker date="1446380604311" expanded="true" signature="6078:6129" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="6138:6293" placeholder=" Run a select statement and return a single result. ..." />
-            <marker date="1446380604311" expanded="true" signature="6349:6476" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="6485:6634" placeholder=" Run a select statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="6706:6774" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="6783:6964" placeholder=" Run a select statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="7037:7707" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="7070:7699" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="7142:7698" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="7179:7219" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="7716:7839" placeholder=" Get the PDO connection to use for a select query. ..." />
-            <marker date="1446380604311" expanded="true" signature="7900:7980" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="7989:8138" placeholder=" Run an insert statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="8191:8255" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="8264:8412" placeholder=" Run an update statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="8465:8538" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="8547:8694" placeholder=" Run a delete statement against the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="8747:8820" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="8829:8988" placeholder=" Execute an SQL statement and return the boolean result. ..." />
-            <marker date="1446380604311" expanded="true" signature="9044:9359" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="9077:9351" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9131:9350" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9168:9210" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9368:9528" placeholder=" Run an SQL statement and get the number of rows affected. ..." />
-            <marker date="1446380604311" expanded="true" signature="9593:10209" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="9626:10201" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9680:10200" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="9717:9756" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="10218:10344" placeholder=" Run a raw, unprepared query against the PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="10385:10608" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="10418:10600" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="10454:10599" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="10491:10533" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="10617:10732" placeholder=" Prepare the query bindings for execution. ..." />
-            <marker date="1446380604311" expanded="true" signature="10787:11408" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="10887:11374" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="11195:11285" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="11314:11364" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="11417:11566" placeholder=" Execute a Closure within a transaction. ..." />
-            <marker date="1446380604311" expanded="true" signature="11619:12416" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="11896:11975" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12234:12297" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12321:12384" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12425:12499" placeholder=" Start a new database transaction. ..." />
-            <marker date="1446380604311" expanded="true" signature="12540:12953" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="12618:12671" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12752:12889" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12782:12878" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="12962:13042" placeholder=" Commit the active database transaction. ..." />
-            <marker date="1446380604311" expanded="true" signature="13073:13251" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="13119:13162" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="13260:13342" placeholder=" Rollback the active database transaction. ..." />
-            <marker date="1446380604311" expanded="true" signature="13375:13815" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="13421:13466" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="13547:13692" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="13577:13681" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="13824:13902" placeholder=" Get the number of active transactions. ..." />
-            <marker date="1446380604311" expanded="true" signature="13943:13991" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="14000:14122" placeholder=" Execute the given callback in &quot;dry run&quot; mode. ..." />
-            <marker date="1446380604311" expanded="true" signature="14171:14720" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="14729:14981" placeholder=" Run a SQL statement and log its execution context. ..." />
-            <marker date="1446380604311" expanded="true" signature="15048:16052" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="15410:15496" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="15525:15661" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="15588:15650" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="16061:16283" placeholder=" Run a SQL statement. ..." />
-            <marker date="1446380604311" expanded="true" signature="16363:17156" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="16640:16708" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="17000:17124" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="17165:17484" placeholder=" Handle a query exception that occurred during query execution. ..." />
-            <marker date="1446380604311" expanded="true" signature="17599:17811" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="17669:17785" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="17820:17907" placeholder=" Disconnect from the underlying PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="17942:18001" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="18010:18115" placeholder=" Reconnect to the database. ..." />
-            <marker date="1446380604311" expanded="true" signature="18149:18364" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="18202:18273" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="18373:18471" placeholder=" Reconnect to the database if a PDO connection is missing. ..." />
-            <marker date="1446380604311" expanded="true" signature="18527:18653" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="18605:18646" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="18662:18841" placeholder=" Log a query in the connection's query log. ..." />
-            <marker date="1446380604311" expanded="true" signature="18905:19199" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="18947:19055" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="19096:19125" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="19208:19339" placeholder=" Register a database query listener with the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="19387:19511" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="19429:19504" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="19520:19625" placeholder=" Fire an event for this connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="19678:19819" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="19720:19812" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="19828:19949" placeholder=" Get the elapsed time since a given starting point. ..." />
-            <marker date="1446380604311" expanded="true" signature="19997:20069" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="20078:20141" placeholder=" Is Doctrine available? ..." />
-            <marker date="1446380604311" expanded="true" signature="20185:20254" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="20263:20427" placeholder=" Get a Doctrine Schema Column instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="20484:20620" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="20629:20765" placeholder=" Get the Doctrine DBAL schema manager for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="20814:20919" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="20928:21041" placeholder=" Get the Doctrine DBAL database connection instance. ..." />
-            <marker date="1446380604311" expanded="true" signature="21087:21419" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="21143:21369" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="21428:21500" placeholder=" Get the current PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="21531:21570" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="21579:21668" placeholder=" Get the current PDO connection used for reading. ..." />
-            <marker date="1446380604311" expanded="true" signature="21703:21847" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="21749:21794" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="21856:21952" placeholder=" Set the PDO connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="21987:22193" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="22033:22135" placeholder="..." />
-            <marker date="1446380604311" expanded="true" signature="22202:22315" placeholder=" Set the PDO connection used for reading. ..." />
-            <marker date="1446380604311" expanded="true" signature="22354:22420" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="22429:22554" placeholder=" Set the reconnect instance on the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="22614:22692" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="22701:22782" placeholder=" Get the database connection name. ..." />
-            <marker date="1446380604311" expanded="true" signature="22814:22867" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="22876:22994" placeholder=" Get an option from the configuration options. ..." />
-            <marker date="1446380604311" expanded="true" signature="23035:23096" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="23105:23172" placeholder=" Get the PDO driver name. ..." />
-            <marker date="1446380604311" expanded="true" signature="23210:23286" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="23295:23420" placeholder=" Get the query grammar used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="23460:23508" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="23517:23672" placeholder=" Set the query grammar used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="23743:23795" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="23804:23931" placeholder=" Get the schema grammar used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="23972:24021" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="24030:24187" placeholder=" Set the schema grammar used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="24260:24313" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="24322:24458" placeholder=" Get the query post processor used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="24499:24548" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="24557:24725" placeholder=" Set the query post processor used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="24786:24841" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="24850:24974" placeholder=" Get the event dispatcher used by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="25017:25059" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25068:25225" placeholder=" Set the event dispatcher instance on the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="25286:25331" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25340:25424" placeholder=" Determine if the connection in a &quot;dry run&quot;. ..." />
-            <marker date="1446380604311" expanded="true" signature="25459:25514" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25523:25609" placeholder=" Get the default fetch mode for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="25646:25691" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25700:25817" placeholder=" Set the default fetch mode for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="25864:25915" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="25924:25995" placeholder=" Get the connection query log. ..." />
-            <marker date="1446380604311" expanded="true" signature="26031:26075" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26084:26145" placeholder=" Clear the query log. ..." />
-            <marker date="1446380604311" expanded="true" signature="26183:26225" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26234:26314" placeholder=" Enable the query log on the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="26353:26403" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26412:26493" placeholder=" Disable the query log on the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="26533:26584" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26593:26674" placeholder=" Determine whether we're logging queries. ..." />
-            <marker date="1446380604311" expanded="true" signature="26706:26756" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26765:26847" placeholder=" Get the name of the connected database. ..." />
-            <marker date="1446380604311" expanded="true" signature="26887:26931" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="26940:27055" placeholder=" Set the name of the connected database. ..." />
-            <marker date="1446380604311" expanded="true" signature="27104:27153" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="27162:27245" placeholder=" Get the table prefix for the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="27284:27331" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="27340:27458" placeholder=" Set the table prefix in use by the connection. ..." />
-            <marker date="1446380604311" expanded="true" signature="27504:27614" placeholder="{...}" />
-            <marker date="1446380604311" expanded="true" signature="27623:27786" placeholder=" Set the table prefix and return the grammar. ..." />
-            <marker date="1446380604311" expanded="true" signature="27842:27934" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37004405">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21145375">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8942732">
-          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <caret line="47" column="47" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25256976">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34067547">
-          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6167401">
-          <caret line="67" column="11" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34067547">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5110132">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <marker date="1450948083252" expanded="false" signature="44:184" placeholder="..." />
-            <marker date="1450948083252" expanded="true" signature="226:1779" placeholder="{...}" />
-            <marker date="1450948083252" expanded="false" signature="236:332" placeholder=" Display a listing of the resource. ..." />
-            <marker date="1450948083252" expanded="true" signature="362:541" placeholder="{...}" />
-            <marker date="1450948083252" expanded="true" signature="399:595" placeholder="..." />
-            <marker date="1450948083252" expanded="true" signature="426:530" placeholder="..." />
-            <marker date="1450948083252" expanded="false" signature="550:654" placeholder=" Show the form for creating a new resource. ..." />
-            <marker date="1450948083252" expanded="true" signature="685:708" placeholder="{...}" />
-            <marker date="1450948083252" expanded="false" signature="717:871" placeholder=" Store a newly created resource in storage. ..." />
-            <marker date="1450948083252" expanded="true" signature="917:940" placeholder="{...}" />
-            <marker date="1450948083252" expanded="false" signature="949:1066" placeholder=" Display the specified resource. ..." />
-            <marker date="1450948083252" expanded="true" signature="1098:1121" placeholder="{...}" />
-            <marker date="1450948083252" expanded="false" signature="1130:1265" placeholder=" Show the form for editing the specified resource. ..." />
-            <marker date="1450948083252" expanded="true" signature="1297:1320" placeholder="{...}" />
-            <marker date="1450948083252" expanded="false" signature="1329:1506" placeholder=" Update the specified resource in storage. ..." />
-            <marker date="1450948083252" expanded="true" signature="1558:1581" placeholder="{...}" />
-            <marker date="1450948083252" expanded="false" signature="1590:1719" placeholder=" Remove the specified resource from storage. ..." />
-            <marker date="1450948083252" expanded="true" signature="1754:1777" placeholder="{...}" />
-          </folding>
+        <state vertical-scroll-proportion="0.17737003">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1277533">
-          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding>
-            <marker date="1450947574828" expanded="false" signature="9:390" placeholder="..." />
-            <marker date="1450947574828" expanded="true" signature="407:693" placeholder="..." />
-            <marker date="1450947574828" expanded="true" signature="445:692" placeholder="..." />
-            <marker date="1450947574828" expanded="true" signature="541:689" placeholder="..." />
-            <marker date="1450947574828" expanded="true" signature="569:687" placeholder="..." />
-            <marker date="1450947574828" expanded="true" signature="586:629" placeholder="..." />
-            <marker date="1450947574828" expanded="true" signature="709:757" placeholder="..." />
-            <marker date="1450947574828" expanded="true" signature="727:756" placeholder="..." />
-            <marker date="1450947574828" expanded="true" signature="966:1155" placeholder="..." />
-            <marker date="1450947574828" expanded="true" signature="1004:1154" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.60091746">
+          <caret line="47" column="47" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Guard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17737003">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core_c.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3715596">
+          <caret line="253" column="38" selection-start-line="253" selection-start-column="38" selection-end-line="253" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="721" column="13" selection-start-line="721" selection-start-column="13" selection-end-line="721" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.044342507">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Authenticatable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.019877676">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RedirectsUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31039757">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6452599">
+          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2171254">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/Access/Authorizable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6593245">
-          <caret line="116" column="48" selection-start-line="116" selection-start-column="48" selection-end-line="116" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.22171254">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1972477">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26605505">
+          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
           <folding>
-            <marker date="1450955338773" expanded="true" signature="27:424" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="605:3724" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="673:750" placeholder=" The database table used by the model. ..." />
-            <marker date="1450955338773" expanded="true" signature="793:872" placeholder=" The attributes that are mass assignable. ..." />
-            <marker date="1450955338773" expanded="true" signature="940:1030" placeholder=" The attributes excluded from the model's JSON form. ..." />
-            <marker date="1450955338773" expanded="false" signature="1097:1134" placeholder=" Get the role a user has ..." />
-            <marker date="1450955338773" expanded="true" signature="1164:1234" placeholder="{...}" />
-            <marker date="1450955338773" expanded="false" signature="1243:1344" placeholder=" Find out if the user is admin, based on if has any roles. ..." />
-            <marker date="1450955338773" expanded="true" signature="1376:1461" placeholder="{...}" />
-            <marker date="1450955338773" expanded="false" signature="1470:1550" placeholder=" Find out if user has a specific role ..." />
-            <marker date="1450955338773" expanded="true" signature="1588:1680" placeholder="{...}" />
-            <marker date="1450955338773" expanded="false" signature="1689:1744" placeholder=" Get key in array with corresponding value ..." />
-            <marker date="1450955338773" expanded="true" signature="1795:1985" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="1846:1933" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="1881:1923" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="1994:2049" placeholder=" Add roles to users to make them concierge ..." />
-            <marker date="1450955338773" expanded="true" signature="2094:3722" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="2223:3666" placeholder="{...}" />
-            <marker date="1450955338773" expanded="true" signature="2265:2747" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="2773:3255" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="3284:3551" placeholder="..." />
-            <marker date="1450955338773" expanded="true" signature="3572:3656" placeholder="..." />
+            <element signature="e#254#369#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/resources/views/errors/404.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5110132">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.4256">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39908257">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
           <folding />
         </state>
       </provider>

@@ -92,7 +92,7 @@ body.nav-sm .profile {
 }
 
 .menu_section h3 {
-    padding-left: 15px;
+    padding-left: 23px;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: .5px;
@@ -124,8 +124,8 @@ body.nav-sm .profile {
 }
 
 .profile_info {
-    padding: 25px 15px 20px;
-    width: 100%;
+    padding: 25px 10px 10px;
+    width: 65%;
     float: left;
 }
 
@@ -199,7 +199,7 @@ body.nav-sm .menu_section h3 {
 body.nav-md .container.body .col-md-3.left_col {
     width: 230px;
     padding: 0;
-    position: fixed;
+    position: absolute;
     display: flex;
 }
 
@@ -1933,7 +1933,7 @@ span.right {
 
 .tile_count {
     margin-bottom: 20px;
-    margin-top: 80px;
+    margin-top: 20px;
 }
 
 .tile_count div:first-child .left {
@@ -3353,10 +3353,8 @@ textarea:focus {
     background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
     background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
     background-repeat: repeat-x;
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
     border-color: #e6e6e6 #e6e6e6 #bfbfbf;
     border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-    filter: progid: DXImageTransform.Microsoft.gradient(enabled false);
     border: 1px solid #cccccc;
     border-bottom-color: #b3b3b3;
     -webkit-border-radius: 4px;
@@ -3673,7 +3671,6 @@ ul.social li {
     display: block;
     position: relative;
     -moz-opacity: 1;
-    filter: alpha(opacity: 100);
     opacity: 1;
     color: #666;
 }
@@ -3807,7 +3804,6 @@ ul.social li {
     display: block;
     position: relative;
     -moz-opacity: 1;
-    filter: alpha(opacity: 100);
     opacity: 1;
     color: #666;
 }
@@ -4258,8 +4254,6 @@ ul.widget_tally .count {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
-    filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
     padding-bottom: 10px;
     -webkit-box-shadow: 0 4px 6px -6px #222;
     -moz-box-shadow: 0 4px 6px -6px #222;
@@ -6091,6 +6085,22 @@ header{width:100%;}
 
 /* Button
  * -------------------------------------------------------------------------- */
+
+.btn-primary {
+  border-color: #003973; /* hsb(210, 100%, 45%) */
+  background-color: #00468c; /* hsb(210, 100%, 55%) */
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.active:focus,
+.btn-primary.active:hover {
+  border-color: #00264d; /* hsb(208, 100%, 10%) */
+  background-color: #003366; /* hsb(208, 100%, 40%) */
+}
+
 
 /* Basic style
  * -------------------------------------------------------------------------- */

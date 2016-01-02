@@ -7,7 +7,11 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class UsersController extends Controller
+// Pulling in Auth & Redirect
+use Auth;
+use Redirect;
+
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +20,11 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        if ( Auth::check() ) {
+            return view('home');
+        }
+
+        return Redirect::to('/');
     }
 
     /**
