@@ -88,7 +88,7 @@ body.nav-sm .profile {
 }
 
 .menu_section {
-    margin-bottom: 35px;
+    margin-bottom: 10px;
 }
 
 .menu_section h3 {
@@ -5856,7 +5856,7 @@ form:after {
     margin: 10px 15px 0 0;
 }
 .reset_pass{margin-top:10px !important;}
-.login_content div .reset_pass{margin-top: 13px !important; margin-right: 39px; float: right;}
+.login_content div .reset_pass{margin-top: 9px !important; margin-right: 0; float: right;}
 .separator{border-top: 1px solid #D8D8D8;
            margin-top: 10px;
            padding-top: 10px;}
@@ -6342,4 +6342,15 @@ ul.notifications {
     color: #E9EDEF;
     float: right;
     opacity: 1;
+}
+
+.page-content {
+    padding-top: 45px;
+}
+
+.remember {
+    margin-top: 8px;
+}
+input.fee-name {
+    text-transform: uppercase;
 }

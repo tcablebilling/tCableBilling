@@ -55,7 +55,7 @@
                         <div>
                             <button type="submit" class="btn btn-default submit pull-left">Log in</button>
                             <div class="pull-left remember">
-                                <input type="checkbox" name="remember"> <div class="remember-text">Remember Me</div>
+                                <input type="checkbox" name="remember"> <div class="remember-text pull-right">Remember Me</div>
                             </div>
                             <a class="reset_pass pull-right" href="#">Lost your password?</a>
                         </div>

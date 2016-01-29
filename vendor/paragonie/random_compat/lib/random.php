@@ -58,7 +58,11 @@ if (PHP_VERSION_ID < 70000) {
          */
         if (extension_loaded('libsodium')) {
             // See random_bytes_libsodium.php
-            require_once $RandomCompatDIR.'/random_bytes_libsodium.php';
+            if (PHP_VERSION_ID >= 50300 && function_exists('\\Sodium\\randombytes_buf')) {
+                require_once $RandomCompatDIR.'/random_bytes_libsodium.php';
+            } elseif (method_exists('Sodium', 'randombytes_buf')) {
+                require_once $RandomCompatDIR.'/random_bytes_libsodium_legacy.php';
+            }
         }
         if (
             !function_exists('random_bytes') && 
@@ -75,8 +79,8 @@ if (PHP_VERSION_ID < 70000) {
             // that is not helpful to us here.
             
             // See random_bytes_dev_urandom.php
-            require_once $RandomCompatDIR.'/random_bytes_dev_urandom.php';
-        }
+                require_once $RandomCompatDIR.'/random_bytes_dev_urandom.php';
+            }
         if (
             !function_exists('random_bytes') &&
             PHP_VERSION_ID >= 50307 &&
@@ -90,15 +94,23 @@ if (PHP_VERSION_ID < 70000) {
             extension_loaded('com_dotnet') &&
             class_exists('COM')
         ) {
-            try {
-                $RandomCompatCOMtest = new COM('CAPICOM.Utilities.1');
-                if (method_exists($RandomCompatCOMtest, 'GetRandom')) {
-                    // See random_bytes_com_dotnet.php
-                    require_once $RandomCompatDIR.'/random_bytes_com_dotnet.php';
+            $RandomCompat_disabled_classes = preg_split(
+                '#\s*,\s*#', 
+                strtolower(ini_get('disable_classes'))
+            );
+            
+            if (!in_array('com', $RandomCompat_disabled_classes)) {
+                try {
+                    $RandomCompatCOMtest = new COM('CAPICOM.Utilities.1');
+                    if (method_exists($RandomCompatCOMtest, 'GetRandom')) {
+                        // See random_bytes_com_dotnet.php
+                        require_once $RandomCompatDIR.'/random_bytes_com_dotnet.php';
+                    }
+                } catch (com_exception $e) {
+                    // Don't try to use it.
                 }
-            } catch (com_exception $e) {
-                // Don't try to use it.
             }
+            $RandomCompat_disabled_classes = null;
             $RandomCompatCOMtest = null;
         }
         if (
@@ -110,8 +122,8 @@ if (PHP_VERSION_ID < 70000) {
                     DIRECTORY_SEPARATOR === '/' &&
                     PHP_VERSION_ID >= 50300
                 ) ||
-                // Windows with PHP >= 5.3.4
-                PHP_VERSION_ID >= 50304
+                // Windows with PHP >= 5.4.1
+                PHP_VERSION_ID >= 50401
             )
         ) {
             // See random_bytes_openssl.php
