@@ -11,7 +11,7 @@
                         <div class="x_panel">
 
                             <div class="x_content">
-                                <table id="example" class="table table-striped responsive-utilities jambo_table">
+                                <table id="billingall" class="table table-striped responsive-utilities jambo_table">
                                     <thead>
                                     <tr class="headings">
                                         <th>
@@ -590,6 +590,31 @@
                     </p>
                 </div>
                 <div class="clearfix"></div>
+                <script type="text/javascript" charset="utf-8" async defer>
+                    jQuery(document).ready(function($) {
+                        var oTable = $('#billingall').dataTable({
+                            "oLanguage": {
+                                "sSearch": "Search all columns:"
+                            },
+                            "aoColumnDefs": [
+                                {
+                                    'bSortable': false,
+                                    'aTargets': [0]
+                                }, //disables sorting for column one
+                                {
+                                    'sWidth': '20%',
+                                    'aTargets': [6]
+                                }
+                            ],
+                            'iDisplayLength': 12,
+                            "sPaginationType": "full_numbers",
+                            "dom": 'T<"clear">lfrtip',
+                            "tableTools": {
+                                "sSwfPath": "js/datatables/tools/swf/copy_csv_xls_pdf.swf"
+                            }
+                        });
+                    });
+                </script>
             </footer>
             <!-- /footer content -->
 
