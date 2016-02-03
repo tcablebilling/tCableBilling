@@ -3,7 +3,7 @@
 <div class="item form-group">
     {!! Form::label('name', 'Channel Package Name', array('class' => 'control-label col-md-3 col-sm-3 col-xs-12'));!!}
     <div class="col-md-6 col-sm-6 col-xs-12">
-       {!! Form::text('name', null,['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required', 'pattern'=>'[A-Z][-]', 'placeholder'=>'Package name...']);!!}
+       {!! Form::text('name', null,['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required', 'placeholder'=>'Package name...']);!!}
     </div>
 </div>
 

@@ -17,6 +17,9 @@
 <script src="{{ URL::asset('js/datatables/tools/js/dataTables.tableTools.js') }}"></script>
 <!-- form validation -->
 <script src="{{ URL::asset('js/validator/validator.js') }}"></script>
+<!-- daterangepicker -->
+<script type="text/javascript" src="{{ URL::asset('js/moment.min2.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/datepicker/daterangepicker.js') }}"></script>
 <script>
     $(document).ready(function () {
         $('input.tableflat').iCheck({

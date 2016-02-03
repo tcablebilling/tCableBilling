@@ -13,13 +13,6 @@
 // Home URL [Must Be Logged In]
 Route::group(['middleware' => 'auth'], function(){
 	Route::get('/home', array( 'as' => 'home', 'uses' => 'HomeController@index') );
-	Route::get('/general-bill', array( 'as' => 'general-bill',
-			function()
-			{
-				return view('general_bill');
-			}
-		)
-	);
 
 	Route::get('/per-client-bill', array( 'as' => 'per-client-bill',
 			function()
@@ -33,6 +26,8 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::resource( '/clients', 'ClientsController' );
 	Route::resource( '/packages', 'PackagesController' );
 	Route::resource( '/areas', 'AreasController' );
+	Route::resource( '/payments', 'PaymentsController');
+	Route::resource( '/billings', 'BillingsController');
 });
 // Authentication routes...
 Route::get('/', 'Auth\AuthController@getLogin');

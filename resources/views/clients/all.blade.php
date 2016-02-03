@@ -107,11 +107,7 @@
                             }
                         ],
                         'iDisplayLength': 12,
-                        "sPaginationType": "full_numbers",
-                        "dom": 'T<"clear">lfrtip',
-                        "tableTools": {
-                            "sSwfPath": "js/datatables/tools/swf/copy_csv_xls_pdf.swf"
-                        }
+                        "sPaginationType": "full_numbers"
                     });
                 });
                 </script>

@@ -650,10 +650,6 @@ a:focus {
 
 .top_nav li a i {
     font-size: 18px;
-    margin-right: 15px;
-    border: 1px solid;
-    border-radius: 3px;
-    padding: 5px;
 }
 
 .navbar-static-top {
@@ -888,11 +884,19 @@ li.current-page a {
 .x_content canvas {}
 
 footer {
-    background: #fff;
+    background: #EDEDED;
     padding: 5px 20px 0;
     height: 45px;
     margin: 0 -17px;
+    bottom: 0;
+    right: 37px;
+    position: fixed;
+    width: 1079px;
+    border-top: 1px solid #999;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
 }
+
 
 .tile-stats.sparkline {
     padding: 10px;
@@ -1744,9 +1748,9 @@ ul.msg_list li a .message {
     border-right: 6px solid transparent;
     content: "";
     display: inline-block;
-    right: 6%;
+    right: 13%;
     position: absolute;
-    top: -6px;
+    top: -7px;
 }
 
 .dropdown-menu>li>a {
@@ -6357,4 +6361,25 @@ ul.notifications {
 }
 input.fee-name {
     text-transform: uppercase;
+}
+
+.user-profile > i.fa {
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 5px;
+    margin-right: 6px;
+}
+
+.package-btn {
+    margin-bottom: 10px;
+    margin-right: 0;
+}
+
+.client-details {
+    display: block;
+    font-style: italic;
+}
+
+#billing_id {
+    padding: 0 10px;
 }

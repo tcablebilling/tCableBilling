@@ -14,9 +14,12 @@ class CreateBillingTable extends Migration
     {
         Schema::create('billings', function (Blueprint $table) {
             $table->increments('id');
-            $table->bigInteger('client_id');
-            $table->date('month_year');
-            $table->bigInteger('cumulative');
+            $table->integer('client_id')->unsigned();
+            $table->foreign('client_id')
+                  ->references('id')->on('clients')
+                  ->onDelete('cascade');
+            $table->integer('bill_amount');
+            $table->date('month');
             $table->timestamps();
         });
     }

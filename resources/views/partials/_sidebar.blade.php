@@ -1,4 +1,6 @@
+
 @inject('auth', 'Auth')
+
 <div class="navbar nav_title" style="border: 0;">
     <a href="{{ URL::route('home') }}" class="site_title"><i class="fa fa-paw"></i> <span>Gentellela Alela!</span></a>
 </div>
@@ -28,10 +30,9 @@
             </li>
             <li><a><i class="fa fa-flag"></i> Billing <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu" style="display: none">
-                    <li><a href="{{ URL::route('general-bill') }}">General Billing</a>
-                    </li>
-                    <li><a href="{{ URL::route('per-client-bill') }}">Per Client Billing</a>
-                    </li>
+                    <li><a href="/billings">General Billing</a></li>
+                    <li><a href="{{ URL::route('per-client-bill') }}">Per Client Billing</a></li>
+                    <li><a href="/payments">Payment History</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-male"></i> Clients <span class="fa fa-chevron-down"></span></a>
@@ -47,14 +48,6 @@
                     <li><a href="monthly_invoice.html">Monthly(Regular)</a>
                     </li>
                     <li><a href="per_client_invoice.html">Per Client</a>
-                    </li>
-                </ul>
-            </li>
-            <li><a><i class="fa fa-user"></i> Users <span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu" style="display: none">
-                    <li><a href="tables.html">All Users</a>
-                    </li>
-                    <li><a href="tables_dynamic.html">Add New User</a>
                     </li>
                 </ul>
             </li>
