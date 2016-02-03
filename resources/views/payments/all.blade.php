@@ -93,8 +93,8 @@
                                         @endif
                                     @endforeach
                                     </tbody>
-
                                 </table>
+                                {!! $payments->render() !!}
                             </div>
                         </div>
                     </div>
@@ -139,6 +139,7 @@
                                     'aTargets': [2]
                                 }
                             ],
+                            "bPaginate": false,
                             'iDisplayLength': 12,
                             "sPaginationType": "full_numbers"
                         });

@@ -70,8 +70,8 @@
                                         @endif
                                     @endforeach
                                     </tbody>
-
                                 </table>
+                                {!! $clients->render() !!}
                             </div>
                         </div>
                     </div>
@@ -106,8 +106,9 @@
                                 'aTargets': [6]
                             }
                         ],
-                        'iDisplayLength': 12,
-                        "sPaginationType": "full_numbers"
+                        "bPaginate": false,
+                        // 'iDisplayLength': 12,
+                        // "sPaginationType": "full_numbers"
                     });
                 });
                 </script>
