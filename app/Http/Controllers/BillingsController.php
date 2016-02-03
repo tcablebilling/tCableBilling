@@ -17,9 +17,14 @@ class BillingsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $billings = Billing::orderBy('id', 'DESC')->get();
+        if ($request->ajax())
+        {
+            $billings = Billing::orderBy('id', 'DESC')->get();
+            return json_encode($billings);
+        }
+        $billings = Billing::orderBy('id', 'DESC')->paginate(150);
         return view('billings', compact('billings'));
     }
 

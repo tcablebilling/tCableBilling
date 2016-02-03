@@ -43,7 +43,7 @@
                                                         {{$billing->clientDetails->name}}
                                                         <span class="client-details">Client ID: {{$billing->clientDetails->client_id}}</span>
                                                     </td>
-                                                    <td class=" ">{{$billing->month}}</td>
+                                                    <td class=" ">{{date('F Y', strtotime($billing->month))}}</td>
                                                     <td class=" ">&#2547; {{$billing->bill_amount}}</td>
                                                     <td class=" ">&#2547;
                                                     {{
@@ -69,7 +69,7 @@
                                                         {{$billing->clientDetails->name}}
                                                         <span class="client-details">Client ID: {{$billing->clientDetails->client_id}}</span>
                                                     </td>
-                                                    <td class=" ">{{$billing->month}}</td>
+                                                    <td class=" ">{{date('F Y', strtotime($billing->month))}}</td>
                                                     <td class=" ">&#2547; {{$billing->bill_amount}}</td>
                                                     <td class=" ">&#2547;
                                                     {{
@@ -89,6 +89,7 @@
                                         @endforeach
                                     </tbody>
                                 </table>
+                                {!! $billings->render() !!}
                             </div>
                         </div>
                     </div>
@@ -109,7 +110,7 @@
                 <div class="clearfix"></div>
                 <script type="text/javascript" charset="utf-8" async defer>
                     jQuery(document).ready(function($) {
-                        var oTable = $('#billingall').dataTable({
+                        var oTable = $('#billingall').DataTable({
                             "oLanguage": {
                                 "sSearch": "Search all columns:"
                             },
@@ -121,10 +122,12 @@
                                 {
                                     'sWidth': '10%',
                                     'aTargets': [6]
-                                }
+                                },
+
                             ],
-                            'iDisplayLength': 12,
-                            "sPaginationType": "full_numbers"
+                            "bPaginate": false,
+                            // 'iDisplayLength': 12,
+                            // "sPaginationType": "full_numbers"
                         });
                     });
                 </script>
