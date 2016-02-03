@@ -39,10 +39,13 @@
                                                         <input type="checkbox" class="tableflat">
                                                     </td>
                                                     <td class=" ">{{sprintf("%'.05d\n", $billing->id)}}</td>
-                                                    <td class=" ">{{$billing->client_id}} </td>
-                                                    <td class=" ">{{$billing->month}}</td>
-                                                    <td class=" ">{{$billing->bill_amount}}</td>
                                                     <td class=" ">
+                                                        {{$billing->clientDetails->name}}
+                                                        <span class="client-details">Client ID: {{$billing->clientDetails->client_id}}</span>
+                                                    </td>
+                                                    <td class=" ">{{$billing->month}}</td>
+                                                    <td class=" ">&#2547; {{$billing->bill_amount}}</td>
+                                                    <td class=" ">&#2547;
                                                     {{
                                                         DB::table('billings')
                                                         ->where('client_id', '=', $billing->client_id)
@@ -62,10 +65,13 @@
                                                         <input type="checkbox" class="tableflat">
                                                     </td>
                                                     <td class=" ">{{sprintf("%'.05d\n", $billing->id)}}</td>
-                                                    <td class=" ">{{$billing->client_id}} </td>
-                                                    <td class=" ">{{$billing->month}}</td>
-                                                    <td class=" ">{{$billing->bill_amount}}</td>
                                                     <td class=" ">
+                                                        {{$billing->clientDetails->name}}
+                                                        <span class="client-details">Client ID: {{$billing->clientDetails->client_id}}</span>
+                                                    </td>
+                                                    <td class=" ">{{$billing->month}}</td>
+                                                    <td class=" ">&#2547; {{$billing->bill_amount}}</td>
+                                                    <td class=" ">&#2547;
                                                     {{
                                                         DB::table('billings')
                                                         ->where('client_id', '=', $billing->client_id)

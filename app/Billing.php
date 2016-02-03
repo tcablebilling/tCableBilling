@@ -11,4 +11,11 @@ class Billing extends Model
     	'bill_amount',
     	'month'
     ];
+    /**
+     * Get the client channel package.
+     */
+    public function clientDetails()
+    {
+        return $this->belongsTo('App\Client', 'client_id');
+    }
 }

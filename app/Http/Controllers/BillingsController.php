@@ -19,7 +19,7 @@ class BillingsController extends Controller
      */
     public function index()
     {
-        $billings = Billing::all();
+        $billings = Billing::orderBy('id', 'DESC')->get();
         return view('billings', compact('billings'));
     }
 
