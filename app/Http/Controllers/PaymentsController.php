@@ -58,7 +58,7 @@ class PaymentsController extends Controller
      */
     public function show($id)
     {
-        //
+        return \Redirect::to( 'payments' );
     }
 
     /**

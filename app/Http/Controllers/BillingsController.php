@@ -81,7 +81,7 @@ class BillingsController extends Controller
      */
     public function show($id)
     {
-		//
+        return \Redirect::to('billings');
     }
 
     /**
@@ -92,7 +92,7 @@ class BillingsController extends Controller
      */
     public function edit($id)
     {
-        //
+        return \Redirect::to('billings');
     }
 
     /**
@@ -104,7 +104,7 @@ class BillingsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return \Redirect::to('billings');
     }
 
     /**
