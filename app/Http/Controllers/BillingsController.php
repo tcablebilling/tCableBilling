@@ -81,9 +81,7 @@ class BillingsController extends Controller
      */
     public function show($id)
     {
-        $billings = Billing::where('client_id', $id )->orderBy('id', 'DESC')->paginate(150);
-
-        return view('billings', compact('billings'));
+		//
     }
 
     /**

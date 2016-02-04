@@ -58,9 +58,7 @@ class PaymentsController extends Controller
      */
     public function show($id)
     {
-        $payments = Payment::where('client_id', $id )->orderBy('id', 'DESC')->paginate(150);
-
-        return view('payments.all', compact('payments'));
+        //
     }
 
     /**
