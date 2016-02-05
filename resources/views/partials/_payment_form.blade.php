@@ -10,7 +10,7 @@
 <div class="item form-group">
     {!! Form::label('billing_id', 'Billing ID', array('class' => 'control-label col-md-3 col-sm-3 col-xs-12'));!!}
     <div class="col-md-6 col-sm-6 col-xs-12">
-       {!! Form::number('billing_id', null,['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required', 'min'=>'0']);!!}
+       {!! Form::select('billing_id', $billings, null,['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required', 'placeholder'=>'Select a billing ID...']);!!}
     </div>
 </div>
 

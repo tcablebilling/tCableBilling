@@ -14,13 +14,7 @@
 Route::group(['middleware' => 'auth'], function(){
 	Route::get('/home', array( 'as' => 'home', 'uses' => 'HomeController@index') );
 
-	Route::get('/per-client-bill', array( 'as' => 'per-client-bill',
-			function()
-			{
-				return view('per_client_bill');
-			}
-		)
-	);
+	Route::get('/individual', 'BillingsController@individualClient');
 
 	// Route::resource( '/users', 'UsersController' );
 	Route::resource( '/clients', 'ClientsController' );

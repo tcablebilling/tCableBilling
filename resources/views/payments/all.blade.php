@@ -40,6 +40,7 @@
                                         <th>ID</th>
                                         <th>Name</th>
                                         <th>Date</th>
+                                        <th>Billing ID</th>
                                         <th>Paid Amount</th>
                                         <th>Cumulative</th>
                                         <th class=" no-link last"><span class="nobr" width="20%">Action</span>
@@ -60,14 +61,16 @@
                                                     <span class="client-details">Client ID: {{$payment->clientDetails->client_id}}</span>
                                                 </td>
                                                 <td class=" ">{{date('F d, Y', strtotime($payment->date))}}</td>
-                                                <td class=" ">&#2547; {{$payment->paid_amount}}</td>
-                                                <td class=" ">&#2547;
+                                                <td class=" ">{{sprintf("%'.05d\n", $payment->billing_id)}}</td>
+                                                <td class=" ">{{$payment->paid_amount}} &#2547;</td>
+                                                <td class=" ">
                                                     {{
                                                         DB::table('payments')
                                                         ->where('client_id', '=', $payment->client_id)
                                                         ->where('id', '<=', $payment->id)
                                                         ->sum('paid_amount')
                                                     }}
+                                                    &#2547;
                                                 </td>
                                                 <td class=" last">
                                                     {!! Form::open(array('route' => array('payments.destroy', $payment->id), 'method' => 'delete')) !!}
@@ -87,14 +90,16 @@
                                                     <span class="client-details">Client ID: {{$payment->clientDetails->client_id}}</span>
                                                 </td>
                                                 <td class=" ">{{date('F d, Y', strtotime($payment->date))}}</td>
-                                                <td class=" ">&#2547; {{$payment->paid_amount}}</td>
-                                                <td class=" ">&#2547;
+                                                <td class=" ">{{sprintf("%'.05d\n", $payment->billing_id)}}</td>
+                                                <td class=" ">{{$payment->paid_amount}} &#2547;</td>
+                                                <td class=" ">
                                                     {{
                                                         DB::table('payments')
                                                         ->where('client_id', '=', $payment->client_id)
                                                         ->where('id', '<=', $payment->id)
                                                         ->sum('paid_amount')
                                                     }}
+                                                    &#2547;
                                                 </td>
                                                 <td class=" last">
                                                     {!! Form::open(array('route' => array('payments.destroy', $payment->id), 'method' => 'delete')) !!}
@@ -140,7 +145,7 @@
                                 {
                                     'bSortable': false,
                                     'sWidth': '15%',
-                                    'aTargets': [3, 4, 5, 6]
+                                    'aTargets': [3, 4, 5, 6, 7]
                                 },
                                 {
                                     'bSortable': false,

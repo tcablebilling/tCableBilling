@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 
 use App\Payment;
 use App\Client;
+use App\Billing;
 
 class PaymentsController extends Controller
 {
@@ -50,7 +51,11 @@ class PaymentsController extends Controller
         foreach ( Client::all() as $client) {
             $clients[$client->id] = $client->client_id . ' ' . $client->name;
         }
-        return view( 'payments.create', compact('clients') );
+        $billings = [];
+        foreach ( Billing::all() as $billing) {
+            $billings[$billing->id] = sprintf("%'.05d\n", $billing->id);
+        }
+        return view( 'payments.create', compact('clients', 'billings') );
     }
 
     /**
@@ -90,8 +95,11 @@ class PaymentsController extends Controller
             $clients[$client->id] = $client->client_id . ' ' . $client->name;
         }
         $payment = Payment::findOrFail($id);
-
-        return view('payments.edit', compact('payment', 'clients'));
+        $billings = [];
+        foreach ( Billing::all() as $billing) {
+            $billings[$billing->id] = sprintf("%'.05d\n", $billing->id);
+        }
+        return view('payments.edit', compact('payment', 'clients', 'billings'));
     }
 
     /**

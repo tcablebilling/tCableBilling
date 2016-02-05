@@ -113,4 +113,9 @@ class BillingsController extends Controller {
 	public function destroy( $id ) {
 		//
 	}
+
+	public function individualClient()
+	{
+		return view('individual_bill');
+	}
 }

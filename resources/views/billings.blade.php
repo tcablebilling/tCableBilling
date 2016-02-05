@@ -36,6 +36,9 @@
                                         <th>Month </th>
                                         <th>Amount </th>
                                         <th>Cumulative </th>
+                                        <th>Paid</th>
+                                        <th>Total</th>
+                                        <th>Due </th>
                                         <th class=" no-link last"><span class="nobr">Action</span>
                                         </th>
                                     </tr>
@@ -54,14 +57,37 @@
                                                         <span class="client-details">Client ID: {{$billing->clientDetails->client_id}}</span>
                                                     </td>
                                                     <td class=" ">{{date('F Y', strtotime($billing->month))}}</td>
-                                                    <td class=" ">&#2547; {{$billing->bill_amount}}</td>
-                                                    <td class=" ">&#2547;
+                                                    <td class=" ">{{$billing->bill_amount}} &#2547;</td>
+                                                    <td class=" ">
                                                     {{
-                                                        DB::table('billings')
+                                                        $bill_cum = DB::table('billings')
                                                         ->where('client_id', '=', $billing->client_id)
                                                         ->where('id', '<=', $billing->id)
                                                         ->sum('bill_amount')
                                                     }}
+                                                    &#2547;
+                                                    </td>
+                                                    <td class=" ">
+                                                    {{
+                                                        DB::table('payments')
+                                                        ->where('client_id', '=', $billing->client_id)
+                                                        ->where('billing_id', '=', $billing->id)
+                                                        ->sum('paid_amount')
+                                                    }}
+                                                    &#2547;
+                                                    </td>
+                                                    <td class=" ">
+                                                    {{
+                                                        $paid_cum = DB::table('payments')
+                                                        ->where('client_id', '=', $billing->client_id)
+                                                        ->where('billing_id', '<=', $billing->id)
+                                                        ->sum('paid_amount')
+                                                    }}
+                                                    &#2547;
+                                                    </td>
+                                                    <td class=" ">
+                                                    {{ $bill_cum - $paid_cum }}
+                                                    &#2547;
                                                     </td>
                                                     <td class=" last">
                                                         {!! Form::open(array('route' => array('billings.destroy', $billing->id), 'method' => 'delete')) !!}
@@ -80,14 +106,37 @@
                                                         <span class="client-details">Client ID: {{$billing->clientDetails->client_id}}</span>
                                                     </td>
                                                     <td class=" ">{{date('F Y', strtotime($billing->month))}}</td>
-                                                    <td class=" ">&#2547; {{$billing->bill_amount}}</td>
-                                                    <td class=" ">&#2547;
+                                                    <td class=" ">{{$billing->bill_amount}} &#2547;</td>
+                                                    <td class=" ">
                                                     {{
-                                                        DB::table('billings')
+                                                        $bill_cum = DB::table('billings')
                                                         ->where('client_id', '=', $billing->client_id)
                                                         ->where('id', '<=', $billing->id)
                                                         ->sum('bill_amount')
                                                     }}
+                                                    &#2547;
+                                                    </td>
+                                                    <td class=" ">
+                                                    {{
+                                                        DB::table('payments')
+                                                        ->where('client_id', '=', $billing->client_id)
+                                                        ->where('billing_id', '=', $billing->id)
+                                                        ->sum('paid_amount')
+                                                    }}
+                                                    &#2547;
+                                                    </td>
+                                                    <td class=" ">
+                                                    {{
+                                                        $paid_cum = DB::table('payments')
+                                                        ->where('client_id', '=', $billing->client_id)
+                                                        ->where('billing_id', '<=', $billing->id)
+                                                        ->sum('paid_amount')
+                                                    }}
+                                                    &#2547;
+                                                    </td>
+                                                    <td class=" ">
+                                                    {{ $bill_cum - $paid_cum }}
+                                                    &#2547;
                                                     </td>
                                                     <td class=" last">
                                                         {!! Form::open(array('route' => array('billings.destroy', $billing->id), 'method' => 'delete')) !!}
@@ -127,11 +176,11 @@
                             "aoColumnDefs": [
                                 {
                                     'bSortable': false,
-                                    'aTargets': [0]
+                                    'aTargets': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
                                 }, //disables sorting for column one
                                 {
                                     'sWidth': '10%',
-                                    'aTargets': [6]
+                                    'aTargets': [7]
                                 },
 
                             ],

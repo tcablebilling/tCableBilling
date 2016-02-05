@@ -15,7 +15,7 @@ class UserTableSeeder extends Seeder
             'name' => 'Khan Mohammad Rashedun-Naby',
             'username'	=>	'admin',
             'email' => 'naby88@gmail.com',
-            'password' => bcrypt('secret'),
+            'password' => bcrypt('1'),
         ]);
     }
 }
