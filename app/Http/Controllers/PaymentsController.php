@@ -20,7 +20,17 @@ class PaymentsController extends Controller
     public function index()
     {
         $payments = Payment::orderBy('id', 'DESC')->paginate(150);
-        return view('payments.all', compact('payments'));
+        $client_id = null;
+        $clients = [];
+        foreach ( Client::all() as $client) {
+            $clients[$client->id] = $client->client_id . ' ' . $client->name;
+        }
+        $client_id = \Input::get('client_id');
+        if ( $client_id != null ) {
+            $payments = Payment::where('client_id', $client_id)->orderBy('id', 'DESC')->paginate(150);
+            return view('payments.all', compact('payments', 'client_id', 'clients'));
+        }
+        return view( 'payments.all', compact( 'payments', 'client_id', 'clients' ) );
     }
 
     /**

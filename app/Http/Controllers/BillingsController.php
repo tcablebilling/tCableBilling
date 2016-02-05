@@ -25,7 +25,17 @@ class BillingsController extends Controller
             return json_encode($billings);
         }
         $billings = Billing::orderBy('id', 'DESC')->paginate(150);
-        return view('billings', compact('billings'));
+        $client_id = null;
+    	$clients = [];
+        foreach ( Client::all() as $client) {
+            $clients[$client->id] = $client->client_id . ' ' . $client->name;
+        }
+    	$client_id = \Input::get('client_id');
+    	if ($client_id != null) {
+	        $billings = Billing::where('client_id', $client_id)->orderBy('id', 'DESC')->paginate(150);
+	        return view('billings', compact('billings', 'client_id', 'clients'));
+    	}
+        return view('billings', compact('billings', 'client_id', 'clients'));
     }
 
     /**
@@ -116,5 +126,10 @@ class BillingsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getClientBill()
+    {
+
     }
 }

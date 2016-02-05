@@ -10,10 +10,20 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_content">
-                                <div class="packages-buttons pull-right">
-                                    {!! Form::open(['url'=>'/billings','class'=>'form-horizontal form-label-left']) !!}
-                                        <button id="send" type="submit" class="btn btn-success btn-sm package-btn">Generate Next Month Bills</button>
-                                    {!! Form::close()!!}
+                                <div class="row">
+                                    <div class="col-md-8 item form-group">
+                                        {!! Form::open(['method'=>'GET', 'url'=>'billings','class'=>'form-horizontal form-label-left']) !!}
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            {!! Form::select('client_id', $clients, $client_id,['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required', 'placeholder'=>'Select client...']);!!}
+                                        </div>
+                                        <button id="send" type="submit" class="btn btn-success btn-sm package-btn">Filter</button>
+                                        {!! Form::close()!!}
+                                    </div>
+                                    <div class="col-md-4 packages-buttons">
+                                        {!! Form::open(['url'=>'/billings','class'=>'form-horizontal form-label-left pull-right']) !!}
+                                            <button id="send" type="submit" class="btn btn-success btn-sm package-btn">Generate Next Month Bills</button>
+                                        {!! Form::close()!!}
+                                    </div>
                                 </div>
                                 <table id="billingall" class="table table-striped responsive-utilities jambo_table">
                                     <thead>

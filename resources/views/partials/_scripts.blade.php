@@ -20,8 +20,10 @@
 <!-- daterangepicker -->
 <script type="text/javascript" src="{{ URL::asset('js/moment.min2.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/datepicker/daterangepicker.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/select/select2.full.js') }}"></script>
 <script>
     $(document).ready(function () {
+        $('select').select2();
         $('input.tableflat').iCheck({
             checkboxClass: 'icheckbox_flat-green',
             radioClass: 'iradio_flat-green'
