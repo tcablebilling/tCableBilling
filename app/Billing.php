@@ -18,9 +18,4 @@ class Billing extends Model
     {
         return $this->belongsTo('App\Client', 'client_id');
     }
-
-    public function paymentDetails()
-    {
-        return $this->hasMany('App\Payment', 'billing_id', 'id');
-    }
 }
