@@ -9,8 +9,8 @@
                     <div class="x_panel">
 
                         <div class="x_content">
-                            {!! Form::model($package, ['route'=>['packages.update', $package->id], 'method'=>'patch','class'=>'form-horizontal form-label-left']) !!}
-                                @include('partials._package_form')
+                            {!! Form::model($user, ['route'=>['users.update', $user->id], 'method'=>'patch','class'=>'form-horizontal form-label-left']) !!}
+                                @include('partials._user_form')
                             {!! Form::close() !!}
                         </div>
                     </div>

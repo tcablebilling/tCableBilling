@@ -54,8 +54,22 @@
         </div>
 
         @include('partials._topnav')
-
+        <!-- page content -->
+        <div class="right_col" role="main">
         @yield('content')
+            <!-- footer content -->
+            <footer>
+                <div class="">
+                    <p class="pull-right"><span class="lead">"tCableBilling"</span> is a automated cable network billing system. Developed by <a>Khan Mohammad Rashedun-Naby</a>. |
+                        <span class="lead"> <i class="fa fa-paw"></i> tCableBilling</span>
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+
+        </div>
+        <!-- /page content -->
     </div>
 
 </div>

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\User;
 class UsersController extends Controller
 {
     /**
@@ -16,7 +17,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::paginate(150);
+        return view('users.all', compact('users'));
     }
 
     /**
@@ -26,7 +28,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('users.create');
     }
 
     /**
@@ -37,7 +39,15 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User;
+        $user->name = \Input::get('name');
+        $user->username = \Input::get('username');
+        $user->email = \Input::get('email');
+        $user->password = bcrypt(\Input::get('password'));
+        if (\Input::get('password') == \Input::get('password_confirmation')) {
+            $user->save();
+        }
+        return \Redirect::to('/users');
     }
 
     /**
@@ -59,7 +69,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);
+        return view('users.edit', compact('user'));
     }
 
     /**
@@ -71,7 +82,14 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->name = \Input::get('name');
+        $user->email = \Input::get('email');
+        $user->password = bcrypt(\Input::get('password'));
+        if (\Input::get('password') == \Input::get('password_confirmation')) {
+            $user->save();
+        }
+        return \Redirect::to('/users');
     }
 
     /**
@@ -82,6 +100,9 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->delete();
+
+        return \Redirect::to('/users');
     }
 }
