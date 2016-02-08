@@ -111,7 +111,10 @@ class BillingsController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function destroy( $id ) {
-		//
+        $billing = Billing::findOrFail($id);
+        $billing->delete();
+
+        return \Redirect::to('/billings');
 	}
 
 	public function individualClient()

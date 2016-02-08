@@ -60,7 +60,7 @@
             <!-- footer content -->
             <footer>
                 <div class="">
-                    <p class="pull-right"><span class="lead">"tCableBilling"</span> is a automated cable network billing system. Developed by <a>Khan Mohammad Rashedun-Naby</a>. |
+                    <p class="pull-right"><span class="lead">"tCableBilling"</span> is an automated cable network billing system. Developed by <a>Khan Mohammad Rashedun-Naby</a>. |
                         <span class="lead"> <i class="fa fa-paw"></i> tCableBilling</span>
                     </p>
                 </div>
