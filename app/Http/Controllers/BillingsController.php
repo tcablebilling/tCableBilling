@@ -61,7 +61,7 @@ class BillingsController extends Controller {
 				$data = array(
 					'client_id'   => $client->id,
 					'bill_amount' => $package[0]->fee,
-					'month'       => date( 'Y-m-d', strtotime( "+1 month", strtotime( date( 'Y-m-d' ) ) ) )
+					'month'       => date( 'Ymd', strtotime( "+1 month", strtotime( date( 'Ym' ).'01' ) ) )
 				);
 				$billing->create( $data );
 			}
@@ -116,6 +116,24 @@ class BillingsController extends Controller {
 
 	public function individualClient()
 	{
-		return view('individual_bill');
+		$input = explode('-', \Input::get( 'range' ), 2);
+		$input_fm = null;
+		$input_tm = null;
+		if (!empty($input)) {
+			$input_fm = $input[0];
+			if (array_key_exists( 1, $input)) {
+				$input_tm = $input[1];
+			}
+		}
+		$from_month = date('Ym', strtotime( $input_fm ));
+		$to_month = date( 'Ymd', strtotime( date( 'Y-m-d', strtotime( $input_tm ) ) ) );
+		$client_id = null;
+		$clients   = [ ];
+		foreach ( Client::all() as $client ) {
+			$clients[ $client->id ] = $client->client_id . ' ' . $client->name;
+		}
+		$client_id = \Input::get( 'client_id' );
+		$billings = Billing::where( 'client_id', $client_id )->orderBy( 'id', 'DESC' )->whereBetween('month', array( $from_month, $to_month))->paginate( 150 );
+		return view('individual_bill', compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' ));
 	}
 }

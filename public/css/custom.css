@@ -1637,17 +1637,18 @@ td.details {
 
 .paging_full_numbers a.paginate_button,
 .paging_full_numbers a.paginate_active {
-    border: 1px solid #aaa;
+    border: 1px solid #555;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     padding: 2px 5px;
     margin: 0 3px;
-    cursor: pointer;
-    *cursor: hand;
+    cursor: pointer;*
+    cursor: hand;
 }
 
 .paging_full_numbers a.paginate_button {
     background-color: #ddd;
+    border-radius: 0;
 }
 
 .paging_full_numbers a.paginate_button:hover {
@@ -1657,6 +1658,7 @@ td.details {
 
 .paging_full_numbers a.paginate_active {
     background-color: #99B3FF;
+    border-radius: 0;
 }
 
 table.display tr.even.row_selected td {
@@ -3037,7 +3039,7 @@ select.parsley-error {
 }
 
 .daterangepicker table.table-condensed tbody tr:first-child td {
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 .daterangepicker table.table-condensed th:first-child,
@@ -3047,7 +3049,7 @@ select.parsley-error {
 
 .daterangepicker table.table-condensed th:last-child,
 .daterangepicker table.table-condensed td:last-child {
-    padding-right: 12px
+    padding-right: 6px;
 }
 
 .table-condensed>thead>tr>th,
@@ -3159,21 +3161,21 @@ select.parsley-error {
 }
 
 .daterangepicker td.available + td.start-date {
-    -webkit-border-radius: 4px 0 0 4px;
+    -webkit-border-radius: 0 0 0 0;
     -moz-border-radius: 4px 0 0 4px;
-    border-radius: 4px 0 0 4px;
+    border-radius: 0 0 0 0;
 }
 
 .daterangepicker td.in-range + td.end-date {
-    -webkit-border-radius: 0 4px 4px 0;
+    -webkit-border-radius: 0 0px 0px 0;
     -moz-border-radius: 0 4px 4px 0;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 0 0 0;
 }
 
 .daterangepicker td.start-date.end-date {
     -webkit-border-radius: 4px !important;
     -moz-border-radius: 4px !important;
-    border-radius: 4px !important;
+    border-radius: 0px !important;
 }
 
 .daterangepicker td.active,
@@ -3252,7 +3254,7 @@ select.parsley-error {
 .daterangepicker .ranges .input-mini {
     background-color: #eee;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 0px;
     color: #555;
     display: block;
     font-size: 11px;
@@ -3261,7 +3263,7 @@ select.parsley-error {
     vertical-align: middle;
     margin: 0 0 10px 0;
     padding: 0 6px;
-    width: 74px;
+    width: 116px;
 }
 
 .daterangepicker .ranges .input-mini:hover {
@@ -3324,7 +3326,7 @@ select.parsley-error {
 }
 
 .daterangepicker .ranges .range_inputs>div:nth-child(2) {
-    padding-left: 11px;
+    padding-left: 0px;
 }
 
 .daterangepicker.opensleft .ranges,
@@ -6415,4 +6417,13 @@ input.fee-name {
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
     line-height: 28px;
+}
+#range {
+    font-size: 13px;
+    padding: 0 5px;
+    height: 30px;
+    border: 1px solid;
+}
+.btn {
+    border-radius: 0px;
 }

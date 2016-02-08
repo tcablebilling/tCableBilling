@@ -19,7 +19,7 @@ class CreateBillingsTable extends Migration
                   ->references('id')->on('clients')
                   ->onDelete('cascade');
             $table->integer('bill_amount');
-            $table->date('month');
+            $table->string('month');
             $table->timestamps();
         });
     }

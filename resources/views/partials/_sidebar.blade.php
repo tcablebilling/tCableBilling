@@ -32,6 +32,7 @@
                 <ul class="nav child_menu" style="display: none">
                     <li><a href="/billings">General Billing</a></li>
                     <li><a href="/payments">Payment History</a></li>
+                    <li><a href="/individual">Individual History</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-male"></i> Clients <span class="fa fa-chevron-down"></span></a>
@@ -40,12 +41,6 @@
                     </li>
                     <li><a href="/clients/create">Add New Client</a>
                     </li>
-                </ul>
-            </li>
-            <li><a><i class="fa fa-file-text"></i> Invoice <span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu" style="display: none">
-                    <li><a href="per_client_invoice.html">Monthly</a></li>
-                    <li><a href="/individual">Individual</a></li>
                 </ul>
             </li>
         </ul>
