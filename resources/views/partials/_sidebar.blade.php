@@ -30,8 +30,8 @@
             </li>
             <li><a><i class="fa fa-flag"></i> Billing <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu" style="display: none">
-                    <li><a href="/billings">General Billing</a></li>
-                    <li><a href="/payments">Payment History</a></li>
+                    <li><a href="/billings">Billings</a></li>
+                    <li><a href="/payments">Payments</a></li>
                     <li><a href="/individual">Individual History</a></li>
                 </ul>
             </li>

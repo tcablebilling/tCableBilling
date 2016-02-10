@@ -10,7 +10,9 @@ use App\Http\Controllers\Controller;
 // Pulling in Auth & Redirect
 use Auth;
 use Redirect;
-
+use PDF;
+use App\Client;
+use App\Billing;
 class HomeController extends Controller
 {
     /**
@@ -26,70 +28,13 @@ class HomeController extends Controller
 
         return Redirect::to('/');
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function billMonthly()
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        // $date = strtotime('+1 month', strtotime(date('Ym').'01'));
+        $date = strtotime(\Input::get('range'));
+        $billings = Billing::where('month', '=', date('Ymd', $date))->get();
+        // $pdf = PDF::loadView('invoices.monthly', compact('billings'));
+        // return $pdf->download('invoice.pdf');
+        return view('invoices.monthly', compact('billings'));
     }
 }

@@ -1,4 +1,4 @@
- @extends('layouts.master')
+@extends('layouts.master')
     @section('content')
         <div class="page-content">
             <div class="clearfix"></div>
@@ -150,11 +150,9 @@
                         </div>
                     </div>
                 </div>
-
                 <br />
                 <br />
                 <br />
-
             </div>
             <script type="text/javascript" charset="utf-8" async defer>
                 jQuery(document).ready(function($) {

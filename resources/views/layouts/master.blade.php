@@ -22,8 +22,12 @@
     <link href="{{ URL::asset('css/datatables/tools/css/dataTables.tableTools.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/select/select2.min.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/custom.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/jquery-ui.min.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/jquery-ui.structure.min.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/jquery-ui.theme.min.css') }}" rel="stylesheet">
 
     <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
+    <script src="{{ URL::asset('js/jquery-ui.js') }}"></script>
 
     <!--[if lt IE 9]>
     <script src="../assets/js/ie8-responsive-file-warning.js"></script>

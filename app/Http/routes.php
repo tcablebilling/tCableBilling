@@ -13,6 +13,7 @@
 // Home URL [Must Be Logged In]
 Route::group(['middleware' => 'auth'], function(){
 	Route::get('/home', array( 'as' => 'home', 'uses' => 'HomeController@index') );
+	Route::get('/print-m', array( 'as' => 'monthbill', 'uses' => 'HomeController@billMonthly') );
 
 	Route::get('/individual', 'BillingsController@individualClient');
 

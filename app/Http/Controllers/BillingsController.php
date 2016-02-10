@@ -66,7 +66,7 @@ class BillingsController extends Controller {
 				$billing->create( $data );
 			}
 		}
-		return \Redirect::to( 'billings' );
+		return \Redirect::to( 'home' );
 	}
 
 	/**
@@ -138,5 +138,7 @@ class BillingsController extends Controller {
 		$client_id = \Input::get( 'client_id' );
 		$billings = Billing::where( 'client_id', $client_id )->orderBy( 'id', 'DESC' )->whereBetween('month', array( $from_month, $to_month))->paginate( 150 );
 		return view('individual_bill', compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' ));
+		// $pdf = PDF::loadView('invoices.client', compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' ));
+		// return $pdf->download('invoice.pdf');
 	}
 }

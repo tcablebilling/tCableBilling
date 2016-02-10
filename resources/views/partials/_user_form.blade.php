@@ -1,7 +1,7 @@
 <span class="section">User Details</span>
 
 <div class="item form-group">
-    {!! Form::label('name', 'User Name', array('class' => 'control-label col-md-3 col-sm-3 col-xs-12'));!!}
+    {!! Form::label('name', 'Full Name', array('class' => 'control-label col-md-3 col-sm-3 col-xs-12'));!!}
     <div class="col-md-6 col-sm-6 col-xs-12">
        {!! Form::text('name', null,['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required', 'placeholder'=>'User name...']);!!}
     </div>
@@ -31,7 +31,7 @@
 <div class="item form-group">
     {!! Form::label('password_confirmation', 'Password Confirmation', array('class' => 'control-label col-md-3 col-sm-3 col-xs-12'));!!}
     <div class="col-md-6 col-sm-6 col-xs-12">
-       {!! Form::password('password_confirmation',['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required', 'placeholder'=>'Enter password...']);!!}
+       {!! Form::password('password_confirmation',['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required', 'placeholder'=>'Confirm password...']);!!}
     </div>
 </div>
 
