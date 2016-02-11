@@ -69,13 +69,7 @@
 				font-size:2.4em;
 				line-height:1.4em;
 				margin:0 0 20px;
-				background:repeating-linear-gradient(
-				    45deg,
-				    transparent,
-				    transparent 10px,
-				    #ccc 10px,
-				    #ccc 20px
-				);
+				background: #ddd;
 			}
 			#project {
 				float:left;
