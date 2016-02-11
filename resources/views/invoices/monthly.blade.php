@@ -69,7 +69,7 @@
 				font-size:2.4em;
 				line-height:1.4em;
 				margin:0 0 20px;
-				background: #ddd;
+				background: #F5F5F5;
 			}
 			#project {
 				float:left;
@@ -142,7 +142,7 @@
 			    <div id="logo">
 			        <img src="invoice/logo.png">
 			    </div>
-			    <h1>Billing ID:{{sprintf("%'.05d\n", $billing->id)}}</h1>
+			    <h1>BILL ID:{{sprintf("%'.05d\n", $billing->id)}}</h1>
 			    <div id="company" class="clearfix">
 			        <div>Company Name</div>
 			        <div>455 Foggy Heights,<br/> AZ 85004, US</div>
@@ -151,10 +151,12 @@
 			    </div>
 			    <div id="project">
 			        <!-- <div><span>PROJECT</span> Website development</div> -->
+			        <div><span>ID</span> {{$billing->clientDetails->client_id}}</div>
 			        <div><span>CLIENT</span> {{$billing->clientDetails->name}}</div>
 			        <div><span>ADDRESS</span> {{$billing->clientDetails->address}}</div>
+			        <div><span>PHONE</span> {{$billing->clientDetails->phone_no_1}}</div>
 			        <div><span>DATE</span> {{date('F j, Y')}}</div>
-			        <div><span>DATE</span> {{date('F Y', strtotime($billing->month))}}</div>
+			        <div><span>BILL FOR</span> {{date('F Y', strtotime($billing->month))}}</div>
 			    </div>
 			</header>
 			<main>

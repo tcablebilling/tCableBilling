@@ -68,9 +68,33 @@
                         </div>
                         <div class="col-md-4 packages-buttons">
                             {!! Form::open(['url'=>'/billings','class'=>'form-horizontal form-label-left pull-right']) !!}
-                                <button id="send" type="submit" class="btn btn-success btn-sm package-btn">Generate Next Month Bills</button>
+	                            @if( $b != date('Y-m-d') )
+	                                <button id="send" type="submit" class="btn btn-success btn-sm package-btn">Generate Next Month Bills</button>
+	                            @else
+	                            	<button id="send" type="submit" class="btn btn-success btn-sm package-btn" disabled>Generate Next Month Bills</button>
+	                            @endif
                             {!! Form::close()!!}
                         </div>
+                    </div>
+                </div>
+                <div class="x_content">
+                    <span class="section">Per Client Custom Range Bill Generation And Print</span>
+                    <div class="row">
+                    {!! Form::open(['method'=>'GET', 'url'=>'print-custom','class'=>'form-horizontal']) !!}
+                        <div class="row">
+                            <div class="col-md-11 item form-group">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    {!! Form::select('client_id', $clients, null,['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required', 'placeholder'=>'Select client...']);!!}
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    {!! Form::text('month_range', null, [ 'id'=>'month_range', 'class'=>'form-control col-md-7 col-xs-12', 'required'=>'required', 'readonly'=>'readonly', 'placeholder'=>'From...']);!!}
+                                </div>
+                            </div>
+                            <div class="col-md-1 packages-buttons">
+                                <button id="send" type="submit" class="btn btn-success btn-sm package-btn pull-right">Print</button>
+                            </div>
+                        </div>
+                    {!! Form::close()!!}
                     </div>
                 </div>
             </div>
@@ -92,6 +116,12 @@
                         var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
                         thisCalendar.datepicker('setDate', new Date(year, month, 1));
                     });
+                });
+            });
+            $(function() {
+                $('#month_range').daterangepicker({
+                    opens:'left',
+                    format:'MMMM D, YY'
                 });
             });
         </script>

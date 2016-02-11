@@ -22,11 +22,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if ( Auth::check() ) {
-            return view('home');
+        $clients   = [ ];
+        foreach ( Client::all() as $client ) {
+            $clients[ $client->id ] = $client->client_id . ' ' . $client->name;
         }
-
-        return Redirect::to('/');
+        $button = Billing::orderBy( 'id', 'DESC' )->first();
+        $b = date('Y-m-d', strtotime($button['created_at']));
+        return view('home', compact('clients', 'b'));
     }
     public function billMonthly()
     {
@@ -34,7 +36,32 @@ class HomeController extends Controller
         $date = strtotime(\Input::get('range'));
         $billings = Billing::where('month', '=', date('Ymd', $date))->get();
         // $pdf = PDF::loadView('invoices.monthly', compact('billings'));
-        // return $pdf->download('invoice.pdf');
+        // return $pdf->download(date('Y-m-d').'.pdf');
         return view('invoices.monthly', compact('billings'));
+    }
+    public function clientCustom()
+    {
+        $input = explode('-', \Input::get( 'month_range' ), 2);
+        $input_fm = null;
+        $input_tm = null;
+        if (!empty($input)) {
+            $input_fm = $input[0];
+            if (array_key_exists( 1, $input)) {
+                $input_tm = $input[1];
+            }
+        }
+        $from_month = date('Ym', strtotime( $input_fm ));
+        $to_month = date( 'Ymd', strtotime( date( 'Y-m-d', strtotime( $input_tm ) ) ) );
+        $client_id = null;
+        $clients   = [ ];
+        foreach ( Client::all() as $client ) {
+            $clients[ $client->id ] = $client->client_id . ' ' . $client->name;
+        }
+        $client_id = \Input::get( 'client_id' );
+        $billings = Billing::where( 'client_id', $client_id )->orderBy( 'id', 'DESC' )->whereBetween('month', array( $from_month, $to_month))->paginate( 150 );
+        return view('invoices.client', compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' ));
+        // $pdf = PDF::loadView('invoices.client', compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' ));
+        // $name = date('Y-m-d') . '-' . $client_id;
+        // return $pdf->download( $name . '.pdf' );
     }
 }
