@@ -1964,7 +1964,7 @@ span.right {
 }
 
 .tile_stats_count .right {
-    padding-left: 10px;
+    padding-left: 0px;
     height: 100%;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -6435,4 +6435,7 @@ input.fee-name {
 }
 .package-btn.pull-right {
     min-width: 70px;
+}
+.col-md-11.item.form-group > .col-md-6.col-sm-6.col-xs-12 {
+    padding-left: 0;
 }

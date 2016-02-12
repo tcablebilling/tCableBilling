@@ -13,6 +13,7 @@ use Redirect;
 use PDF;
 use App\Client;
 use App\Billing;
+use App\Payment;
 class HomeController extends Controller
 {
     /**
@@ -23,12 +24,24 @@ class HomeController extends Controller
     public function index()
     {
         $clients   = [ ];
+        $client_count = Client::count();
+        $next_mon_bill = Billing::where('month','=', date( 'Ymd', strtotime( "+1 month", strtotime( date( 'Ym' ).'01' ) ) ))->sum('bill_amount');
+        $this_mon_bill = Billing::where('month','=', date( 'Ym').'01')->sum('bill_amount');
+        $this_mon_payment = Payment::whereYear('date','=', date( 'Y'))->whereMonth('date','=', date('m'))->sum('paid_amount');
         foreach ( Client::all() as $client ) {
             $clients[ $client->id ] = $client->client_id . ' ' . $client->name;
         }
         $button = Billing::orderBy( 'id', 'DESC' )->first();
-        $b = date('Y-m-d', strtotime($button['created_at']));
-        return view('home', compact('clients', 'b'));
+        $b = date('Ym', strtotime($button['created_at']));
+        return view('home', compact(
+        	'clients',
+        	'b',
+        	'client_count',
+        	'next_mon_bill',
+        	'this_mon_bill',
+        	'this_mon_payment'
+        	)
+        );
     }
     public function billMonthly()
     {
