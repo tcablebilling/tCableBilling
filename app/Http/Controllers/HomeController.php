@@ -31,7 +31,7 @@ class HomeController extends Controller
         foreach ( Client::all() as $client ) {
             $clients[ $client->id ] = $client->client_id . ' ' . $client->name;
         }
-        $button = Billing::orderBy( 'id', 'DESC' )->first();
+        $button = Billing::orderBy( 'created_at', 'DESC' )->first();
         $b = date('Ym', strtotime($button['created_at']));
         return view('home', compact(
         	'clients',

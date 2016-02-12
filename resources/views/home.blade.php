@@ -55,7 +55,7 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_content">
-                    <span class="section">Per Client Custom Range Bill Generation And Print</span>
+                    <span class="section">Client Based Custom Range Bill Generation And Print</span>
                     <div class="row">
                     {!! Form::open(['method'=>'GET', 'url'=>'print-custom','class'=>'form-horizontal']) !!}
                         <div class="col-md-11 item form-group">
@@ -84,13 +84,11 @@
                             {!! Form::close()!!}
                         </div>
                         <div class="col-md-4 packages-buttons">
-                            {!! Form::open(['url'=>'/billings','class'=>'form-horizontal form-label-left pull-right']) !!}
-                                @if( $b === date('Ym') )
-                                    <button id="send" type="submit" class="btn btn-success btn-sm package-btn" disabled>Generate Next Month Bills</button>
-                                @else
+                            @if( $b != date('Ym') )
+                                {!! Form::open(['url'=>'/billings','class'=>'form-horizontal form-label-left pull-right']) !!}
                                 	<button id="send" type="submit" class="btn btn-success btn-sm package-btn">Generate Next Month Bills</button>
-                                @endif
-                            {!! Form::close()!!}
+                                {!! Form::close()!!}
+                            @endif
                         </div>
                     </div>
                 </div>
