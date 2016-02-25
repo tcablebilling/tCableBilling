@@ -30,16 +30,16 @@
             </li>
             <li><a><i class="fa fa-flag"></i> Billing <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu" style="display: none">
-                    <li><a href="/billings">Billings</a></li>
-                    <li><a href="/payments">Payments</a></li>
-                    <li><a href="/individual">Individual History</a></li>
+                    <li><a href="{{ URL::route('billings.index') }}">Billings</a></li>
+                    <li><a href="{{ URL::route('payments.index') }}">Payments</a></li>
+                    <li><a href="{{ URL::route('individual') }}">Individual History</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-male"></i> Clients <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu" style="display: none">
-                    <li><a href="/clients">All Clients</a>
+                    <li><a href="{{ URL::route('clients.index') }}">All Clients</a>
                     </li>
-                    <li><a href="/clients/create">Add New Client</a>
+                    <li><a href="{{ URL::route('clients.create') }}">Add New Client</a>
                     </li>
                 </ul>
             </li>
@@ -50,9 +50,9 @@
         <ul class="nav side-menu">
             <li><a><i class="fa fa-area-chart"></i> Options <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu" style="display: none">
-                    <li><a href="/packages">Channel Packages</a>
+                    <li><a href="{{ URL::route('packages.index') }}">Channel Packages</a>
                     </li>
-                    <li><a href="/areas">Areas</a>
+                    <li><a href="{{ URL::route('areas.index') }}">Areas</a>
                     </li>
                 </ul>
             </li>

@@ -57,7 +57,7 @@
                                                 <td class=" ">{{ $bill_cum - $paid_cum }} &#2547; </td>
                                                 <td class=" last">
                                                     {!! Form::open(array('route' => array('billings.destroy', $billing->id), 'method' => 'delete')) !!}
-                                                        <button type="submit" onclick="return confirm('Are you sure you want to delete the billing?')" class="btn btn-danger btn-sm">Delete</button>
+                                                        <button id="delete" type="submit" onclick="return confirm('Are you sure you want to delete the billing?')" class="btn btn-danger btn-sm">Delete</button>
                                                     {!! Form::close() !!}
                                                 </td>
                                             </tr>
@@ -79,7 +79,7 @@
                                                 <td class=" ">{{ $bill_cum - $paid_cum }} &#2547; </td>
                                                 <td class=" last">
                                                     {!! Form::open(array('route' => array('billings.destroy', $billing->id), 'method' => 'delete')) !!}
-                                                        <button type="submit" onclick="return confirm('Are you sure you want to delete the billing?')" class="btn btn-danger btn-sm">Delete</button>
+                                                        <button id="delete" type="submit" onclick="return confirm('Are you sure you want to delete the billing?')" class="btn btn-danger btn-sm">Delete</button>
                                                     {!! Form::close() !!}
                                                 </td>
                                             </tr>
@@ -115,6 +115,27 @@
                         "bPaginate": false,
                         // 'iDisplayLength': 12,
                         // "sPaginationType": "full_numbers"
+                    });
+                });
+                $("#delete").click(function(event) {
+                    swal({
+                        title: "Are you sure?",
+                        text: "You will not be able to recover this imaginary file!",
+                        type: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: "Yes, delete it!",
+                        cancelButtonText: "No, cancel plx!",
+                        closeOnConfirm: false,
+                        closeOnCancel: false
+                    }, function(isConfirm){
+                        if (isConfirm) {
+                            swal("Deleted!", "Your imaginary file has been deleted.", "success");
+                        } else {
+                            swal("Cancelled", "Your imaginary file is safe :)",
+                                "error"
+                            );
+                        }
                     });
                 });
             </script>
