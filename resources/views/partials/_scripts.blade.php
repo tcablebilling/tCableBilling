@@ -9,6 +9,7 @@
 <!-- icheck -->
 <script src="{{ URL::asset('js/icheck/icheck.min.js') }}"></script>
 
+<script src="{{ URL::asset('js/sweetalert.min.js') }}"></script>
 <script src="{{ URL::asset('js/custom.js') }}"></script>
 
 

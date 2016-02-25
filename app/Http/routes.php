@@ -16,7 +16,7 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/print-m', array( 'as' => 'print-m', 'uses' => 'HomeController@billMonthly') );
 	Route::get('/print-custom', array( 'as' => 'print-custom', 'uses' => 'HomeController@clientCustom') );
 
-	Route::get('/individual', 'BillingsController@individualClient');
+	Route::get('/individual', [ 'as' => 'individual', 'uses' => 'BillingsController@individualClient'] );
 
 	Route::resource( '/users', 'UsersController' );
 	Route::resource( '/clients', 'ClientsController' );
@@ -26,6 +26,6 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::resource( '/billings', 'BillingsController');
 });
 // Authentication routes...
-Route::get('/', 'Auth\AuthController@getLogin');
-Route::post('/', 'Auth\AuthController@postLogin');
+Route::get('/', [ 'as' => 'getLogin', 'uses' => 'Auth\AuthController@getLogin']);
+Route::post('/', [ 'as' => 'postLogin', 'uses' => 'Auth\AuthController@postLogin']);
 Route::get('logout', 'Auth\AuthController@getLogout');

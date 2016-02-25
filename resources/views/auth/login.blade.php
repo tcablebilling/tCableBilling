@@ -43,8 +43,7 @@
         <div id="wrapper">
             <div id="login" class="animate form">
                 <section class="login_content">
-                    <form method="POST" action="/">
-                        {!! csrf_field() !!}
+                    {!! Form::open(['method'=>'POST', 'route'=>'postLogin']) !!}
                         <h1>Please Login</h1>
                         <div>
                             <input type="text" class="form-control" placeholder="Username" name="username" required="" />
@@ -67,7 +66,7 @@
                                 <p>©2015 All Rights Reserved.</p>
                             </div>
                         </div>
-                    </form>
+                    {!! Form::close()!!}
                     <!-- form -->
                     @if(count($errors)>0)
                         <div class="alert alert-danger login-error">
