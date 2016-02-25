@@ -26,6 +26,7 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::resource( '/billings', 'BillingsController');
 });
 // Authentication routes...
-Route::get('/', [ 'as' => 'getLogin', 'uses' => 'Auth\AuthController@getLogin']);
-Route::post('/', [ 'as' => 'postLogin', 'uses' => 'Auth\AuthController@postLogin']);
-Route::get('logout', 'Auth\AuthController@getLogout');
+Route::get( '/', 'HomeController@rootPath' );
+Route::get( '/login', [ 'as' => 'getLogin', 'uses' => 'Auth\AuthController@getLogin' ] );
+Route::post( '/login', [ 'as' => 'postLogin', 'uses' => 'Auth\AuthController@postLogin' ] );
+Route::get( 'logout', 'Auth\AuthController@getLogout' );

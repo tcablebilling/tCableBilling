@@ -77,4 +77,12 @@ class HomeController extends Controller
         // $name = date('Y-m-d') . '-' . $client_id;
         // return $pdf->download( $name . '.pdf' );
     }
+
+    public function rootPath()
+    {
+        if( Auth::check() )
+            return Redirect::to( 'home' );
+        else
+            return view( 'welcome' );
+    }
 }
