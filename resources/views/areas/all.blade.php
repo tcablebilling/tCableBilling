@@ -11,7 +11,7 @@
 
                         <div class="x_content">
                             <div class="areas-buttons pull-right">
-                                <a href="/areas/create" title="" class="btn btn-success btn-sm area-btn">
+                                <a href="{{ URL::route('areas.create') }}" title="" class="btn btn-success btn-sm area-btn">
                                     Add New Area
                                 </a>
                             </div>

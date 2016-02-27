@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laravel</title>
+        <title>tCableBilling</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
@@ -33,7 +33,7 @@
             }
 
             .title {
-                font-size: 190px;
+                font-size: 180px;
                 padding-bottom: 60px;
                 margin-top: 30px;
                 font-weight: 900;
@@ -67,7 +67,7 @@
             <div class="content">
                 <div class="title">tCableBilling<span id="trade-mark">&reg;</span></div>
                 <a id="enter" href="{{ URL::route('home') }}">Login</a>
-                <p id="copyright">&copy; 2015. All rights reserved.</p>
+                <p id="copyright">&copy; {{ date('Y') }}  All rights reserved.</p>
             </div>
         </div>
     </body>

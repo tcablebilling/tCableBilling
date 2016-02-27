@@ -11,7 +11,7 @@
 
                         <div class="x_content">
                             <div class="packages-buttons pull-right">
-                                <a href="/packages/create" title="" class="btn btn-success btn-sm package-btn">
+                                <a href="{{ URL::route('packages.create') }}" title="" class="btn btn-success btn-sm package-btn">
                                     Add New Package
                                 </a>
                             </div>
