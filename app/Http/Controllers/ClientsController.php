@@ -43,16 +43,17 @@ class ClientsController extends Controller
          * Getting all area names and ids in one array
          */
         $areas = Area::all();
+        $max_id = Client::max('id') + 1;
         $area_names = [];
         $area_codes = [];
         foreach ($areas as $area) {
             $area_names[$area->id] = $area->name;
         }
         foreach ($areas as $area) {
-            $area_codes[$area->id] = $area->code;
+            $area_codes[$area->id] = $area->code . '-' . sprintf("%'.03d", $max_id);
         }
-        $max_id = Client::max('id') + 1;
-        return view( 'clients.create', compact( 'package_names', 'area_names', 'area_codes', 'max_id' ) );
+        $area_codes = json_encode($area_codes);
+        return view( 'clients.create', compact( 'package_names', 'area_names', 'area_codes' ) );
     }
 
     /**
