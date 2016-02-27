@@ -6439,3 +6439,7 @@ input.fee-name {
 .col-md-11.item.form-group > .col-md-6.col-sm-6.col-xs-12 {
     padding-left: 0;
 }
+#reg {
+    font-size: 13px;
+    vertical-align: top;
+}

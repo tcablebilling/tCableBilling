@@ -21,7 +21,7 @@
                                     {!! Form::close()!!}
                                 </div>
                                 <div class="col-md-4 packages-buttons">
-                                    <a href="/payments/create" title="" class="btn btn-success btn-sm package-btn pull-right">
+                                    <a href="{{ URL::route('payments.create') }}" title="" class="btn btn-success btn-sm package-btn pull-right">
                                         Add New Payment
                                     </a>
                                 </div>
