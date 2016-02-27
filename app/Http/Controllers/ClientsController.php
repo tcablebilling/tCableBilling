@@ -44,11 +44,15 @@ class ClientsController extends Controller
          */
         $areas = Area::all();
         $area_names = [];
+        $area_codes = [];
         foreach ($areas as $area) {
             $area_names[$area->id] = $area->name;
         }
-
-        return view('clients.create', compact('package_names', 'area_names'));
+        foreach ($areas as $area) {
+            $area_codes[$area->id] = $area->code;
+        }
+        $max_id = Client::max('id') + 1;
+        return view( 'clients.create', compact( 'package_names', 'area_names', 'area_codes', 'max_id' ) );
     }
 
     /**
