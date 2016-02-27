@@ -23,9 +23,15 @@
             </div>
             <script type="text/javascript">
                 jQuery(document).ready(function($) {
+                	var pad = function (str, max) {
+						str = str.toString();
+						return str.length < max ? pad('0' + str, max) : str;
+					}
+                	var area_codes = {!! json_encode( $area_codes ) !!};
+                	var max_id = {!! $max_id !!};
                     $('#area').change(function() {
                         var area = $('#area').val();
-                        console.log(area);
+                        $('#client_id').val( area_codes[area] + '-' + pad( max_id, '3' ) );
                     });
                 });
             </script>
