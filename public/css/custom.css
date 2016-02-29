@@ -7,7 +7,7 @@ body.nav-sm .container.body .left_col {
 }
 
 body.nav-sm .container.body .right_col {
-    padding: 10px 20px;
+    padding: 10px 20px 0px 20px;
     margin-left: 70px;
     z-index: 2;
 }
@@ -885,16 +885,13 @@ li.current-page a {
 
 footer {
     background: #EDEDED;
-    padding: 5px 20px 0;
-    height: 45px;
-    margin: 0 -17px;
-    bottom: 0;
-    right: 37px;
-    position: fixed;
-    width: 1079px;
+    padding: 10px 15px;
+    height: 53px;
+    position: relative;
     border-top: 1px solid #999;
     border-left: 1px solid #999;
     border-right: 1px solid #999;
+    margin-top: 0px;
 }
 
 
@@ -1061,7 +1058,12 @@ h2 {
 .accordion .panel:hover {
     background: #F2F5F7;
 }
-
+.content {
+    margin-top: 20px;
+}
+.content > .x_panel {
+    min-height: 55vh !important;
+}
 .x_panel {
     position: relative;
     width: 100%;
@@ -1079,6 +1081,7 @@ h2 {
     -webkit-transition: all .2s ease;
     -ms-transition: all .2s ease;
     transition: all .2s ease;
+    min-height: 81vh;
 }
 
 .x_title {
@@ -4800,7 +4803,7 @@ ul.project_files li a i {
  * bootstrap-vertical-tabs - v1.2.1
  * https://dbtek.github.io/bootstrap-vertical-tabs
  * 2014-11-07
- * Copyright (c) 2014 İsmail Demirbilek
+ * Copyright (c) 2014 Ä°smail Demirbilek
  * License: MIT
  */
 
@@ -5422,7 +5425,7 @@ ul.project_files li a i {
 }
 /* *********  /ecommerce  **************************** */
 /* *********  progressbar  **************************** */
-/*! bootstrap-progressbar v0.8.4 | Copyright (c) 2012-2014 Stephan Groß | MIT license | http://www.minddust.com */
+/*! bootstrap-progressbar v0.8.4 | Copyright (c) 2012-2014 Stephan GroÃŸ | MIT license | http://www.minddust.com */
 
 .progress_summary .progress {
     margin: 5px 0 12px !important;
@@ -6442,4 +6445,8 @@ input.fee-name {
 #reg {
     font-size: 13px;
     vertical-align: top;
+}
+
+.table {
+    width: 100% !important;
 }
