@@ -13,6 +13,7 @@
         table td,
         table th {
             text-align:left;
+            text-transform: uppercase;
         }
         #company div,
         #project div,
@@ -97,7 +98,7 @@
             background:#F5F5F5;
         }
         table th {
-            padding:5px 10px;
+            padding:5px 5px;
             border-bottom:1px solid #C1CED9;
             font-weight: bolder;
         }
@@ -106,7 +107,7 @@
             text-align:left;
         }
         table td {
-            padding:10px;
+            padding:10px 5px;
             text-align:left;
         }
         table td.desc,

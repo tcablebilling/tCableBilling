@@ -62,7 +62,7 @@
         <div class="right_col" role="main">
         @yield('content')
             <!-- footer content -->
-            <footer>
+            <footer class="footer">
                 <div class="">
                     <p class="pull-right"><span class="lead">tCableBilling<span id="reg">&reg;</span></span> is an automated cable network billing system. Developed by <a>Khan Mohammad Rashedun-Naby</a>. |
                         <span class="lead"> <i class="fa fa-paw"></i> tCableBilling<span id="reg">&reg;</span></span>

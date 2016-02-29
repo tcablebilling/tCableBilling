@@ -48,9 +48,9 @@ class HomeController extends Controller
         // $date = strtotime('+1 month', strtotime(date('Ym').'01'));
         $date = strtotime(\Input::get('range'));
         $billings = Billing::where('month', '=', date('Ymd', $date))->get();
-        // $pdf = PDF::loadView('invoices.monthly', compact('billings'));
-        // return $pdf->download(date('Y-m-d').'.pdf');
-        return view('invoices.monthly', compact('billings'));
+        $pdf = PDF::loadView('invoices.monthly', compact('billings'));
+        return $pdf->download(date('Y-m-d').'.pdf');
+        // return view('invoices.monthly', compact('billings'));
     }
     public function clientCustom()
     {
@@ -72,10 +72,10 @@ class HomeController extends Controller
         }
         $client_id = \Input::get( 'client_id' );
         $billings = Billing::where( 'client_id', $client_id )->orderBy( 'id', 'DESC' )->whereBetween('month', array( $from_month, $to_month))->paginate( 150 );
-        return view('invoices.client', compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' ));
-        // $pdf = PDF::loadView('invoices.client', compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' ));
-        // $name = date('Y-m-d') . '-' . $client_id;
-        // return $pdf->download( $name . '.pdf' );
+        // return view('invoices.client', compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' ));
+        $pdf = PDF::loadView('invoices.client', compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' ));
+        $name = date('Y-m-d') . '-' . $client_id;
+        return $pdf->download( $name . '.pdf' );
     }
 
     public function rootPath()
