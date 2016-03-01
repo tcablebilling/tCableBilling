@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>{{ $billings->first()->clientDetails->client_id }}</title>
+    <title>{{ $billings[0]->first()->clientDetails->client_id }}</title>
     <style type="text/css" media="screen">
         #logo {
             text-align:center;
@@ -153,47 +153,54 @@
         <div><a href="mailto:company@example.com">company@example.com</a></div>
     </div>
     <div id="project">
-        <div><span>ID</span>{{ $billings->first()->clientDetails->client_id }}</div>
-        <div><span>CLIENT</span>{{ $billings->first()->clientDetails->name }}</div>
-        <div><span>ADDRESS</span>{{ $billings->first()->clientDetails->address }}</div>
-        <div><span>PHONE</span>{{ $billings->first()->clientDetails->phone_no_1 }}</div>
+        <div><span>ID</span>{{ $billings[0]->first()->clientDetails->client_id }}</div>
+        <div><span>CLIENT</span>{{ $billings[0]->first()->clientDetails->name }}</div>
+        <div><span>ADDRESS</span>{{ $billings[0]->first()->clientDetails->address }}</div>
+        <div><span>PHONE</span>{{ $billings[0]->first()->clientDetails->phone_no_1 }}</div>
         <div><span>DATE</span>{{date('F j, Y')}}</div>
     </div>
 </header>
-<main>
-    <table>
-        <thead>
-        <tr>
-            <th class="service">Bill ID</th>
-            <th>Month</th>
-            <th class="desc">Bill</th>
-            <th class="desc">Total Bill</th>
-            <th>Paid</th>
-            <th>Total Paid</th>
-            <th>Due</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach($billings as $billing)
+<!-- This $i variable is very important. Don't delete it.-->
+{{--*/ $i = 0 /*--}}
+@foreach( $billings as $chunked_billings)
+    <!-- This $i variable is very important. Don't delete it.-->
+    {{--*/ $i++ /*--}}
+    <main>
+        <table>
+            <thead>
             <tr>
-                <td class="service">{{sprintf("%'.05d\n", $billing->id)}}</td>
-                <td class="desc">{{date('F Y', strtotime($billing->month))}}</td>
-                <td class="unit">{{$billing->bill_amount}} BDT</td>
-                <td class="qty">{{ $bill_cum = $billing->billCumulative->filter(function ($item) use ($billing) { return $item->id <= $billing->id; })->sum('bill_amount')}} BDT</td>
-                <td class="total">{{ $billing->clientPayments->sum('paid_amount') }} BDT</td>
-                <td class="total">{{ $paid_cum = $billing->paidCumulative->filter(function ($item) use ($billing) { return $item->billing_id <= $billing->id; })->sum('paid_amount') }} BDT</td>
-                <td class="total">{{ $bill_cum - $paid_cum }} BDT</td>
+                <th class="service">Bill ID</th>
+                <th>Month</th>
+                <th class="desc">Bill</th>
+                <th class="desc">Total Bill</th>
+                <th>Paid</th>
+                <th>Total Paid</th>
+                <th>Due</th>
             </tr>
-        @endforeach
-        </tbody>
-    </table>
-    <div id="notices">
-        <div>NOTICE:</div>
-        <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
-    </div>
-</main>
-<footer>
-    Invoice was created on a computer and is valid without the signature and seal.
-</footer>
+            </thead>
+            <tbody>
+            @foreach($chunked_billings as $billing)
+                <tr>
+                    <td class="service">{{sprintf("%'.05d\n", $billing->id)}}</td>
+                    <td class="desc">{{date('F Y', strtotime($billing->month))}}</td>
+                    <td class="unit">{{$billing->bill_amount}} BDT</td>
+                    <td class="qty">{{ $bill_cum = $billing->billCumulative->filter(function ($item) use ($billing) { return $item->id <= $billing->id; })->sum('bill_amount')}} BDT</td>
+                    <td class="total">{{ $billing->clientPayments->sum('paid_amount') }} BDT</td>
+                    <td class="total">{{ $paid_cum = $billing->paidCumulative->filter(function ($item) use ($billing) { return $item->billing_id <= $billing->id; })->sum('paid_amount') }} BDT</td>
+                    <td class="total">{{ $bill_cum - $paid_cum }} BDT</td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+        <div id="notices">
+            <div>NOTICE:</div>
+            <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
+        </div>
+    </main>
+    <footer>Copyright &copy; {{date('Y')}} All Rights Reserved. tCableBilling, an automated billing system.</footer>
+    @if( $i != count($billings))
+        <div class="page-break"></div>
+    @endif
+@endforeach
 </body>
 </html>
