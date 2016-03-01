@@ -90,9 +90,9 @@
         <div class="col-md-6 col-sm-6 col-xs-12">
             {!! Form::select('client_status',
                 [
-                    'active'    =>'Active',
-                    'suspended' =>'Suspended',
-                    'deactive'  =>'Deactive'
+                    'Active'    =>'Active',
+                    'Suspended' =>'Suspended',
+                    'Deactive'  =>'Deactive'
                 ], null, ['class'=>'form-control col-md-7 col-xs-12', 'placeholder' => 'Select Client Status...']);
             !!}
         </div>
