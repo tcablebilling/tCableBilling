@@ -14,6 +14,8 @@ use PDF;
 use App\Client;
 use App\Billing;
 use App\Payment;
+use App\Employee;
+
 class HomeController extends Controller
 {
     /**
@@ -28,6 +30,7 @@ class HomeController extends Controller
         $next_mon_bill = Billing::where('month','=', date( 'Ymd', strtotime( "+1 month", strtotime( date( 'Ym' ).'01' ) ) ))->sum('bill_amount');
         $this_mon_bill = Billing::where('month','=', date( 'Ym').'01')->sum('bill_amount');
         $this_mon_payment = Payment::whereYear('date','=', date( 'Y'))->whereMonth('date','=', date('m'))->sum('paid_amount');
+        $employee_salary = Employee::all()->sum('salary');
         foreach ( Client::all() as $client ) {
             $clients[ $client->id ] = $client->client_id . ' ' . $client->name;
         }
@@ -39,7 +42,8 @@ class HomeController extends Controller
         	'client_count',
         	'next_mon_bill',
         	'this_mon_bill',
-        	'this_mon_payment'
+        	'this_mon_payment',
+            'employee_salary'
         	)
         );
     }
