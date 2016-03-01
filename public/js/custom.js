@@ -52,10 +52,11 @@ $(function () {
 
 /* Sidebar Menu active class */
 $(function () {
-    var url = window.location;
-    $('#sidebar-menu a[href="' + url + '"]').parent('li').addClass('current-page');
+    var getUrl = window.location;
+    var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+    $('#sidebar-menu a[href="' + baseUrl + '"]').parent('li').addClass('current-page');
     $('#sidebar-menu a').filter(function () {
-        return this.href == url;
+        return this.href == baseUrl;
     }).parent('li').addClass('current-page').parent('ul').slideDown().parent().addClass('active');
 });
 
