@@ -27,7 +27,7 @@
                                 <thead>
                                 <tr class="headings">
                                     <th>
-                                        <input type="checkbox" class="tableflat">
+                                        <input type="checkbox" class="tableflat" disabled readonly>
                                     </th>
                                     <th>ID </th>
                                     <th>Client Details </th>
@@ -45,7 +45,7 @@
                                         @if ($billing->id % 2 == 0)
                                             <tr class="even pointer">
                                                 <td class="a-center ">
-                                                    <input type="checkbox" class="tableflat">
+                                                    <input type="checkbox" class="tableflat" disabled readonly>
                                                 </td>
                                                 <td class=" ">{{sprintf("%'.05d\n", $billing->id)}}</td>
                                                 <td class=" ">
@@ -89,7 +89,7 @@
                                         @else
                                             <tr class="odd pointer">
                                                 <td class="a-center ">
-                                                    <input type="checkbox" class="tableflat">
+                                                    <input type="checkbox" class="tableflat" disabled readonly>
                                                 </td>
                                                 <td class=" ">{{sprintf("%'.05d\n", $billing->id)}}</td>
                                                 <td class=" ">
