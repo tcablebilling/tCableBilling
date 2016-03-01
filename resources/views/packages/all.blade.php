@@ -19,7 +19,7 @@
                                 <thead>
                                 <tr class="headings">
                                     <th>
-                                        <input type="checkbox" class="tableflat">
+                                        <input type="checkbox" class="tableflat" disabled readonly>
                                     </th>
                                     <th>Package Name</th>
                                     <th>Fee</th>
@@ -33,7 +33,7 @@
                                     @if ($package->id % 2 == 0)
                                         <tr class="even pointer">
                                             <td class="a-center ">
-                                                <input type="checkbox" class="tableflat">
+                                                <input type="checkbox" class="tableflat" disabled readonly>
                                             </td>
                                             <td class=" ">{{$package->name}} </td>
                                             <td class=" ">{{$package->fee}} Tk.</td>
@@ -47,7 +47,7 @@
                                     @else
                                         <tr class="odd pointer">
                                             <td class="a-center ">
-                                                <input type="checkbox" class="tableflat">
+                                                <input type="checkbox" class="tableflat" disabled readonly>
                                             </td>
                                             <td class=" ">{{$package->name}} </td>
                                             <td class=" ">{{$package->fee}} Tk.</td>
