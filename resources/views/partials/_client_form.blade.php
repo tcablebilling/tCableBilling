@@ -76,7 +76,7 @@
             {!! Form::select('address_proof',
                 [
                     'passport'          =>'Passport',
-                    'voter_id'          =>'voter_id',
+                    'voter_id'          =>'Voter ID',
                     'driving_licence'   =>'Driving Licence',
                     'gas_bill'          =>'Gas Bill',
                     'electricity_bill'  =>'Electricity Bill'
