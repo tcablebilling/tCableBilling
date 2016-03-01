@@ -75,7 +75,8 @@ class HomeController extends Controller
             $clients[ $client->id ] = $client->client_id . ' ' . $client->name;
         }
         $client_id = \Input::get( 'client_id' );
-        $billings = Billing::where( 'client_id', $client_id )->orderBy( 'id', 'DESC' )->whereBetween('month', array( $from_month, $to_month))->paginate( 150 );
+        $billings_all = Billing::where( 'client_id', $client_id )->orderBy( 'id', 'DESC' )->whereBetween('month', array( $from_month, $to_month))->get();
+        $billings = $billings_all->chunk(14);
         // return view('invoices.client', compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' ));
         $pdf = PDF::loadView('invoices.client', compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' ));
         $name = date('Y-m-d') . '-' . $client_id;
