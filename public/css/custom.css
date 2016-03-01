@@ -6450,3 +6450,7 @@ input.fee-name {
 .table {
     width: 100% !important;
 }
+#bottom-copyright {
+    margin-bottom: 0;
+    margin-top: 5px;
+}
