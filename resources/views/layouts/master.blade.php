@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Cable TV Network Accounting</title>
+    <title>tCableBilling</title>
 
     <!-- Bootstrap core CSS -->
 
@@ -64,8 +64,9 @@
             <!-- footer content -->
             <footer class="footer">
                 <div class="">
-                    <p class="pull-right"><span class="lead">tCableBilling<span id="reg">&reg;</span></span> is an automated cable network billing system. Developed by <a>Khan Mohammad Rashedun-Naby</a>. |
-                        <span class="lead"> <i class="fa fa-paw"></i> tCableBilling<span id="reg">&reg;</span></span>
+                    <p id="bottom-copyright" class="pull-left">©{{date('Y')}} All Rights Reserved.</p>
+                    <p class="pull-right"><span class="lead"><i class="fa fa-globe"></i> tCableBilling<span id="reg">&reg;</span></span> is an automated cable network billing system. Developed by <a>Khan Mohammad Rashedun-Naby</a>. |
+                        <span class="lead"> <i class="fa fa-globe"></i> tCableBilling<span id="reg">&reg;</span></span>
                     </p>
                 </div>
                 <div class="clearfix"></div>

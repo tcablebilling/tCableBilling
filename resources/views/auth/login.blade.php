@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Cable TV Accounting !</title>
+    <title>tCableBilling !</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset("/css/bootstrap.min.css") }}" rel="stylesheet">
@@ -61,9 +61,9 @@
                         <div class="clearfix"></div>
                         <div class="separator">
                             <div>
-                                <h1><i class="fa fa-globe" style="font-size: 26px;"></i> Cable TV Accounting !</h1>
+                                <h1><i class="fa fa-globe" style="font-size: 26px;"></i> tCableBilling <span id="reg">®</span></h1>
 
-                                <p>©2015 All Rights Reserved.</p>
+                                <p>©{{date('Y')}} All Rights Reserved.</p>
                             </div>
                         </div>
                     {!! Form::close()!!}
