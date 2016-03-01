@@ -73,6 +73,7 @@
 			}
 			#project {
 				float:left;
+				margin-left: 13px;
 			}
 			#project span {
 				text-align:right;
