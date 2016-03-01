@@ -41,8 +41,8 @@
                                             <td class=" ">{{$client->client_status}}</td>
                                             <td class=" last">
                                                 {!! Form::open(array('route' => array('clients.destroy', $client->id), 'method' => 'delete')) !!}
-                                                    <a href="#" class="btn btn-sm btn-success">View</a>
-                                                    <a href="/clients/{{$client->id}}/edit" class="btn btn-sm btn-success">Edit</a>
+                                                    <a href="{{URL::route('billings.index')}}?client_id={{$client->id}}" class="btn btn-sm btn-success">View</a>
+                                                    <a href="{{URL::route('clients.index')}}/{{$client->id}}/edit" class="btn btn-sm btn-success">Edit</a>
                                                     <button type="submit" onclick="return confirm('Are you sure you want to delete the client?')" class="btn btn-danger btn-sm">Delete</button>
                                                 {!! Form::close() !!}
                                             </td>
@@ -59,8 +59,8 @@
                                             <td class=" ">{{$client->client_status}}</td>
                                             <td class=" last">
                                                 {!! Form::open(array('route' => array('clients.destroy', $client->id), 'method' => 'delete')) !!}
-                                                    <a href="#" class="btn btn-sm btn-success">View</a>
-                                                    <a href="/clients/{{$client->id}}/edit" class="btn btn-sm btn-success">Edit</a>
+                                                    <a href="{{URL::route('billings.index')}}?client_id={{$client->id}}" class="btn btn-sm btn-success">View</a>
+                                                    <a href="{{URL::route('clients.index')}}/{{$client->id}}/edit" class="btn btn-sm btn-success">Edit</a>
                                                     <button type="submit" onclick="return confirm('Are you sure you want to delete the client?')" class="btn btn-danger btn-sm">Delete</button>
                                                 {!! Form::close() !!}
                                             </td>

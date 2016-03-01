@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Example 1</title>
+		<title>{{date('F Y')}}</title>
 		<style type="text/css" media="screen">
 			#logo {
 				text-align:center;
@@ -137,7 +137,11 @@
 		</style>
 	</head>
 	<body>
-		@foreach($billings as $billing)
+	<!-- This $i variable is very important. Don't delete it.-->
+	{{--*/ $i = 0 /*--}}
+		@foreach($billings as $key_billing => $billing)
+			<!-- This $i variable is very important. Don't delete it.-->
+			{{--*/ $i++ /*--}}
 			<header class="clearfix">
 			    <div id="logo">
 			        <img src="invoice/logo.png">
@@ -150,7 +154,6 @@
 			        <div><a href="mailto:company@example.com">company@example.com</a></div>
 			    </div>
 			    <div id="project">
-			        <!-- <div><span>PROJECT</span> Website development</div> -->
 			        <div><span>ID</span> {{$billing->clientDetails->client_id}}</div>
 			        <div><span>CLIENT</span> {{$billing->clientDetails->name}}</div>
 			        <div><span>ADDRESS</span> {{$billing->clientDetails->address}}</div>
@@ -210,10 +213,10 @@
 			        <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
 			    </div>
 			</main>
-			<footer>
-			    Invoice was created on a computer and is valid without the signature and seal.
-			</footer>
-			<div class="page-break"></div>
+			<footer>Copyright &copy; {{date('Y')}} All Rights Reserved. tCableBilling, an automated billing system.</footer>
+			@if( $i != count($billings))
+				<div class="page-break"></div>
+			@endif
 		@endforeach
 	</body>
 </html>

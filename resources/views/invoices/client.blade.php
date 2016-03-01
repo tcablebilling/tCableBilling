@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Example 1</title>
+    <title>{{ $billings->first()->clientDetails->client_id }}</title>
     <style type="text/css" media="screen">
         #logo {
             text-align:center;
