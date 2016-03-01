@@ -48,7 +48,7 @@ class BillingsController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function store( Billing $billing ) {
-		$clients = Client::all();
+		$clients = Client::where('client_status', '=', 'Active')->get();
 		$data = array();
 		$created_at = \DB::table( 'billings' )->orderBy( 'created_at', 'desc' )->first();
 		$date = 0;

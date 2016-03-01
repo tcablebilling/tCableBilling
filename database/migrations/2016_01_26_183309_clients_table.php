@@ -22,7 +22,7 @@ class ClientsTable extends Migration
             $table->string('address');
             $table->enum('connection_type', ['home', 'office', 'business', 'govt']);
             $table->bigInteger('channel_package');
-            $table->enum('client_status', ['Active', 'Suspended', 'Deactive']);
+            $table->enum('client_status', ['Active', 'Deactive']);
             $table->enum('address_proof', ['voter_id', 'passport', 'electricity_bill', 'gas_bill', 'driving_license'])->nullable();
             $table->string('address_proof_no')->nullable();
             $table->string('device_box_no')->nullable();
