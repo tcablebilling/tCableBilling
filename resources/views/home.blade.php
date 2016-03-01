@@ -45,8 +45,8 @@
             <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                 <div class="left"></div>
                 <div class="right">
-                    <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
-                    <div class="count">7,325</div>
+                    <span class="count_top"><i class="fa fa-user"></i> Employee Salaries</span>
+                    <div class="count">{{$employee_salary}}</div>
                     <!-- <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span> -->
                 </div>
             </div>

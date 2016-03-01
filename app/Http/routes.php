@@ -24,6 +24,7 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::resource( '/areas', 'AreasController' );
 	Route::resource( '/payments', 'PaymentsController');
 	Route::resource( '/billings', 'BillingsController');
+	Route::resource( '/employees', 'EmployeesController');
 });
 // Authentication routes...
 Route::get( '/', 'HomeController@rootPath' );

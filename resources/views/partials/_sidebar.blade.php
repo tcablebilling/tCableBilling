@@ -54,6 +54,8 @@
                     </li>
                     <li><a href="{{ URL::route('areas.index') }}">Areas</a>
                     </li>
+                    <li><a href="{{ URL::route('employees.index') }}">Employees</a>
+                    </li>
                 </ul>
             </li>
         </ul>
