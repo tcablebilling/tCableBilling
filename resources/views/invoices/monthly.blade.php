@@ -177,30 +177,9 @@
 			        <tbody>
 			            <tr>
 			                <td class="unit">{{$billing->bill_amount}}</td>
-			                <td class="qty">
-			                {{
-                                $bill_cum = DB::table('billings')
-                                ->where('client_id', '=', $billing->client_id)
-                                ->where('id', '<=', $billing->id)
-                                ->sum('bill_amount')
-                            }}
-                            </td>
-			                <td class="total">
-                            {{
-                                DB::table('payments')
-                                ->where('client_id', '=', $billing->client_id)
-                                ->where('billing_id', '=', $billing->id)
-                                ->sum('paid_amount')
-                            }}
-			                </td>
-			                <td class="total">
-	                        {{
-	                            $paid_cum = DB::table('payments')
-	                            ->where('client_id', '=', $billing->client_id)
-	                            ->where('billing_id', '<=', $billing->id)
-	                            ->sum('paid_amount')
-	                        }}
-			                </td>
+			                <td class="qty">{{ $bill_cum = $billing->getBillCumulativeSum() }} TK </td>
+			                <td class="total">{{ $billing->clientPayments->sum('paid_amount') }} TK </td>
+			                <td class="total">{{ $paid_cum = $billing->getPaidCumulativeSum() }} TK </td>
 			                <td class="total">{{ $bill_cum - $paid_cum }}</td>
 			            </tr>
 			            <tr>

@@ -184,9 +184,9 @@
                     <td class="service">{{sprintf("%'.05d\n", $billing->id)}}</td>
                     <td class="desc">{{date('F Y', strtotime($billing->month))}}</td>
                     <td class="unit">{{$billing->bill_amount}} BDT</td>
-                    <td class="qty">{{ $bill_cum = $billing->billCumulative->filter(function ($item) use ($billing) { return $item->id <= $billing->id; })->sum('bill_amount')}} BDT</td>
+                    <td class="qty">{{ $bill_cum = $billing->getBillCumulativeSum() }} TK </td>
                     <td class="total">{{ $billing->clientPayments->sum('paid_amount') }} BDT</td>
-                    <td class="total">{{ $paid_cum = $billing->paidCumulative->filter(function ($item) use ($billing) { return $item->billing_id <= $billing->id; })->sum('paid_amount') }} BDT</td>
+                    <td class="total">{{ $paid_cum = $billing->getPaidCumulativeSum() }} TK </td>
                     <td class="total">{{ $bill_cum - $paid_cum }} BDT</td>
                 </tr>
             @endforeach

@@ -51,7 +51,7 @@ class HomeController extends Controller
     {
         // $date = strtotime('+1 month', strtotime(date('Ym').'01'));
         $date = strtotime(\Input::get('range'));
-        $billings = Billing::where('month', '=', date('Ymd', $date))->get();
+        $billings = Billing::with('billCumulative', 'paidCumulative')->where('month', '=', date('Ymd', $date))->get();
         $pdf = PDF::loadView('invoices.monthly', compact('billings'));
         return $pdf->download(date('Y-m-d').'.pdf');
         // return view('invoices.monthly', compact('billings'));
@@ -75,7 +75,7 @@ class HomeController extends Controller
             $clients[ $client->id ] = $client->client_id . ' ' . $client->name;
         }
         $client_id = \Input::get( 'client_id' );
-        $billings_all = Billing::where( 'client_id', $client_id )->orderBy( 'id', 'DESC' )->whereBetween('month', array( $from_month, $to_month))->get();
+        $billings_all = Billing::with('billCumulative', 'paidCumulative')->where( 'client_id', $client_id )->orderBy( 'id', 'DESC' )->whereBetween('month', array( $from_month, $to_month))->get();
         $billings = $billings_all->chunk(14);
         // return view('invoices.client', compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' ));
         $pdf = PDF::loadView('invoices.client', compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' ));
