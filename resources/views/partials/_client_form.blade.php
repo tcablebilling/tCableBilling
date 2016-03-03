@@ -91,7 +91,6 @@
             {!! Form::select('client_status',
                 [
                     'Active'    =>'Active',
-                    'Suspended' =>'Suspended',
                     'Deactive'  =>'Deactive'
                 ], null, ['class'=>'form-control col-md-7 col-xs-12', 'placeholder' => 'Select Client Status...']);
             !!}

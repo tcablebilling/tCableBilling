@@ -10,7 +10,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-// Home URL [Must Be Logged In]
 Route::group(['middleware' => 'auth'], function(){
 	Route::get('/home', array( 'as' => 'home', 'uses' => 'HomeController@index') );
 	Route::get('/print-m', array( 'as' => 'print-m', 'uses' => 'HomeController@billMonthly') );

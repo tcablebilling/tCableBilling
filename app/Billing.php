@@ -39,4 +39,14 @@ class Billing extends Model
     {
         return $this->hasMany('App\Billing', 'client_id', 'client_id');
     }
+
+    public function getBillCumulativeSum(){
+        $billingId = $this->id;
+        return $this->billCumulative->filter(function ($item) use ($billingId) { return $item->id <= $billingId; })->sum('bill_amount');
+    }
+
+    public function getPaidCumulativeSum(){
+        $billingId = $this->id;
+        return $this->paidCumulative->filter(function ($item) use ($billingId) { return $item->billing_id <= $billingId; })->sum('paid_amount');
+    }
 }

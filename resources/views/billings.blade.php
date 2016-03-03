@@ -50,11 +50,11 @@
                                                     <span class="client-details">Client ID: {{ $billing->clientDetails->client_id }}</span>
                                                 </td>
                                                 <td class=" ">{{ date('F Y', strtotime($billing->month)) }}</td>
-                                                <td class=" ">{{ $billing->bill_amount }} &#2547;</td>
-                                                <td class=" ">{{ $bill_cum = $billing->billCumulative->filter(function ($item) use ($billing) { return $item->id <= $billing->id; })->sum('bill_amount')}} &#2547; </td>
-                                                <td class=" ">{{ $billing->clientPayments->sum('paid_amount') }}&#2547;</td>
-                                                <td class=" ">{{ $paid_cum = $billing->paidCumulative->filter(function ($item) use ($billing) { return $item->billing_id <= $billing->id; })->sum('paid_amount') }} &#2547; </td>
-                                                <td class=" ">{{ $bill_cum - $paid_cum }} &#2547; </td>
+                                                <td class=" ">{{ $billing->bill_amount }} TK</td>
+                                                <td class=" ">{{ $bill_cum = $billing->getBillCumulativeSum() }} TK </td>
+                                                <td class=" ">{{ $billing->clientPayments->sum('paid_amount') }} TK</td>
+                                                <td class=" ">{{ $paid_cum = $billing->getPaidCumulativeSum() }} TK </td>
+                                                <td class=" ">{{ $bill_cum - $paid_cum }} TK </td>
                                                 <td class=" last">
                                                     {!! Form::open(array('route' => array('billings.destroy', $billing->id), 'method' => 'delete')) !!}
                                                         <button id="delete" type="submit" onclick="return confirm('Are you sure you want to delete the billing?')" class="btn btn-danger btn-sm">Delete</button>
@@ -72,11 +72,11 @@
                                                     <span class="client-details">Client ID: {{ $billing->clientDetails->client_id }}</span>
                                                 </td>
                                                 <td class=" ">{{ date('F Y', strtotime($billing->month))}}</td>
-                                                <td class=" ">{{ $billing->bill_amount}} &#2547;</td>
-                                                <td class=" ">{{ $bill_cum = $billing->billCumulative->filter(function ($item) use ($billing) { return $item->id <= $billing->id; })->sum('bill_amount')}} &#2547; </td>
-                                                <td class=" ">{{ $billing->clientPayments->sum('paid_amount') }}&#2547;</td>
-                                                <td class=" ">{{ $paid_cum = $billing->paidCumulative->filter(function ($item) use ($billing) { return $item->billing_id <= $billing->id; })->sum('paid_amount') }} &#2547; </td>
-                                                <td class=" ">{{ $bill_cum - $paid_cum }} &#2547; </td>
+                                                <td class=" ">{{ $billing->bill_amount}} TK</td>
+                                                <td class=" ">{{ $bill_cum = $billing->getBillCumulativeSum() }} TK </td>
+                                                <td class=" ">{{ $billing->clientPayments->sum('paid_amount') }} TK</td>
+                                                <td class=" ">{{ $paid_cum = $billing->getPaidCumulativeSum() }} TK </td>
+                                                <td class=" ">{{ $bill_cum - $paid_cum }} TK </td>
                                                 <td class=" last">
                                                     {!! Form::open(array('route' => array('billings.destroy', $billing->id), 'method' => 'delete')) !!}
                                                         <button id="delete" type="submit" onclick="return confirm('Are you sure you want to delete the billing?')" class="btn btn-danger btn-sm">Delete</button>
