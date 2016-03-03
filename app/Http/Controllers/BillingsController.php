@@ -66,6 +66,7 @@ class BillingsController extends Controller {
 				$billing->create( $data );
 			}
 		}
+        \Alert::success('Monthly bill for all client has been generated.', 'Monthly Bill Generated !');
 		return \Redirect::to( 'home' );
 	}
 
@@ -113,7 +114,7 @@ class BillingsController extends Controller {
 	public function destroy( $id ) {
         $billing = Billing::findOrFail($id);
         $billing->delete();
-
+        \Alert::info('Your requested bill has been deleted.', 'Bill Deleted !');
         return \Redirect::to('/billings');
 	}
 

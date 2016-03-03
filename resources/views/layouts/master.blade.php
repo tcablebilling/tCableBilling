@@ -21,11 +21,15 @@
     <link href="{{ URL::asset('css/icheck/flat/green.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/datatables/tools/css/dataTables.tableTools.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/select/select2.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/custom.css') }}" rel="stylesheet">
+
     <link href="{{ URL::asset('css/jquery-ui.min.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/jquery-ui.structure.min.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/jquery-ui.theme.min.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/sweetalert.css') }}" rel="stylesheet">
 
+    <link href="{{ URL::asset('css/custom.css') }}" rel="stylesheet">
+
+    <script src="{{ URL::asset('js/sweetalert.min.js') }}"></script>
     <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
     <script src="{{ URL::asset('js/jquery-ui.js') }}"></script>
 
@@ -45,8 +49,8 @@
 <body class="nav-md">
 
 <div class="container body">
-
-
+    <!-- Include this after the sweet alert js file -->
+    @include('sweet::alert')
     <div class="main_container">
 
         <div class="col-md-3 left_col">

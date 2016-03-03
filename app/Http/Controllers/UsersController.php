@@ -46,6 +46,7 @@ class UsersController extends Controller
         $user->password = bcrypt(\Input::get('password'));
         if (\Input::get('password') == \Input::get('password_confirmation')) {
             $user->save();
+            \Alert::success('Your requested user has been created.', 'User Created !');
         }
         return \Redirect::to('/users');
     }
@@ -88,6 +89,7 @@ class UsersController extends Controller
         $user->password = bcrypt(\Input::get('password'));
         if (\Input::get('password') == \Input::get('password_confirmation')) {
             $user->save();
+            \Alert::success('Your requested user has been updated.', 'User Updated !');
         }
         return \Redirect::to('/users');
     }
@@ -102,7 +104,7 @@ class UsersController extends Controller
     {
         $user = User::findOrFail($id);
         $user->delete();
-
+        \Alert::info('Your requested user has been deleted.', 'User Deleted !');
         return \Redirect::to('/users');
     }
 }

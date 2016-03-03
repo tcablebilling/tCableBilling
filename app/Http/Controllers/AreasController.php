@@ -41,6 +41,7 @@ class AreasController extends Controller
     public function store(Request $request)
     {
         Area::create($request->all());
+        \Alert::success('Your requested area has been created.', 'Area Created !');
         return redirect('/areas');
     }
 
@@ -79,7 +80,7 @@ class AreasController extends Controller
         $area = Area::findOrFail($id);
         $area->fill(\Input::all());
         $area->save();
-
+        \Alert::success('Your requested area has been updated.', 'Area Updated !');
         return \Redirect::to('/areas');
     }
 
@@ -93,7 +94,7 @@ class AreasController extends Controller
     {
         $area = Area::findOrFail($id);
         $area->delete();
-
+        \Alert::info('Your requested area has been deleted.', 'Area Deleted !');
         return \Redirect::to('/areas');
     }
 }

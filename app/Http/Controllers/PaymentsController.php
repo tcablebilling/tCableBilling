@@ -67,7 +67,7 @@ class PaymentsController extends Controller
     public function store(Request $request)
     {
         Payment::create( $request->all() );
-
+        \Alert::success('Your requested payment has been created.', 'Payment Created !');
         return \Redirect::to( 'payments' );
     }
 
@@ -114,7 +114,7 @@ class PaymentsController extends Controller
         $payment = Payment::findOrFail($id);
         $payment->fill(\Input::all());
         $payment->save();
-
+        \Alert::success('Your requested payment has been updated.', 'Payment Updated !');
         return \Redirect::to('/payments');
     }
 
@@ -128,7 +128,7 @@ class PaymentsController extends Controller
     {
         $payment = Payment::findOrFail($id);
         $payment->delete();
-
+        \Alert::info('Your requested payment has been deleted.', 'Payment Deleted !');
         return \Redirect::to('/payments');
     }
 }
