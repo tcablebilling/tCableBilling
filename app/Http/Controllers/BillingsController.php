@@ -17,7 +17,7 @@ class BillingsController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index() {
-		$billings = Billing::orderBy( 'id', 'DESC' )->paginate( 150 );
+		$billings = Billing::with('billCumulative', 'paidCumulative');
 		$client_id = null;
 		$clients   = [ ];
 		foreach ( Client::all() as $client ) {
@@ -25,9 +25,9 @@ class BillingsController extends Controller {
 		}
 		$client_id = \Input::get( 'client_id' );
 		if ( $client_id != null ) {
-			$billings = Billing::where( 'client_id', $client_id )->orderBy( 'id', 'DESC' )->paginate( 150 );
-			return view( 'billings', compact( 'billings', 'client_id', 'clients' ) );
+			$billings =$billings->where( 'client_id', $client_id );
 		}
+		$billings = $billings->orderBy('id','desc')->paginate(159);
 		return view( 'billings', compact( 'billings', 'client_id', 'clients' ) );
 	}
 
@@ -136,7 +136,8 @@ class BillingsController extends Controller {
 			$clients[ $client->id ] = $client->client_id . ' ' . $client->name;
 		}
 		$client_id = \Input::get( 'client_id' );
-		$billings = Billing::where( 'client_id', $client_id )->orderBy( 'id', 'DESC' )->whereBetween('month', array( $from_month, $to_month))->paginate( 150 );
+		$billings = Billing::with('billCumulative', 'paidCumulative');
+		$billings = $billings->where( 'client_id', $client_id )->orderBy( 'id', 'DESC' )->whereBetween('month', array( $from_month, $to_month))->paginate( 150 );
 		return view('individual_bill', compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' ));
 		// $pdf = PDF::loadView('invoices.client', compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' ));
 		// return $pdf->download('invoice.pdf');

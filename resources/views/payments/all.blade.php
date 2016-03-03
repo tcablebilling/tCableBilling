@@ -58,9 +58,9 @@
                                                 {{$payment->clientDetails->name}}
                                                 <span class="client-details">Client ID: {{$payment->clientDetails->client_id}}</span>
                                             </td>
-                                            <td class=" ">{{date('F d, Y', strtotime($payment->date))}}</td>
-                                            <td class=" ">{{sprintf("%'.05d\n", $payment->billing_id)}}</td>
-                                            <td class=" ">{{$payment->paid_amount}} &#2547;</td>
+                                            <td class=" ">{{ date('F d, Y', strtotime($payment->date)) }}</td>
+                                            <td class=" ">{{ sprintf("%'.05d\n", $payment->billing_id) }}</td>
+                                            <td class=" ">{{ $payment->paid_amount }} &#2547;</td>
                                             <td class=" ">
                                                 {{
                                                     DB::table('payments')
