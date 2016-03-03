@@ -65,6 +65,7 @@ class ClientsController extends Controller
     public function store(Client $client, Request $request)
     {
         $client->create($request->all());
+        \Alert::success('Your requested client has been created.', 'Client Created !');
         return redirect('/clients');
     }
 
@@ -76,7 +77,7 @@ class ClientsController extends Controller
      */
     public function show($id)
     {
-        return view('clients.create');
+        return view('clients.index');
     }
 
     /**
@@ -121,7 +122,7 @@ class ClientsController extends Controller
         $client = Client::findOrFail($id);
         $client->fill(\Input::all());
         $client->save();
-
+        \Alert::success('Your requested client info has been updated.', 'Client Info Updated !');
         return \Redirect::to('/clients');
     }
 
@@ -135,7 +136,7 @@ class ClientsController extends Controller
     {
         $client = Client::findOrFail($id);
 		$client->delete();
-
+        \Alert::info('Your requested client has been deleted.', 'Client Deleted !');
         return \Redirect::to('/clients');
     }
 }
