@@ -60,16 +60,8 @@
                                             </td>
                                             <td class=" ">{{ date('F d, Y', strtotime($payment->date)) }}</td>
                                             <td class=" ">{{ sprintf("%'.05d\n", $payment->billing_id) }}</td>
-                                            <td class=" ">{{ $payment->paid_amount }} &#2547;</td>
-                                            <td class=" ">
-                                                {{
-                                                    DB::table('payments')
-                                                    ->where('client_id', '=', $payment->client_id)
-                                                    ->where('id', '<=', $payment->id)
-                                                    ->sum('paid_amount')
-                                                }}
-                                                &#2547;
-                                            </td>
+                                            <td class=" ">{{ $payment->paid_amount }} TK</td>
+                                            <td class=" ">{{$payment->paymentPaidCumulative()}} TK</td>
                                             <td class=" last">
                                                 {!! Form::open(array('route' => array('payments.destroy', $payment->id), 'method' => 'delete')) !!}
                                                     <a href="/payments/{{$payment->id}}/edit" class="btn btn-sm btn-success">Edit</a>
@@ -89,16 +81,8 @@
                                             </td>
                                             <td class=" ">{{date('F d, Y', strtotime($payment->date))}}</td>
                                             <td class=" ">{{sprintf("%'.05d\n", $payment->billing_id)}}</td>
-                                            <td class=" ">{{$payment->paid_amount}} &#2547;</td>
-                                            <td class=" ">
-                                                {{
-                                                    DB::table('payments')
-                                                    ->where('client_id', '=', $payment->client_id)
-                                                    ->where('id', '<=', $payment->id)
-                                                    ->sum('paid_amount')
-                                                }}
-                                                &#2547;
-                                            </td>
+                                            <td class=" ">{{$payment->paid_amount}} TK</td>
+                                            <td class=" ">{{$payment->paymentPaidCumulative()}} TK</td>
                                             <td class=" last">
                                                 {!! Form::open(array('route' => array('payments.destroy', $payment->id), 'method' => 'delete')) !!}
                                                     <a href="/payments/{{$payment->id}}/edit" class="btn btn-sm btn-success">Edit</a>
