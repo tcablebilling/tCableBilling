@@ -71,4 +71,10 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    public function authenticated( \Illuminate\Http\Request $request, \App\User $user ) 
+    {
+        \Alert::success('You just logged in.', 'Welcome !')->persistent('Close');
+        return redirect()->intended($this->redirectPath());
+    }
 }
