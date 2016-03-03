@@ -10,6 +10,11 @@
                     <div class="x_panel">
 
                         <div class="x_content">
+                            <div class="packages-buttons pull-right">
+                                <a href="{{ URL::route('clients.create') }}" title="" class="btn btn-success btn-sm package-btn">
+                                    Add New Client
+                                </a>
+                            </div>
                             <table id="clientall" class="table table-striped responsive-utilities jambo_table">
                                 <thead>
                                 <tr class="headings">

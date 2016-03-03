@@ -39,8 +39,6 @@
                 <ul class="nav child_menu" style="display: none">
                     <li><a href="{{ URL::route('clients.index') }}">All Clients</a>
                     </li>
-                    <li><a href="{{ URL::route('clients.create') }}">Add New Client</a>
-                    </li>
                 </ul>
             </li>
         </ul>
