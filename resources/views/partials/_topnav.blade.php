@@ -1,3 +1,4 @@
+@inject('auth', 'Auth')
 <!-- top navigation -->
 <div class="top_nav navbar-fixed-top">
 
@@ -13,7 +14,9 @@
                         <i class="fa fa-bars"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
-                        <li><a href="{{URL::to('users')}}"><i class="fa fa-users pull-right"></i> Users</a></li>
+                        @if(Auth::user()->role == 'Admin')
+                            <li><a href="{{URL::to('users')}}"><i class="fa fa-users pull-right"></i> Users</a></li>
+                        @endif
                         <li><a href="{{URL::to('logout')}}"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                     </ul>
                 </li>

@@ -25,6 +25,7 @@
                                     <th>Name </th>
                                     <th>Username </th>
                                     <th>Email </th>
+                                    <th>Role </th>
                                     {{-- <th>Amount </th> --}}
                                     <th class=" no-link last"><span class="nobr">Action</span>
                                     </th>
@@ -42,6 +43,7 @@
                                             <td class=" ">{{$user->name}} </td>
                                             <td class=" ">{{$user->username}}</td>
                                             <td class=" ">{{$user->email}}</td>
+                                            <td class=" ">{{$user->role}}</td>
                                             <td class=" last">
                                                 {!! Form::open(array('route' => array('users.destroy', $user->id), 'method' => 'delete', 'id'=>'delete')) !!}
                                                 {!! Form::close() !!}
@@ -58,6 +60,7 @@
                                             <td class=" ">{{$user->name}} </td>
                                             <td class=" ">{{$user->username}}</td>
                                             <td class=" ">{{$user->email}}</td>
+                                            <td class=" ">{{$user->role}}</td>
                                             <td class=" last">
                                                 {!! Form::open(array('route' => array('users.destroy', $user->id), 'method' => 'delete', 'id'=>'delete')) !!}
                                                 {!! Form::close() !!}
@@ -92,7 +95,7 @@
                             }, //disables sorting for column one
                             {
                                 'sWidth': '20%',
-                                'aTargets': [5]
+                                'aTargets': [6]
                             }
                         ],
                         "bPaginate": false,
