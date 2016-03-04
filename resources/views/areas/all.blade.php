@@ -38,10 +38,10 @@
                                             <td class=" ">{{$area->name}} </td>
                                             <td class=" ">{{$area->code}}</td>
                                             <td class=" last">
-                                                {!! Form::open(array('route' => array('areas.destroy', $area->id), 'method' => 'delete')) !!}
-                                                    <a href="/areas/{{$area->id}}/edit" class="btn btn-sm btn-success">Edit</a>
-                                                    <button type="submit" onclick="return confirm('Are you sure you want to delete the area?')" class="btn btn-danger btn-sm">Delete</button>
+                                                {!! Form::open(array('route' => array('areas.destroy', $area->id), 'method' => 'delete', 'id'=>'delete')) !!}
                                                 {!! Form::close() !!}
+                                                <a href="/areas/{{$area->id}}/edit" class="btn btn-sm btn-success">Edit</a>
+                                                <button class="btn btn-danger btn-sm delete">Delete</button>
                                             </td>
                                         </tr>
                                     @else
@@ -52,10 +52,10 @@
                                             <td class=" ">{{$area->name}} </td>
                                             <td class=" ">{{$area->code}}</td>
                                             <td class=" last">
-                                                {!! Form::open(array('route' => array('areas.destroy', $area->id), 'method' => 'delete')) !!}
-                                                    <a href="/areas/{{$area->id}}/edit" class="btn btn-sm btn-success">Edit</a>
-                                                    <button type="submit" onclick="return confirm('Are you sure you want to delete the area?')" class="btn btn-danger btn-sm">Delete</button>
+                                                {!! Form::open(array('route' => array('areas.destroy', $area->id), 'method' => 'delete', 'id'=>'delete')) !!}
                                                 {!! Form::close() !!}
+                                                <a href="/areas/{{$area->id}}/edit" class="btn btn-sm btn-success">Edit</a>
+                                                <button class="btn btn-danger btn-sm delete">Delete</button>
                                             </td>
                                         </tr>
                                     @endif

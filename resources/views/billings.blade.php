@@ -56,9 +56,9 @@
                                                 <td class=" ">{{ $paid_cum = $billing->getPaidCumulativeSum() }} TK </td>
                                                 <td class=" ">{{ $bill_cum - $paid_cum }} TK </td>
                                                 <td class=" last">
-                                                    {!! Form::open(array('route' => array('billings.destroy', $billing->id), 'method' => 'delete')) !!}
-                                                        <button id="delete" type="submit" onclick="return confirm('Are you sure you want to delete the billing?')" class="btn btn-danger btn-sm">Delete</button>
+                                                    {!! Form::open(array('route' => array('billings.destroy', $billing->id), 'method' => 'delete', 'id'=>'delete')) !!}
                                                     {!! Form::close() !!}
+                                                    <button class="btn btn-danger btn-sm delete">Delete</button>
                                                 </td>
                                             </tr>
                                         @else
@@ -78,9 +78,9 @@
                                                 <td class=" ">{{ $paid_cum = $billing->getPaidCumulativeSum() }} TK </td>
                                                 <td class=" ">{{ $bill_cum - $paid_cum }} TK </td>
                                                 <td class=" last">
-                                                    {!! Form::open(array('route' => array('billings.destroy', $billing->id), 'method' => 'delete')) !!}
-                                                        <button id="delete" type="submit" onclick="return confirm('Are you sure you want to delete the billing?')" class="btn btn-danger btn-sm">Delete</button>
+                                                    {!! Form::open(array('route' => array('billings.destroy', $billing->id), 'method' => 'delete', 'id'=>'delete')) !!}
                                                     {!! Form::close() !!}
+                                                    <button class="btn btn-danger btn-sm delete">Delete</button>
                                                 </td>
                                             </tr>
                                         @endif

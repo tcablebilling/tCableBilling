@@ -94,4 +94,24 @@
         if (this.checked)
             $('form .alert').remove();
     }).prop('checked', false);
+
+    $('button.delete').on('click', function() {
+        swal({
+            title: "Are you sure?",
+            text: "Think again. This data can't be recovered later !",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "No, cancel!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        }, function(isConfirm) {
+            if (isConfirm) {
+                $("form#delete").submit();
+            } else {
+                swal("Cancelled", "Your data is safe.", "error");
+            }
+        });
+    })
 </script>

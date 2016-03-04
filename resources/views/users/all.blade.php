@@ -43,10 +43,10 @@
                                             <td class=" ">{{$user->username}}</td>
                                             <td class=" ">{{$user->email}}</td>
                                             <td class=" last">
-                                                {!! Form::open(array('route' => array('users.destroy', $user->id), 'method' => 'delete')) !!}
-                                                    <a href="/users/{{$user->id}}/edit" class="btn btn-sm btn-success">Edit</a>
-                                                    <button type="submit" onclick="return confirm('Are you sure you want to delete the user?')" class="btn btn-danger btn-sm">Delete</button>
+                                                {!! Form::open(array('route' => array('users.destroy', $user->id), 'method' => 'delete', 'id'=>'delete')) !!}
                                                 {!! Form::close() !!}
+                                                <a href="/users/{{$user->id}}/edit" class="btn btn-sm btn-success">Edit</a>
+                                                <button class="btn btn-danger btn-sm delete">Delete</button>
                                             </td>
                                         </tr>
                                     @else
@@ -59,10 +59,10 @@
                                             <td class=" ">{{$user->username}}</td>
                                             <td class=" ">{{$user->email}}</td>
                                             <td class=" last">
-                                                {!! Form::open(array('route' => array('users.destroy', $user->id), 'method' => 'delete')) !!}
-                                                    <a href="/users/{{$user->id}}/edit" class="btn btn-sm btn-success">Edit</a>
-                                                    <button type="submit" onclick="return confirm('Are you sure you want to delete the user?')" class="btn btn-danger btn-sm">Delete</button>
+                                                {!! Form::open(array('route' => array('users.destroy', $user->id), 'method' => 'delete', 'id'=>'delete')) !!}
                                                 {!! Form::close() !!}
+                                                <a href="/users/{{$user->id}}/edit" class="btn btn-sm btn-success">Edit</a>
+                                                <button class="btn btn-danger btn-sm delete">Delete</button>
                                             </td>
                                         </tr>
                                     @endif
