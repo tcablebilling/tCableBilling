@@ -66,7 +66,10 @@ class BillingsController extends Controller {
 				$billing->create( $data );
 			}
 		}
-        \Alert::success('Monthly bill for all client has been generated.', 'Monthly Bill Generated !');
+		$database = storage_path('database.sqlite');
+		$backup_database = env('DB_BACKUP_DIR', storage_path()) . date( 'Y-m-d-H-i-s' ) . '_datatbase.sqlite';
+		copy($database, $backup_database);
+        \Alert::success('Monthly bill for all client has been generated & monthly database backup completed.', 'Monthly Bill Generated !');
 		return \Redirect::to( 'home' );
 	}
 

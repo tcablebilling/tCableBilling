@@ -16,6 +16,7 @@
                     <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
                         @if(Auth::user()->role == 'Admin')
                             <li><a href="{{URL::to('users')}}"><i class="fa fa-users pull-right"></i> Users</a></li>
+                            <li><a href="{{URL::to('db-backup')}}"><i class="fa fa-database pull-right"></i> Database Backup</a></li>
                         @endif
                         <li><a href="{{URL::to('logout')}}"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                     </ul>

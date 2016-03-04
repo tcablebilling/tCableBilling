@@ -17,6 +17,8 @@ Route::group(['middleware' => 'auth'], function(){
 
 	Route::get('/individual', [ 'as' => 'individual', 'uses' => 'BillingsController@individualClient'] );
 
+	Route::get('/db-backup', array( 'as' => 'db-backup', 'uses' => 'HomeController@dbBackup') );
+
 	Route::resource( '/users', 'UsersController' );
 	Route::resource( '/clients', 'ClientsController' );
 	Route::resource( '/packages', 'PackagesController' );
