@@ -1,17 +1,8 @@
 
 <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
-
-<!-- chart js -->
-<script src="{{ URL::asset('js/chartjs/chart.min.js') }}"></script>
-<!-- bootstrap progress js -->
-<script src="{{ URL::asset('js/progressbar/bootstrap-progressbar.min.js') }}"></script>
 <script src="{{ URL::asset('js/nicescroll/jquery.nicescroll.min.js') }}"></script>
 <!-- icheck -->
 <script src="{{ URL::asset('js/icheck/icheck.min.js') }}"></script>
-
-<script src="{{ URL::asset('js/custom.js') }}"></script>
-
-
 <!-- Datatables -->
 <script src="{{ URL::asset('js/datatables/js/jquery.dataTables.js') }}"></script>
 <script src="{{ URL::asset('js/datatables/tools/js/dataTables.tableTools.js') }}"></script>
@@ -21,6 +12,8 @@
 <script type="text/javascript" src="{{ URL::asset('js/moment.min2.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/datepicker/daterangepicker.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/select/select2.full.js') }}"></script>
+
+<script src="{{ URL::asset('js/custom.js') }}"></script>
 <script>
     $(document).ready(function () {
         $('select').select2();
@@ -110,7 +103,14 @@
             if (isConfirm) {
                 $("form#delete").submit();
             } else {
-                swal("Cancelled", "Your data is safe.", "error");
+                // swal("Cancelled", "Your data is safe.", "error");
+                swal({
+                    title:  "Delete Cancelled",   
+                    text:   "Your data is safe.", 
+                    type:   "error",  
+                    timer:  1000,   
+                    showConfirmButton: false
+                });
             }
         });
     })
