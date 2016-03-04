@@ -17,6 +17,8 @@ class UsersController extends Controller
      */
     public function index()
     {
+        if (\Auth::user()->role != 'Admin')
+            return \Redirect::to('home');
         $users = User::paginate(150);
         return view('users.all', compact('users'));
     }
@@ -28,6 +30,8 @@ class UsersController extends Controller
      */
     public function create()
     {
+        if (\Auth::user()->role != 'Admin')
+            return \Redirect::to('home');
         return view('users.create');
     }
 
@@ -39,10 +43,13 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
+        if (\Auth::user()->role != 'Admin')
+            return \Redirect::to('home');
         $user = new User;
         $user->name = \Input::get('name');
         $user->username = \Input::get('username');
         $user->email = \Input::get('email');
+        $user->role = \Input::get('role');
         $user->password = bcrypt(\Input::get('password'));
         if (\Input::get('password') == \Input::get('password_confirmation')) {
             $user->save();
@@ -59,7 +66,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        //
+        return \Redirect::to('home');
     }
 
     /**
@@ -70,6 +77,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
+        if (\Auth::user()->role != 'Admin')
+            return \Redirect::to('home');
         $user = User::findOrFail($id);
         return view('users.edit', compact('user'));
     }
@@ -83,9 +92,12 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
+        if (\Auth::user()->role != 'Admin')
+            return \Redirect::to('home');
         $user = User::findOrFail($id);
         $user->name = \Input::get('name');
         $user->email = \Input::get('email');
+        $user->role = \Input::get('role');
         $user->password = bcrypt(\Input::get('password'));
         if (\Input::get('password') == \Input::get('password_confirmation')) {
             $user->save();
@@ -102,6 +114,8 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
+        if (\Auth::user()->role != 'Admin')
+            return \Redirect::to('home');
         $user = User::findOrFail($id);
         $user->delete();
         \Alert::info('Your requested user has been deleted.', 'User Deleted !');

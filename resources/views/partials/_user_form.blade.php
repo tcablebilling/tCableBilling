@@ -3,7 +3,7 @@
 <div class="item form-group">
     {!! Form::label('name', 'Full Name', array('class' => 'control-label col-md-3 col-sm-3 col-xs-12'));!!}
     <div class="col-md-6 col-sm-6 col-xs-12">
-       {!! Form::text('name', null,['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required', 'placeholder'=>'User name...']);!!}
+       {!! Form::text('name', null,['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required', 'placeholder'=>'User Full Name...']);!!}
     </div>
 </div>
 
@@ -18,6 +18,18 @@
     {!! Form::label('email', 'Email', array('class' => 'control-label col-md-3 col-sm-3 col-xs-12'));!!}
     <div class="col-md-6 col-sm-6 col-xs-12">
        {!! Form::email('email', null,['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required', 'placeholder'=>'Enter email...']);!!}
+    </div>
+</div>
+
+<div class="item form-group">
+    {!! Form::label('role', 'Select User Role', array('class' => 'control-label col-md-3 col-sm-3 col-xs-12'));!!}
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        {!! Form::select('role',
+            [
+              'Admin'     =>'Admin',
+              'Manager'   =>'Manager'
+            ], null, ['class'=>'form-control col-md-7 col-xs-12', 'placeholder' => 'Select User Role...']);
+        !!}
     </div>
 </div>
 
