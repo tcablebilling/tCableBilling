@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>{{ $billings[0]->first()->clientDetails->client_id }}</title>
+    <title>{{ $billings[0]->first()->clientDetails->area_name->code . '-' . sprintf("%'.03d\n", $billings[0]->first()->clientDetails->id) }}</title>
     <style type="text/css" media="screen">
         #logo {
             text-align:center;
@@ -153,7 +153,7 @@
         <div><a href="mailto:company@example.com">company@example.com</a></div>
     </div>
     <div id="project">
-        <div><span>ID</span>{{ $billings[0]->first()->clientDetails->client_id }}</div>
+        <div><span>ID</span>{{ $billings[0]->first()->clientDetails->area_name->code . '-' . sprintf("%'.03d\n", $billings[0]->first()->clientDetails->id) }}</div>
         <div><span>CLIENT</span>{{ $billings[0]->first()->clientDetails->name }}</div>
         <div><span>ADDRESS</span>{{ $billings[0]->first()->clientDetails->address }}</div>
         <div><span>PHONE</span>{{ $billings[0]->first()->clientDetails->phone_no_1 }}</div>

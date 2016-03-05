@@ -47,7 +47,7 @@
                                                 <td class=" ">{{sprintf("%'.05d\n", $billing->id)}}</td>
                                                 <td class=" ">
                                                     {{ $billing->clientDetails->name }}
-                                                    <span class="client-details">Client ID: {{ $billing->clientDetails->client_id }}</span>
+                                                    <span class="client-details">Client ID: {{ $billing->clientDetails->area_name->code . '-' . sprintf("%'.03d\n", $billing->clientDetails->id) }}</span>
                                                 </td>
                                                 <td class=" ">{{ date('F Y', strtotime($billing->month)) }}</td>
                                                 <td class=" ">{{ $billing->bill_amount }} TK</td>
@@ -69,7 +69,7 @@
                                                 <td class=" ">{{ sprintf("%'.05d\n", $billing->id) }}</td>
                                                 <td class=" ">
                                                     {{ $billing->clientDetails->name }}
-                                                    <span class="client-details">Client ID: {{ $billing->clientDetails->client_id }}</span>
+                                                    <span class="client-details">Client ID: {{ $billing->clientDetails->area_name->code . '-' . sprintf("%'.03d\n", $billing->clientDetails->id) }}</span>
                                                 </td>
                                                 <td class=" ">{{ date('F Y', strtotime($billing->month))}}</td>
                                                 <td class=" ">{{ $billing->bill_amount}} TK</td>

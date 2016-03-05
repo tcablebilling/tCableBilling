@@ -155,7 +155,7 @@
 			        <div><a href="mailto:company@example.com">company@example.com</a></div>
 			    </div>
 			    <div id="project">
-			        <div><span>ID</span> {{$billing->clientDetails->client_id}}</div>
+			        <div><span>ID</span> {{$billing->clientDetails->area_name->code . '-' . sprintf("%'.03d\n", $billing->clientDetails->id)}}</div>
 			        <div><span>CLIENT</span> {{$billing->clientDetails->name}}</div>
 			        <div><span>ADDRESS</span> {{$billing->clientDetails->address}}</div>
 			        <div><span>PHONE</span> {{$billing->clientDetails->phone_no_1}}</div>

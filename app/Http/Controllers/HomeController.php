@@ -32,7 +32,7 @@ class HomeController extends Controller
         $this_mon_payment = Payment::whereYear('date','=', date( 'Y'))->whereMonth('date','=', date('m'))->sum('paid_amount');
         $employee_salary = Employee::all()->sum('salary');
         foreach ( Client::all() as $client ) {
-            $clients[ $client->id ] = $client->client_id . ' ' . $client->name;
+            $clients[ $client->id ] = $client->area_name->code . '-' . sprintf("%'.03d\n", $client->id) . ' ' . $client->name;
         }
         $button = Billing::orderBy( 'created_at', 'DESC' )->first();
         $b = date('Ym', strtotime($button['created_at']));
@@ -72,7 +72,7 @@ class HomeController extends Controller
         $client_id = null;
         $clients   = [ ];
         foreach ( Client::all() as $client ) {
-            $clients[ $client->id ] = $client->client_id . ' ' . $client->name;
+            $clients[ $client->id ] = $client->area_name->code . '-' . sprintf("%'.03d\n", $client->id) . ' ' . $client->name;
         }
         $client_id = \Input::get( 'client_id' );
         $billings_all = Billing::with('billCumulative', 'paidCumulative')->where( 'client_id', $client_id )->orderBy( 'id', 'DESC' )->whereBetween('month', array( $from_month, $to_month))->get();
