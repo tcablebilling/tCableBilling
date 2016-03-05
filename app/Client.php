@@ -8,7 +8,6 @@ class Client extends Model
 {
     protected $fillable = [
     	'area',
-    	'client_id',
     	'name',
     	'phone_no_1',
     	'phone_no_2',

@@ -4,7 +4,11 @@
     <div class="item form-group">
         {!! Form::label('client_id', 'Client ID', array('class' => 'control-label col-md-3 col-sm-3 col-xs-12'));!!}
         <div class="col-md-6 col-sm-6 col-xs-12">
-            {!! Form::text('client_id', null,['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required', 'readonly'=>'readonly']);!!}
+            @if(isset($client))
+                {!! Form::text('client_id', $client->area_name->code . '-' . sprintf("%'.03d\n", $client->id),['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required', 'readonly'=>'readonly']);!!}
+            @else
+                {!! Form::text('client_id', null,['class'=>'form-control col-md-7 col-xs-12', 'required'=>'required', 'readonly'=>'readonly']);!!}
+            @endif
         </div>
     </div>
 

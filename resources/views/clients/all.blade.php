@@ -39,7 +39,7 @@
                                             <td class="a-center ">
                                                 <input type="checkbox" class="tableflat" disabled readonly>
                                             </td>
-                                            <td class=" ">{{$client->client_id}}</td>
+                                            <td class=" ">{{$client->area_name->code}}-{{sprintf("%'.03d\n", $client->id)}}</td>
                                             <td class=" ">{{$client->name}} </td>
                                             <td class=" ">{{(!empty($client->area_name->name)) ? $client->area_name->name : 'No Area !!!' }}</td>
                                             <td class=" ">{{(!empty($client->package->name)) ? $client->package->name : 'No Package Data !!!'}}</td>
@@ -56,7 +56,7 @@
                                             <td class="a-center ">
                                                 <input type="checkbox" class="tableflat" disabled readonly>
                                             </td>
-                                            <td class=" ">{{$client->client_id}}</td>
+                                            <td class=" ">{{$client->area_name->code}}-{{sprintf("%'.03d\n", $client->id)}}</td>
                                             <td class=" ">{{$client->name}} </td>
                                             <td class=" ">{{(!empty($client->area_name->name)) ? $client->area_name->name : 'No Area !!!' }}</td>
                                             <td class=" ">{{(!empty($client->package->name)) ? $client->package->name : 'No Package Data !!!'}}</td>
