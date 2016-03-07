@@ -76,7 +76,7 @@ class HomeController extends Controller
         }
         $client_id = \Input::get( 'client_id' );
         $billings_all = Billing::with('billCumulative', 'paidCumulative')->where( 'client_id', $client_id )->orderBy( 'id', 'DESC' )->whereBetween('month', array( $from_month, $to_month))->get();
-        $billings = $billings_all->chunk(14);
+        $billings = $billings_all->chunk(16);
         if (empty($billings[0])) {
             \Alert::error('No Data Found !')->persistent("Close");
             return \Redirect::to('home');

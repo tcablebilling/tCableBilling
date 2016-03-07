@@ -66,9 +66,30 @@ class BillingsController extends Controller {
 				$billing->create( $data );
 			}
 		}
-		$database = storage_path('database.sqlite');
-		$backup_database = env('DB_BACKUP_DIR', storage_path()) . date( 'Y-m-d-H-i-s' ) . '_datatbase.sqlite';
-		copy($database, $backup_database);
+		// for ($i = 0; $i <= 100; $i++) {
+		// 	$clients = Client::where('client_status', '=', 'Active')->get();
+		// 	$data = array();
+		// 	$created_at = \DB::table( 'billings' )->orderBy( 'created_at', 'desc' )->first();
+		// 	$date = 0;
+		// 	$date = date( 'Ym', strtotime(\DB::table( 'billings' )->orderBy( 'created_at', 'desc' )->first()->month)).'01';
+		// 	foreach ( $clients as $client ) {
+		// 		$package = \DB::table( 'packages' )->where( 'id', '=', $client->channel_package )->get();
+		// 		$data = array(
+		// 			'client_id'   => $client->id,
+		// 			'bill_amount' => $package[0]->fee,
+		// 			'month'       => date( 'Ymd', strtotime( "+1 month", strtotime( $date ) ) ),
+		// 			'created_at'	=> date( 'Y-m-d h:i:s', strtotime( $date ) ),
+		// 			'updated_at'	=> date( 'Y-m-d h:i:s', strtotime( $date ) )
+		// 		);
+		// 		$billing->create( $data );
+		// 	}
+		// }
+		if ( env('DB_CONNECTION') == 'sqlite' ) {
+			$database = storage_path('database.sqlite');
+			$backup_database = env('DB_BACKUP_DIR', storage_path()) . date( 'Y-m-d-H-i-s' ) . '_datatbase.sqlite';
+			copy($database, $backup_database);
+		}
+
         \Alert::success('Monthly bill for all clients has been generated.<br/>Monthly database backup also completed.', 'Bill & Backup Done!')->html('true')->persistent('Close');
 		return \Redirect::to( 'home' );
 	}

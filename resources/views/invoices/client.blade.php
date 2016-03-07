@@ -141,30 +141,30 @@
     </style>
 </head>
 <body>
-<header class="clearfix">
-    <div id="logo">
-        <img src="invoice/logo.png">
-    </div>
-    <h1>{{date('M, Y', strtotime( $input_fm )).' - '.date('M, Y', strtotime( $input_tm ))}}</h1>
-    <div id="company" class="clearfix">
-        <div>Company Name</div>
-        <div>455 Foggy Heights,<br/> AZ 85004, US</div>
-        <div>(602) 519-0450</div>
-        <div><a href="mailto:company@example.com">company@example.com</a></div>
-    </div>
-    <div id="project">
-        <div><span>ID</span>{{ $billings[0]->first()->clientDetails->area_name->code . '-' . sprintf("%'.03d\n", $billings[0]->first()->clientDetails->id) }}</div>
-        <div><span>CLIENT</span>{{ $billings[0]->first()->clientDetails->name }}</div>
-        <div><span>ADDRESS</span>{{ $billings[0]->first()->clientDetails->address }}</div>
-        <div><span>PHONE</span>{{ $billings[0]->first()->clientDetails->phone_no_1 }}</div>
-        <div><span>DATE</span>{{date('F j, Y')}}</div>
-    </div>
-</header>
 <!-- This $i variable is very important. Don't delete it.-->
 {{--*/ $i = 0 /*--}}
 @foreach( $billings as $chunked_billings)
     <!-- This $i variable is very important. Don't delete it.-->
     {{--*/ $i++ /*--}}
+    <header class="clearfix">
+        <div id="logo">
+            <img src="invoice/logo.png">
+        </div>
+        <h1>{{date('M, Y', strtotime( $input_fm )).' - '.date('M, Y', strtotime( $input_tm ))}}</h1>
+        <div id="company" class="clearfix">
+            <div>Company Name</div>
+            <div>455 Foggy Heights,<br/> AZ 85004, US</div>
+            <div>(602) 519-0450</div>
+            <div><a href="mailto:company@example.com">company@example.com</a></div>
+        </div>
+        <div id="project">
+            <div><span>ID</span>{{ $billings[0]->first()->clientDetails->area_name->code . '-' . sprintf("%'.03d\n", $billings[0]->first()->clientDetails->id) }}</div>
+            <div><span>CLIENT</span>{{ $billings[0]->first()->clientDetails->name }}</div>
+            <div><span>ADDRESS</span>{{ $billings[0]->first()->clientDetails->address }}</div>
+            <div><span>PHONE</span>{{ $billings[0]->first()->clientDetails->phone_no_1 }}</div>
+            <div><span>DATE</span>{{date('F j, Y')}}</div>
+        </div>
+    </header>
     <main>
         <table>
             <thead>
