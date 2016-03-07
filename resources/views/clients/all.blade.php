@@ -47,7 +47,8 @@
                                             <td class=" last">
                                                 {!! Form::open(array('route' => array('clients.destroy', $client->id), 'method' => 'delete', 'id'=>'delete')) !!}
                                                 {!! Form::close() !!}
-                                                <a href="/clients/{{$client->id}}/edit" class="btn btn-sm btn-success">Edit</a>
+                                                <a href="{{URL::to('billings')}}?client_id={{$client->id}}" class="btn btn-sm btn-success">View</a>
+                                                <a href="{{URL::to('clients')}}/{{$client->id}}/edit" class="btn btn-sm btn-success">Edit</a>
                                                 <button class="btn btn-danger btn-sm delete">Delete</button>
                                             </td>
                                         </tr>
@@ -64,7 +65,8 @@
                                             <td class=" last">
                                                 {!! Form::open(array('route' => array('clients.destroy', $client->id), 'method' => 'delete', 'id'=>'delete')) !!}
                                                 {!! Form::close() !!}
-                                                <a href="/clients/{{$client->id}}/edit" class="btn btn-sm btn-success">Edit</a>
+                                                <a href="{{URL::to('billings')}}?client_id={{$client->id}}" class="btn btn-sm btn-success">View</a>
+                                                <a href="{{URL::to('clients')}}/{{$client->id}}/edit" class="btn btn-sm btn-success">Edit</a>
                                                 <button class="btn btn-danger btn-sm delete">Delete</button>
                                             </td>
                                         </tr>
