@@ -1310,7 +1310,8 @@ table.tile_info td:first-child {
 }
 
 td span {
-    line-height: 28px;
+    line-height: 15px;
+    font-size: 12px;
 }
 
 .sidebar-widget {
@@ -4822,7 +4823,7 @@ ul.project_files li a i {
  * bootstrap-vertical-tabs - v1.2.1
  * https://dbtek.github.io/bootstrap-vertical-tabs
  * 2014-11-07
- * Copyright (c) 2014 Ä°smail Demirbilek
+ * Copyright (c) 2014 Ã„Â°smail Demirbilek
  * License: MIT
  */
 
@@ -5444,7 +5445,7 @@ ul.project_files li a i {
 }
 /* *********  /ecommerce  **************************** */
 /* *********  progressbar  **************************** */
-/*! bootstrap-progressbar v0.8.4 | Copyright (c) 2012-2014 Stephan GroÃŸ | MIT license | http://www.minddust.com */
+/*! bootstrap-progressbar v0.8.4 | Copyright (c) 2012-2014 Stephan GroÃƒÅ¸ | MIT license | http://www.minddust.com */
 
 .progress_summary .progress {
     margin: 5px 0 12px !important;

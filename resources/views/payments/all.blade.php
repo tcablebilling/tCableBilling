@@ -56,7 +56,7 @@
                                             <td class=" ">{{sprintf("%'.05d\n", $payment->id)}} </td>
                                             <td class=" ">
                                                 {{$payment->clientDetails->name}}
-                                                <span class="client-details">Client ID: {{$payment->clientDetails->client_id}}</span>
+                                                <span class="client-details">Client ID: {{ $payment->clientDetails->area_name->code . '-' . sprintf("%'.03d\n", $payment->clientDetails->id) }}</span>
                                             </td>
                                             <td class=" ">{{ date('F d, Y', strtotime($payment->date)) }}</td>
                                             <td class=" ">{{ sprintf("%'.05d\n", $payment->billing_id) }}</td>
@@ -78,7 +78,7 @@
                                             <td class=" ">{{sprintf("%'.05d\n", $payment->id)}}  </td>
                                             <td class=" ">
                                                 {{$payment->clientDetails->name}}
-                                                <span class="client-details">Client ID: {{$payment->clientDetails->client_id}}</span>
+                                                <span class="client-details">Client ID: {{ $payment->clientDetails->area_name->code . '-' . sprintf("%'.03d\n", $payment->clientDetails->id) }}</span>
                                             </td>
                                             <td class=" ">{{date('F d, Y', strtotime($payment->date))}}</td>
                                             <td class=" ">{{sprintf("%'.05d\n", $payment->billing_id)}}</td>
