@@ -14,7 +14,7 @@
 
     <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
-    <link href="{{ URL::asset('fonts/css/font-awesome.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/font-awesome.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/animate.min.css') }}" rel="stylesheet">
 
     <!-- Custom styling plus plugins -->
@@ -48,49 +48,63 @@
 
 <body class="nav-md">
 
-<div class="container body">
-    <!-- Include this after the sweet alert js file -->
-    @include('sweet::alert')
-    <div class="main_container">
+    <div class="container body">
+        <!-- Include this after the sweet alert js file -->
+        @include('sweet::alert')
+        <div class="main_container">
 
-        <div class="col-md-3 left_col">
-            <div class="left_col scroll-view">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
 
-                @include('partials._sidebar')
+                    @include('partials._sidebar')
+
+                </div>
+            </div>
+
+            @include('partials._topnav')
+            <!-- page content -->
+            <div class="right_col" role="main">
+            @yield('content')
+                <!-- footer content -->
+                <footer class="footer">
+                    <div class="">
+                        <p id="bottom-copyright" class="pull-left">©{{date('Y')}} All Rights Reserved.</p>
+                        <p class="pull-right"><span class="lead"><i class="fa fa-globe"></i> tCableBilling<span id="reg">&reg;</span></span> is an automated cable network billing system. Developed by <a>Khan Mohammad Rashedun-Naby</a>. |
+                            <span class="lead"> <i class="fa fa-globe"></i> tCableBilling<span id="reg">&reg;</span></span>
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </footer>
+                <!-- /footer content -->
 
             </div>
+            <!-- /page content -->
         </div>
 
-        @include('partials._topnav')
-        <!-- page content -->
-        <div class="right_col" role="main">
-        @yield('content')
-            <!-- footer content -->
-            <footer class="footer">
-                <div class="">
-                    <p id="bottom-copyright" class="pull-left">©{{date('Y')}} All Rights Reserved.</p>
-                    <p class="pull-right"><span class="lead"><i class="fa fa-globe"></i> tCableBilling<span id="reg">&reg;</span></span> is an automated cable network billing system. Developed by <a>Khan Mohammad Rashedun-Naby</a>. |
-                        <span class="lead"> <i class="fa fa-globe"></i> tCableBilling<span id="reg">&reg;</span></span>
-                    </p>
-                </div>
-                <div class="clearfix"></div>
-            </footer>
-            <!-- /footer content -->
-
-        </div>
-        <!-- /page content -->
     </div>
 
-</div>
+    <div id="custom_notifications" class="custom-notifications dsp_none">
+        <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
+        </ul>
+        <div class="clearfix"></div>
+        <div id="notif-group" class="tabbed_notifications"></div>
+    </div>
 
-<div id="custom_notifications" class="custom-notifications dsp_none">
-    <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
-    </ul>
-    <div class="clearfix"></div>
-    <div id="notif-group" class="tabbed_notifications"></div>
-</div>
+    <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('js/jquery.nicescroll.min.js') }}"></script>
+    <!-- icheck -->
+    <script src="{{ URL::asset('js/icheck.min.js') }}"></script>
+    <!-- Datatables -->
+    <script src="{{ URL::asset('js/jquery.dataTables.js') }}"></script>
+    <script src="{{ URL::asset('js/dataTables.tableTools.js') }}"></script>
+    <!-- form validation -->
+    <script src="{{ URL::asset('js/validator.js') }}"></script>
+    <!-- daterangepicker -->
+    <script type="text/javascript" src="{{ URL::asset('js/moment.min2.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/daterangepicker.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/select2.full.js') }}"></script>
 
-@include('partials._scripts')
+    <script src="{{ URL::asset('js/custom.js') }}"></script>
 </body>
 
 </html>
