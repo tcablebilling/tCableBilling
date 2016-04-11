@@ -18,9 +18,9 @@
     <link href="{{ URL::asset('css/animate.min.css') }}" rel="stylesheet">
 
     <!-- Custom styling plus plugins -->
-    <link href="{{ URL::asset('css/icheck/flat/green.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/datatables/tools/css/dataTables.tableTools.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/select/select2.min.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/green.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/dataTables.tableTools.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/select2.min.css') }}" rel="stylesheet">
 
     <link href="{{ URL::asset('css/jquery-ui.min.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/jquery-ui.structure.min.css') }}" rel="stylesheet">
