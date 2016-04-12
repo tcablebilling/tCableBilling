@@ -12,22 +12,7 @@
 
     <!-- Bootstrap core CSS -->
 
-    <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
-
-    <link href="{{ URL::asset('css/font-awesome.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/animate.min.css') }}" rel="stylesheet">
-
-    <!-- Custom styling plus plugins -->
-    <link href="{{ URL::asset('css/green.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/dataTables.tableTools.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/select2.min.css') }}" rel="stylesheet">
-
-    <link href="{{ URL::asset('css/jquery-ui.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/jquery-ui.structure.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/jquery-ui.theme.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/sweetalert.css') }}" rel="stylesheet">
-
-    <link href="{{ URL::asset('css/custom.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/app.min.css') }}" rel="stylesheet">
 
     <script src="{{ URL::asset('js/sweetalert.min.js') }}"></script>
     <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
@@ -90,21 +75,7 @@
         <div id="notif-group" class="tabbed_notifications"></div>
     </div>
 
-    <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ URL::asset('js/jquery.nicescroll.min.js') }}"></script>
-    <!-- icheck -->
-    <script src="{{ URL::asset('js/icheck.min.js') }}"></script>
-    <!-- Datatables -->
-    <script src="{{ URL::asset('js/jquery.dataTables.js') }}"></script>
-    <script src="{{ URL::asset('js/dataTables.tableTools.js') }}"></script>
-    <!-- form validation -->
-    <script src="{{ URL::asset('js/validator.js') }}"></script>
-    <!-- daterangepicker -->
-    <script type="text/javascript" src="{{ URL::asset('js/moment.min2.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/daterangepicker.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/select2.full.js') }}"></script>
-
-    <script src="{{ URL::asset('js/custom.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/app.min.js') }}"></script>
 </body>
 
 </html>
