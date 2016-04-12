@@ -11,13 +11,8 @@
     <title>tCableBilling !</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ asset("/css/bootstrap.min.css") }}" rel="stylesheet">
 
-    <link href="{{ asset("/fonts/css/font-awesome.min.css") }}" rel="stylesheet">
-
-    <!-- Custom styling plus plugins -->
-    <link href="{{ asset("/css/custom.css") }}" rel="stylesheet">
-    <link href="{{ asset("/css/icheck/flat/green.css") }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/app.min.css') }}" rel="stylesheet">
 
 
     <script src="{{ asset("/js/jquery.min.js") }}"></script>
