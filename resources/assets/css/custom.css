@@ -390,9 +390,7 @@ dark,
 body {
     color: #73879C;
     background: #2A3F54;
-    /*#ECF0F1; #FCFCFC*/
-
-    font-family: Roboto;
+    font-family: Source Sans Pro;
     font-size: 13px;
     font-weight: 400;
     line-height: 1.471;
@@ -5790,8 +5788,8 @@ form:after {
 .login_content h1 {
     font: normal 25px Helvetica, Arial, sans-serif;
     letter-spacing: -0.05em;
-    line-height: 20px;
-    margin: 10px 0 30px;
+    line-height: 10px;
+    margin: 10px 0 17px;
 }
 .login_content h1:before,
 .login_content h1:after {
@@ -6465,6 +6463,7 @@ input.fee-name {
 #reg {
     font-size: 13px;
     vertical-align: top;
+    margin-left: -5px;
 }
 
 .table {
