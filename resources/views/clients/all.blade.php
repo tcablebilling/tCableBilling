@@ -15,7 +15,7 @@
                                     Add New Client
                                 </a>
                             </div>
-                            <table id="clientall" class="table table-striped responsive-utilities jambo_table">
+                            <table id="clientall" class="table table-striped table-responsive responsive-utilities jambo_table">
                                 <thead>
                                 <tr class="headings">
                                     <th>

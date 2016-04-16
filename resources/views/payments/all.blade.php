@@ -29,7 +29,7 @@
                             <div class="packages-buttons pull-right">
 
                             </div>
-                            <table id="packagesall" class="table table-striped responsive-utilities jambo_table">
+                            <table id="packagesall" class="table table-striped table-responsive responsive-utilities jambo_table">
                                 <thead>
                                 <tr class="headings">
                                     <th>
