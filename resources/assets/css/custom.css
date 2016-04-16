@@ -6461,6 +6461,9 @@ input.fee-name {
     padding-left: 0;
 }
 #reg {
+    font-size: 25px;
+}
+h1 > #reg {
     font-size: 13px;
     vertical-align: top;
     margin-left: -5px;
