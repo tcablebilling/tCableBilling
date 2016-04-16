@@ -1749,8 +1749,6 @@ ul.msg_list li a .message {
 
 .dropdown-menu {
     border: medium none;
-    border-radius: 3px;
-    box-shadow: 0 0 3px;
     display: none;
     float: left;
     font-size: 12px;
