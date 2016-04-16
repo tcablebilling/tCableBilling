@@ -23,7 +23,7 @@
                                     </div>
                                 </div>
                             {!! Form::close()!!}
-                            <table id="billingall" class="table table-striped responsive-utilities jambo_table">
+                            <table id="billingall" class="table table-striped table-responsive responsive-utilities jambo_table">
                                 <thead>
                                 <tr class="headings">
                                     <th>

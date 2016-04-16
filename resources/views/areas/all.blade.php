@@ -15,7 +15,7 @@
                                     Add New Area
                                 </a>
                             </div>
-                            <table id="areasall" class="table table-striped responsive-utilities jambo_table">
+                            <table id="areasall" class="table table-striped table-responsive responsive-utilities jambo_table">
                                 <thead>
                                 <tr class="headings">
                                     <th>
