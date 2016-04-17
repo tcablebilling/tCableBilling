@@ -29,72 +29,74 @@
                             <div class="packages-buttons pull-right">
 
                             </div>
-                            <table id="packagesall" class="table table-striped table-responsive responsive-utilities jambo_table">
-                                <thead>
-                                <tr class="headings">
-                                    <th>
-                                        <input type="checkbox" class="tableflat" disabled readonly>
-                                    </th>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Date</th>
-                                    <th>Billing ID</th>
-                                    <th>Paid Amount</th>
-                                    <th>Cumulative</th>
-                                    <th class=" no-link last"><span class="nobr" width="20%">Action</span>
-                                    </th>
-                                </tr>
-                                </thead>
+                            <div class="table-responsive">
+                                <table id="packagesall" class="table table-striped responsive-utilities jambo_table">
+                                    <thead>
+                                    <tr class="headings">
+                                        <th>
+                                            <input type="checkbox" class="tableflat" disabled readonly>
+                                        </th>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Date</th>
+                                        <th>Billing ID</th>
+                                        <th>Paid Amount</th>
+                                        <th>Cumulative</th>
+                                        <th class=" no-link last"><span class="nobr" width="20%">Action</span>
+                                        </th>
+                                    </tr>
+                                    </thead>
 
-                                <tbody>
-                                @foreach($payments as $payment)
-                                    @if ($payment->id % 2 == 0)
-                                        <tr class="even pointer">
-                                            <td class="a-center ">
-                                                <input type="checkbox" class="tableflat" disabled readonly>
-                                            </td>
-                                            <td class=" ">{{sprintf("%'.05d\n", $payment->id)}} </td>
-                                            <td class=" ">
-                                                {{$payment->clientDetails->name}}
-                                                <span class="client-details">Client ID: {{ $payment->clientDetails->area_name->code . '-' . sprintf("%'.03d\n", $payment->clientDetails->id) }}</span>
-                                            </td>
-                                            <td class=" ">{{ date('F d, Y', strtotime($payment->date)) }}</td>
-                                            <td class=" ">{{ sprintf("%'.05d\n", $payment->billing_id) }}</td>
-                                            <td class=" ">{{ $payment->paid_amount }} TK</td>
-                                            <td class=" ">{{$payment->paymentPaidCumulative()}} TK</td>
-                                            <td class=" last">
-                                                {!! Form::open(array('route' => array('payments.destroy', $payment->id), 'method' => 'delete', 'id'=>'delete')) !!}
-                                                {!! Form::close() !!}
-                                                <a href="/payments/{{$payment->id}}/edit" class="btn btn-sm btn-success">Edit</a>
-                                                <button class="btn btn-danger btn-sm delete">Delete</button>
-                                            </td>
+                                    <tbody>
+                                    @foreach($payments as $payment)
+                                        @if ($payment->id % 2 == 0)
+                                            <tr class="even pointer">
+                                                <td class="a-center ">
+                                                    <input type="checkbox" class="tableflat" disabled readonly>
+                                                </td>
+                                                <td class=" ">{{sprintf("%'.05d\n", $payment->id)}} </td>
+                                                <td class=" ">
+                                                    {{$payment->clientDetails->name}}
+                                                    <span class="client-details">Client ID: {{ $payment->clientDetails->area_name->code . '-' . sprintf("%'.03d\n", $payment->clientDetails->id) }}</span>
+                                                </td>
+                                                <td class=" ">{{ date('F d, Y', strtotime($payment->date)) }}</td>
+                                                <td class=" ">{{ sprintf("%'.05d\n", $payment->billing_id) }}</td>
+                                                <td class=" ">{{ $payment->paid_amount }} TK</td>
+                                                <td class=" ">{{$payment->paymentPaidCumulative()}} TK</td>
+                                                <td class=" last">
+                                                    {!! Form::open(array('route' => array('payments.destroy', $payment->id), 'method' => 'delete', 'id'=>'delete')) !!}
+                                                    {!! Form::close() !!}
+                                                    <a href="/payments/{{$payment->id}}/edit" class="btn btn-sm btn-success">Edit</a>
+                                                    <button class="btn btn-danger btn-sm delete">Delete</button>
+                                                </td>
 
-                                        </tr>
-                                    @else
-                                        <tr class="odd pointer">
-                                            <td class="a-center ">
-                                                <input type="checkbox" class="tableflat" disabled readonly>
-                                            </td>
-                                            <td class=" ">{{sprintf("%'.05d\n", $payment->id)}}  </td>
-                                            <td class=" ">
-                                                {{$payment->clientDetails->name}}
-                                                <span class="client-details">Client ID: {{ $payment->clientDetails->area_name->code . '-' . sprintf("%'.03d\n", $payment->clientDetails->id) }}</span>
-                                            </td>
-                                            <td class=" ">{{date('F d, Y', strtotime($payment->date))}}</td>
-                                            <td class=" ">{{sprintf("%'.05d\n", $payment->billing_id)}}</td>
-                                            <td class=" ">{{$payment->paid_amount}} TK</td>
-                                            <td class=" ">{{$payment->paymentPaidCumulative()}} TK</td>
-                                            <td class=" last">
-                                                {!! Form::open(array('route' => array('payments.destroy', $payment->id), 'method' => 'delete', 'id'=>'delete')) !!}
-                                                {!! Form::close() !!}
-                                                <a href="/payments/{{$payment->id}}/edit" class="btn btn-sm btn-success">Edit</a>
-                                                <button class="btn btn-danger btn-sm delete">Delete</button>
-                                            </td>
-                                        </tr>
-                                    @endif
-                                @endforeach
-                                </tbody>
-                            </table>
+                                            </tr>
+                                        @else
+                                            <tr class="odd pointer">
+                                                <td class="a-center ">
+                                                    <input type="checkbox" class="tableflat" disabled readonly>
+                                                </td>
+                                                <td class=" ">{{sprintf("%'.05d\n", $payment->id)}}  </td>
+                                                <td class=" ">
+                                                    {{$payment->clientDetails->name}}
+                                                    <span class="client-details">Client ID: {{ $payment->clientDetails->area_name->code . '-' . sprintf("%'.03d\n", $payment->clientDetails->id) }}</span>
+                                                </td>
+                                                <td class=" ">{{date('F d, Y', strtotime($payment->date))}}</td>
+                                                <td class=" ">{{sprintf("%'.05d\n", $payment->billing_id)}}</td>
+                                                <td class=" ">{{$payment->paid_amount}} TK</td>
+                                                <td class=" ">{{$payment->paymentPaidCumulative()}} TK</td>
+                                                <td class=" last">
+                                                    {!! Form::open(array('route' => array('payments.destroy', $payment->id), 'method' => 'delete', 'id'=>'delete')) !!}
+                                                    {!! Form::close() !!}
+                                                    <a href="/payments/{{$payment->id}}/edit" class="btn btn-sm btn-success">Edit</a>
+                                                    <button class="btn btn-danger btn-sm delete">Delete</button>
+                                                </td>
+                                            </tr>
+                                        @endif
+                                    @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
                             {!! $payments->render() !!}
                         </div>
                     </div>

@@ -10,12 +10,14 @@
                     <div class="x_panel">
 
                         <div class="x_content">
-                            <div class="packages-buttons pull-right">
-                                <a href="{{ URL::route('packages.create') }}" title="" class="btn btn-success btn-sm package-btn">
-                                    Add New Package
-                                </a>
+                            <div class="row">
+                                <div class="col-md-12 packages-buttons">
+                                    <a href="{{ URL::route('packages.create') }}" title="" class="btn btn-success btn-sm package-btn pull-right">
+                                        Add New Package
+                                    </a>
+                                </div>
                             </div>
-                            <table id="packagesall" class="table table-striped table-responsive responsive-utilities jambo_table">
+                            <table id="packagesall" class="table table-striped responsive-utilities jambo_table">
                                 <thead>
                                 <tr class="headings">
                                     <th>
@@ -61,7 +63,6 @@
                                     @endif
                                 @endforeach
                                 </tbody>
-
                             </table>
                         </div>
                     </div>
