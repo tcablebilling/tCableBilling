@@ -56,7 +56,7 @@
                         <div class="clearfix"></div>
                         <div class="separator">
                             <div>
-                                <h1><i class="fa fa-globe" style="font-size: 26px;"></i> tCableBilling <span id="reg">®</span></h1>
+                                <h1 class="brand-tcablebilling"><i class="fa fa-globe" style="font-size: 26px;"></i> tCableBilling <span id="reg">®</span></h1>
 
                                 <p>©{{date('Y')}} All Rights Reserved.</p>
                             </div>
