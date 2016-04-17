@@ -6462,9 +6462,9 @@ input.fee-name {
     font-size: 25px;
 }
 h1 > #reg {
-    font-size: 13px;
-    vertical-align: top;
-    margin-left: -5px;
+    font-size: 25px;
+    vertical-align: 5px;
+    margin-left: -2px;
 }
 
 .table {
@@ -6473,4 +6473,8 @@ h1 > #reg {
 #bottom-copyright {
     margin-bottom: 0;
     margin-top: 5px;
+}
+.brand-tcablebilling {
+    font: 400 25px Source Sans Pro,Arial,sans-serif!important;
+    letter-spacing: 0.01em !important;
 }
