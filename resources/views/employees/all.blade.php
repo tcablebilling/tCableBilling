@@ -10,12 +10,14 @@
                     <div class="x_panel">
 
                         <div class="x_content">
-                            <div class="packages-buttons pull-right">
-                                <a href="{{ URL::route('employees.create') }}" title="" class="btn btn-success btn-sm package-btn">
-                                    Add New Employee
-                                </a>
+                            <div class="row">
+                                <div class="col-md-12 packages-buttons">
+                                    <a href="{{ URL::route('employees.create') }}" title="" class="btn btn-success btn-sm pull-right package-btn">
+                                        Add New Employee
+                                    </a>
+                                </div>
                             </div>
-                            <table id="clientall" class="table table-striped table-responsive responsive-utilities jambo_table">
+                            <table id="clientall" class="table table-striped responsive-utilities jambo_table">
                                 <thead>
                                 <tr class="headings">
                                     <th>

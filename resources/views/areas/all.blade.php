@@ -10,12 +10,14 @@
                     <div class="x_panel">
 
                         <div class="x_content">
-                            <div class="areas-buttons pull-right">
-                                <a href="{{ URL::route('areas.create') }}" title="" class="btn btn-success btn-sm area-btn">
-                                    Add New Area
-                                </a>
+                            <div class="row">
+                                <div class="col-md-12 areas-buttons">
+                                    <a href="{{ URL::route('areas.create') }}" title="" class="btn btn-success btn-sm area-btn pull-right">
+                                        Add New Area
+                                    </a>
+                                </div>
                             </div>
-                            <table id="areasall" class="table table-striped table-responsive responsive-utilities jambo_table">
+                            <table id="areasall" class="table table-striped responsive-utilities jambo_table">
                                 <thead>
                                 <tr class="headings">
                                     <th>
@@ -91,6 +93,7 @@
                                 'aTargets': [0]
                             }
                         ],
+                        // "bPaginate": false,
                         'iDisplayLength': 12,
                         "sPaginationType": "full_numbers"
                     });
