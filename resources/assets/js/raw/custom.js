@@ -7,7 +7,7 @@
 
 /** ******  Inline JS Codes  *********************** **/
 $(document).ready(function () {
-    $('select').select2();
+    $('select').select2({ width: '100%'});
     $('input.tableflat').iCheck({
         checkboxClass: 'icheckbox_flat-green',
         radioClass: 'iradio_flat-green'
