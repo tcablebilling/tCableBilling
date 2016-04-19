@@ -9,12 +9,16 @@
                     <div class="x_panel">
                         <div class="x_content">
                             <div class="row">
-                                <div class="col-md-12 item form-group pull-right">
+                                <div class="col-md-12 col-sm-12 col-xs-12 item form-group pull-right">
                                     {!! Form::open(['method'=>'GET', 'url'=>'billings','class'=>'form-horizontal form-label-left']) !!}
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        {!! Form::select('client_id', $clients, $client_id,['class'=>'form-control col-md-7 col-xs-12 pull-right', 'required'=>'required', 'placeholder'=>'Select client...']);!!}
-                                    </div>
-                                    <button id="send" type="submit" class="btn btn-success btn-sm package-btn pull-right">Filter</button>
+									<div class="row">
+	                                    <div class="col-md-6 col-sm-6 col-xs-12">
+	                                        {!! Form::select('client_id', $clients, $client_id,['class'=>'form-control col-md-7 col-xs-12 pull-right', 'required'=>'required', 'placeholder'=>'Select client...']);!!}
+	                                    </div>
+	                                    <div class="col-md-6 col-sm-6 col-xs-12">
+		                                    <button id="send" type="submit" class="btn btn-success btn-sm package-btn pull-right">Filter</button>
+                                    	</div>
+                                	</div>
                                     {!! Form::close()!!}
                                 </div>
                             </div>

@@ -6478,3 +6478,6 @@ h1 > #reg {
     font: 400 25px Source Sans Pro,Arial,sans-serif!important;
     letter-spacing: 0.01em !important;
 }
+.select2-container--default .select2-selection--single {
+    border-radius: 0;
+}
