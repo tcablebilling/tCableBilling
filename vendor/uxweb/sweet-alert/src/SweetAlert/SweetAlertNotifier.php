@@ -18,6 +18,8 @@ class SweetAlertNotifier
         'showConfirmButton' => false,
         'timer'             => 1800,
         'allowOutsideClick' => true,
+        'title'             => '',
+        'text'              => '',
     ];
 
     /**
@@ -223,7 +225,7 @@ class SweetAlertNotifier
     {
         return (bool) strlen($this->config['title']);
     }
-    
+
     /**
      * Make Message HTML view.
      *
