@@ -20,7 +20,7 @@ class PaymentsController extends Controller
      */
     public function index()
     {
-        $payments = Payment::orderBy('id', 'DESC')->paginate(150);
+        $payments = Payment::with('clientDetails')->orderBy('id', 'DESC')->paginate(150);
 
         $client_id = null;
         $clients = [];

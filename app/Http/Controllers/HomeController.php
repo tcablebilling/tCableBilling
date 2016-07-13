@@ -27,8 +27,8 @@ class HomeController extends Controller
     {
         $clients   = [ ];
         $client_count = Client::count();
-        $next_mon_bill = Billing::where('month','=', date( 'Ymd', strtotime( "+1 month", strtotime( date( 'Ym' ).'01' ) ) ))->sum('bill_amount');
-        $this_mon_bill = Billing::where('month','=', date( 'Ym').'01')->sum('bill_amount');
+        $next_mon_bill = Billing::where('month','=', date( 'Ymd', strtotime( "+1 month", strtotime( date( 'Ym' ).'01' ) ) ))->with('clientDetails', 'clientPayments')->sum('bill_amount');
+        $this_mon_bill = Billing::where('month','=', date( 'Ym').'01')->with('clientDetails', 'clientPayments')->sum('bill_amount');
         $this_mon_payment = Payment::whereYear('date','=', date( 'Y'))->whereMonth('date','=', date('m'))->sum('paid_amount');
         $employee_salary = Employee::all()->sum('salary');
         foreach ( Client::all() as $client ) {

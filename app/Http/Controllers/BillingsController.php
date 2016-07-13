@@ -17,7 +17,7 @@ class BillingsController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index() {
-		$billings = Billing::with('billCumulative', 'paidCumulative');
+		$billings = Billing::with('billCumulative', 'paidCumulative', 'clientDetails', 'clientPayments');
 		$client_id = null;
 		$clients   = [ ];
 		foreach ( Client::all() as $client ) {
