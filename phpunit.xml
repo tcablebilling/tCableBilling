@@ -26,5 +26,6 @@
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
+        <env name="APP_KEY" value="base64:6hH24g0Jd6nOZQ8Ues3SIYVlg0qFZ1jklderh5gWHqY="/>
     </php>
 </phpunit>
