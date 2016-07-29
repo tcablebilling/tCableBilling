@@ -14,13 +14,11 @@ class ClientsTable extends Migration
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->increments('id');
-            $table->bigInteger('area');
             $table->string('name');
             $table->string('phone_no_1');
             $table->string('phone_no_2')->nullable();
             $table->string('address');
             $table->enum('connection_type', ['home', 'office', 'business', 'govt']);
-            $table->bigInteger('channel_package');
             $table->enum('client_status', ['Active', 'Deactive']);
             $table->enum('address_proof', ['voter_id', 'passport', 'electricity_bill', 'gas_bill', 'driving_license'])->nullable();
             $table->string('address_proof_no')->nullable();
