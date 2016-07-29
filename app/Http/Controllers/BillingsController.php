@@ -57,7 +57,7 @@ class BillingsController extends Controller {
 		}
 		if ( date( 'Ym' ) != $date ) {
 			foreach ( $clients as $client ) {
-				$package = \DB::table( 'packages' )->where( 'id', '=', $client->channel_package )->get();
+				$package = \DB::table( 'packages' )->where( 'id', '=', $client->package_id )->get();
 				$data = array(
 					'client_id'   => $client->id,
 					'bill_amount' => $package[0]->fee,
@@ -73,7 +73,7 @@ class BillingsController extends Controller {
 		// 	$date = 0;
 		// 	$date = date( 'Ym', strtotime(\DB::table( 'billings' )->orderBy( 'created_at', 'desc' )->first()->month)).'01';
 		// 	foreach ( $clients as $client ) {
-		// 		$package = \DB::table( 'packages' )->where( 'id', '=', $client->channel_package )->get();
+		// 		$package = \DB::table( 'packages' )->where( 'id', '=', $client->package_id )->get();
 		// 		$data = array(
 		// 			'client_id'   => $client->id,
 		// 			'bill_amount' => $package[0]->fee,

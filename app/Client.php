@@ -7,13 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Client extends Model
 {
     protected $fillable = [
-    	'area',
+    	'area_id',
     	'name',
     	'phone_no_1',
     	'phone_no_2',
     	'address',
     	'connection_type',
-    	'channel_package',
+    	'package_id',
         'client_status',
     	'address_proof',
     	'address_proof_no',
@@ -24,7 +24,7 @@ class Client extends Model
      */
     public function package()
     {
-        return $this->belongsTo('App\Package', 'channel_package');
+        return $this->belongsTo('App\Package', 'package_id');
     }
 
     /**
@@ -32,6 +32,6 @@ class Client extends Model
      */
     public function area_name()
     {
-        return $this->belongsTo('App\Area', 'area');
+        return $this->belongsTo('App\Area', 'area_id');
     }
 }
