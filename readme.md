@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/rnaby/tCableBilling/master/public/images/tcablebilling.png" alt="Sublime's custom image"/>
 </p>
 
-# tCableBilling
+# tCableBilling<sup>®</sup>
 
 [![Build Status](https://travis-ci.org/rnaby/tCableBilling.svg?branch=master)](https://travis-ci.org/rnaby/tCableBilling)
 
@@ -11,7 +11,7 @@
 Right now I'll suggest you to host this application on your localhost. In future I'll release a web host version. This application will also run smoothly on server also, but it is not recommended. For any support or assistance please email  me naby88@gmail.com.
 
 ## Description
-It is a point of sale (POS) software. With this piece of software you can manage your product sales data easily. I've written this for one of my friends business. I've planned this software as a big system and made it modular. So in future if anyone wants to add more functionality to this system he/she can easily do it.
+It is a recurring billing application for generating monthly subscription bill cable TV network clients, developed with Laravel 5.2.
 
 ### Modules
 * Customer Module
@@ -72,12 +72,12 @@ Now go to your favourite browser and try to access the software through that bro
 
 ## Contributing
 All contributors are welcome!  
-For information on how contribute to tCableBilling, please contact me at naby88@gmail.com.
+For information on how contribute to tCableBilling<sup>®</sup>, please contact me at naby88@gmail.com.
 
 ## Donation
 Any kinds of donations are welcome!  
-For information on how donate to tCableBilling, please contact me at naby88@gmail.com.
+For information on how donate to tCableBilling<sup>®</sup>, please contact me at naby88@gmail.com.
 
 ## License
-tCableBilling is released under the Attribution Assurance License.  
+tCableBilling<sup>®</sup> is released under the Attribution Assurance License.  
 See [LICENSE](LICENSE) for details.
