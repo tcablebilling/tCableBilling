@@ -14,14 +14,14 @@ Right now I'll suggest you to host this application on your localhost. In future
 It is a recurring billing application for generating monthly subscription bill cable TV network clients, developed with Laravel 5.2.
 
 ### Modules
-* Customer Module
-* Order Module
-* Product Module
-* Refund Module
-* Stock Module
-* Store Module
-* Supplier Module
-* User Module
+* Client Module
+* Billing Module
+* Payment Module
+* Individual History Module
+* Package Module
+* Area Module
+* Employee Module
+* Dashboard Overview Module
 
 ## Database Design
 <img src="https://raw.githubusercontent.com/rnaby/tCableBilling/master/public/images/db_tcablebilling.png" alt="Sublime's custom image"/>
@@ -60,15 +60,14 @@ Now go to your favourite browser and try to access the software through that bro
 * Built using Laravel 5.2
 * Live PDF generation using [domPDF](https://dompdf.github.io/)
 * Recurring invoices with auto-billing
-* Manage multiple store
-* Inventory management
-* Daily, weekly and monthly report generation
+* Manage multiple client packages
+* Manage employee data
+* Monthly report generation
 * Multi-user support
 * Tax rates and payment terms
 * Discount management
 * Partial payments
 * Due management
-* Supplier management
 
 ## Contributing
 All contributors are welcome!  
