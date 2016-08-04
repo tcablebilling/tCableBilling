@@ -25,14 +25,9 @@ class AddRelationBetweenClientsAndPackages extends Migration
      */
     public function down()
     {
-        if (Schema::hasTable('clients')) {
-            Schema::table('clients', function (Blueprint $table) {
-                if( Schema::hasColumn( 'clients', 'package_id' ) )
-                {
-                    $table->dropForeign(['package_id']);
-                    $table->dropColumn('package_id');
-                }
-            });
-        }
+        Schema::table('clients', function (Blueprint $table) {
+            $table->dropForeign(['package_id']);
+            $table->dropColumn('package_id');
+        });
     }
 }

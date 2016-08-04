@@ -25,14 +25,9 @@ class AddRelationBetweenClientsAndAreas extends Migration
      */
     public function down()
     {
-        if (Schema::hasTable('clients')) {
-            Schema::table('clients', function (Blueprint $table) {
-                if( Schema::hasColumn( 'clients', 'area_id' ) )
-                {
-                	$table->dropForeign(['area_id']);
-                    $table->dropColumn('area_id');
-                }
-            });
-        }
+        Schema::table('clients', function (Blueprint $table) {
+            $table->dropForeign(['area_id']);
+            $table->dropColumn('area_id');
+        });
     }
 }
