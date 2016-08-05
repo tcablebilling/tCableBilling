@@ -11,13 +11,13 @@
 |
 */
 Route::group(['middleware' => 'auth'], function(){
-	Route::get('/home', array( 'as' => 'home', 'uses' => 'HomeController@index') );
-	Route::get('/print-m', array( 'as' => 'print-m', 'uses' => 'HomeController@billMonthly') );
-	Route::get('/print-custom', array( 'as' => 'print-custom', 'uses' => 'HomeController@clientCustom') );
+	Route::get('/home', ['as' => 'home', 'uses' => 'HomeController@index'] );
+	Route::get('/print-m', ['as' => 'print-m', 'uses' => 'HomeController@billMonthly'] );
+	Route::get('/print-custom', ['as' => 'print-custom', 'uses' => 'HomeController@clientCustom'] );
 
 	Route::get('/individual', [ 'as' => 'individual', 'uses' => 'BillingsController@individualClient'] );
 
-	Route::get('/db-backup', array( 'as' => 'db-backup', 'uses' => 'HomeController@dbBackup') );
+	Route::get('/db-backup', ['as' => 'db-backup', 'uses' => 'HomeController@dbBackup'] );
 
 	Route::resource( '/users', 'UsersController' );
 	Route::resource( '/clients', 'ClientsController' );
