@@ -24,7 +24,7 @@ class Client extends Model
      */
     public function package()
     {
-        return $this->belongsTo('App\Package', 'package_id');
+        return $this->belongsTo('App\Package', 'package_id', 'id');
     }
 
     /**
@@ -32,6 +32,6 @@ class Client extends Model
      */
     public function area_name()
     {
-        return $this->belongsTo('App\Area', 'area_id');
+        return $this->belongsTo('App\Area', 'area_id', 'id');
     }
 }
