@@ -24,8 +24,8 @@
             <script type="text/javascript">
                 jQuery(document).ready(function($) {
                 	var area_codes = {!! $area_codes !!};
-                    $('#area').change(function() {
-                        var area = $('#area').val();
+                    $('#area_id').change(function() {
+                        var area = $('#area_id').val();
                         $('#client_id').val( area_codes[area] );
                     });
                 });

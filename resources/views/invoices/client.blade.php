@@ -147,9 +147,6 @@
     <!-- This $i variable is very important. Don't delete it.-->
     {{--*/ $i++ /*--}}
     <header class="clearfix">
-        <div id="logo">
-            <img src="invoice/logo.png">
-        </div>
         <h1>{{date('M, Y', strtotime( $input_fm )).' - '.date('M, Y', strtotime( $input_tm ))}}</h1>
         <div id="company" class="clearfix">
             <div>Company Name</div>
