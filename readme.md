@@ -80,18 +80,22 @@ Now go to your favourite browser and try to access the software through that bro
 * Due management
 * Auto DB backup(Right now for Sqlite only)
 
+## Queries 
+For any further query on **tCableBilling<sup>®</sup>**, please create an issue. We will discuss the topic there. I'll not answer any email on query. Email communication is only for **Contribution**, **Donation** and **Documentation.**
+
+
 ## Contributing
 All contributors are welcome!  
-For information on how contribute to tCableBilling<sup>®</sup>, please contact me at naby88@gmail.com.
+For information on how contribute to **tCableBilling<sup>®</sup>**, please contact me at naby88@gmail.com.
 
 ## Donation
 Any kinds of donations are welcome!  
-For information on how donate to tCableBilling<sup>®</sup>, please contact me at naby88@gmail.com.
+For information on how donate to **tCableBilling<sup>®</sup>**, please contact me at naby88@gmail.com.
 
 ## Documentation
 It is one of my pet projects. After 9-5 regular job I coded it at home. You can understand that it wasn't possible for me till now to write the software and documentation both at a time. So it would be great if you guys contribute to this software documentation as well as to this software code.  
-For information on writing the documentation of tCableBilling<sup>®</sup>, please contact me at naby88@gmail.com.
+For information on writing the documentation of **tCableBilling<sup>®</sup>**, please contact me at naby88@gmail.com.
 
 ## License
-tCableBilling<sup>®</sup> is released under the Attribution Assurance License.  
+**tCableBilling<sup>®</sup>** is released under the Attribution Assurance License.  
 See [LICENSE](LICENSE) for details.
