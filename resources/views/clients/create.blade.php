@@ -22,13 +22,13 @@
 
             </div>
             <script type="text/javascript">
-                jQuery(document).ready(function($) {
+                (function($) {
                 	var area_codes = {!! $area_codes !!};
                     $('#area_id').change(function() {
                         var area = $('#area_id').val();
                         $('#client_id').val( area_codes[area] );
                     });
-                });
+                })(jQuery);
             </script>
         </div>
     @endsection

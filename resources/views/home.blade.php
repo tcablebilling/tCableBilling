@@ -96,7 +96,7 @@
         <!-- /top tiles -->
         <br/>
         <script type="text/javascript" charset="utf-8" async defer>
-            $(function() {
+            jQuery(document).ready(function($) {
                 $('#range').datepicker({
                     changeMonth: true,
                     changeYear: true,
@@ -111,8 +111,6 @@
                         thisCalendar.datepicker('setDate', new Date(year, month, 1));
                     });
                 });
-            });
-            $(function() {
                 $('#month_range').daterangepicker({
                     opens:'left',
                     format:'MMMM D, YY'

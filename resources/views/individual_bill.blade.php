@@ -113,8 +113,6 @@
                         // 'iDisplayLength': 12,
                         // "sPaginationType": "full_numbers"
                     });
-                });
-                $(function() {
                     $('#range').daterangepicker({
                         opens:'left',
                         format:'MMMM D, YY'

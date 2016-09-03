@@ -12,10 +12,9 @@
 
     <!-- Bootstrap core CSS -->
 
-    <link href="{{ URL::asset('css/app.min.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
 
-    <script src="{{ URL::asset('js/top.min.js') }}"></script>
-
+    <script src="{{ URL::asset('js/top.js') }}"></script>
     <!--[if lt IE 9]>
     <script src="../assets/js/ie8-responsive-file-warning.js"></script>
     <![endif]-->
@@ -73,7 +72,7 @@
         <div id="notif-group" class="tabbed_notifications"></div>
     </div>
 
-    <script type="text/javascript" src="{{ URL::asset('js/bottom.min.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/bottom.js') }}"></script>
 </body>
 
 </html>
