@@ -37,10 +37,7 @@
 <!-- datepicker -->
 <script type="text/javascript">
     $(document).ready(function ($) {
-        $('#reportrange').daterangepicker({
-            "singleDatePicker": true,
-            "format": "YY-MM-DD"
-        });
+        $('#reportrange').datepicker();
     });
 </script>
 <!-- /datepicker -->
