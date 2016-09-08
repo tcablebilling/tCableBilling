@@ -12,5 +12,5 @@ before_script:
   - composer install --no-interaction
 
 script:
-  - chmod -R 777 storage
+  - chmod -R 777 bootstrap/cache
   - vendor/bin/phpunit
