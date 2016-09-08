@@ -12,5 +12,5 @@ before_script:
   - composer install --no-interaction
 
 script:
-  - sudo chown -R apache:apache bootstrap/cache
+  - php artisan clear-compiled
   - vendor/bin/phpunit
