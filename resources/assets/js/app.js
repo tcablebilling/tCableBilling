@@ -171,13 +171,13 @@ jQuery.noConflict();
     }
     /** ******  /switcher  *********************** **/
     /** ******  collapse panel  *********************** **/
-// Close ibox function
+    // Close ibox function
     $('.close-link').click(function () {
         var content = $(this).closest('div.x_panel');
         content.remove();
     });
 
-// Collapse ibox function
+    // Collapse ibox function
     $('.collapse-link').click(function () {
         var x_panel = $(this).closest('div.x_panel');
         var button = $(this).find('i');
@@ -202,7 +202,7 @@ jQuery.noConflict();
     }
     /** ******  /iswitch  *********************** **/
     /** ******  star rating  *********************** **/
-// Starrr plugin (https://github.com/dobtco/starrr)
+    // Starrr plugin (https://github.com/dobtco/starrr)
     var __slice = [].slice;
 
     (function ($, window) {

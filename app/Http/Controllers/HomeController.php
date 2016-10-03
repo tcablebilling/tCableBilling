@@ -54,7 +54,7 @@ class HomeController extends Controller
         $billings = Billing::with('billCumulative', 'paidCumulative')->where('month', '=', date('Ymd', $date))->get();
         $pdf = PDF::loadView('invoices.monthly', compact('billings'));
         return $pdf->download(date('Y-m-d').'.pdf');
-        // return view('invoices.monthly', compact('billings'));
+        //return view('invoices.monthly', compact('billings'));
     }
     public function clientCustom()
     {
