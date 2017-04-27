@@ -26,7 +26,9 @@ It is a recurring billing application for generating monthly subscription bill c
 ## Database Design
 <img src="https://raw.githubusercontent.com/rnaby/tCableBilling/master/public/images/db_tcablebilling.png" alt="Sublime's custom image"/>
 ## Installation
+
 <code>Composer</code> must be installed in your system for installing this software.
+
 ### 1. Step One
 Clone this repository to your localhost or server directory.
 <pre>$ git clone git@github.com:rnaby/tCableBilling.git /to/your/path</pre>
