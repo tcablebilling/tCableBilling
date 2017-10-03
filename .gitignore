@@ -1,7 +1,8 @@
-/vendor
-/node_modules
+vendor/
+node_modules/
 Homestead.yaml
 Homestead.json
 .env
 npm-debug.log
 .idea/
+composer.lock
