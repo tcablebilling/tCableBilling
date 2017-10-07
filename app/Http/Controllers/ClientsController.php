@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace TCableBilling\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use TCableBilling\Http\Requests;
+use TCableBilling\Http\Controllers\Controller;
 
-use App\Client;
-use App\Package;
-use App\Area;
+use TCableBilling\Client;
+use TCableBilling\Package;
+use TCableBilling\Area;
 
 class ClientsController extends Controller
 {

@@ -5,3 +5,7 @@ Homestead.json
 .env
 npm-debug.log
 .idea/
+composer.lock
+storage/framework/cache/
+storage/framework/sessions/
+storage/framework/views/

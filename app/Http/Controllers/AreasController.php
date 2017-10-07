@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace TCableBilling\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use TCableBilling\Http\Requests;
+use TCableBilling\Http\Controllers\Controller;
 
-use App\Area;
+use TCableBilling\Area;
 
 class AreasController extends Controller
 {

@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: TCableBilling
+        psr4_prefix: TCableBilling
         src_path: app

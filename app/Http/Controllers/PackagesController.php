@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace TCableBilling\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use TCableBilling\Http\Requests;
+use TCableBilling\Http\Controllers\Controller;
 
-use App\Package;
+use TCableBilling\Package;
 
 class PackagesController extends Controller
 {

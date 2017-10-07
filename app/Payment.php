@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace TCableBilling;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -17,7 +17,7 @@ class Payment extends Model
      */
     public function clientDetails()
     {
-        return $this->belongsTo('App\Client', 'client_id');
+        return $this->belongsTo('TCableBilling\Client', 'client_id');
     }
     public function paymentPaidCumulative()
     {

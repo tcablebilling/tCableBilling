@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace TCableBilling;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,28 +16,28 @@ class Billing extends Model
      */
     public function clientDetails()
     {
-        return $this->belongsTo('App\Client', 'client_id');
+        return $this->belongsTo('TCableBilling\Client', 'client_id');
     }
     /**
      * Get the client channel package.
      */
     public function clientPayments()
     {
-        return $this->hasMany('App\Payment', 'billing_id', 'id');
+        return $this->hasMany('TCableBilling\Payment', 'billing_id', 'id');
     }
     /**
      * Get the client channel package.
      */
     public function paidCumulative()
     {
-        return $this->hasMany('App\Payment', 'client_id', 'client_id');
+        return $this->hasMany('TCableBilling\Payment', 'client_id', 'client_id');
     }
     /**
      * Get the client channel package.
      */
     public function billCumulative()
     {
-        return $this->hasMany('App\Billing', 'client_id', 'client_id');
+        return $this->hasMany('TCableBilling\Billing', 'client_id', 'client_id');
     }
 
     public function getBillCumulativeSum(){

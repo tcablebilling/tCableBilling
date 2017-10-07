@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace TCableBilling;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -24,7 +24,7 @@ class Client extends Model
      */
     public function package()
     {
-        return $this->belongsTo('App\Package', 'package_id', 'id');
+        return $this->belongsTo('TCableBilling\Package', 'package_id', 'id');
     }
 
     /**
@@ -32,6 +32,6 @@ class Client extends Model
      */
     public function area_name()
     {
-        return $this->belongsTo('App\Area', 'area_id', 'id');
+        return $this->belongsTo('TCableBilling\Area', 'area_id', 'id');
     }
 }

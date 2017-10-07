@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Jobs;
+namespace TCableBilling\Jobs;
 
 use Illuminate\Bus\Queueable;
 

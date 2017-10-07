@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace TCableBilling\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

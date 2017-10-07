@@ -1,20 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace TCableBilling\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use TCableBilling\Http\Requests;
+use TCableBilling\Http\Controllers\Controller;
 
 // Pulling in Auth & Redirect
 use Auth;
 use Redirect;
 use PDF;
-use App\Client;
-use App\Billing;
-use App\Payment;
-use App\Employee;
+use TCableBilling\Client;
+use TCableBilling\Billing;
+use TCableBilling\Payment;
+use TCableBilling\Employee;
 
 class HomeController extends Controller
 {

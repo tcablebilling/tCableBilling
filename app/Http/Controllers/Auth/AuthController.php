@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace TCableBilling\Http\Controllers\Auth;
 
-use App\User;
+use TCableBilling\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use TCableBilling\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
@@ -72,7 +72,7 @@ class AuthController extends Controller
         ]);
     }
 
-    public function authenticated( \Illuminate\Http\Request $request, \App\User $user ) 
+    public function authenticated( \Illuminate\Http\Request $request, \TCableBilling\User $user ) 
     {
         \Alert::success('You just logged in.', 'Welcome !')->persistent('Close');
         return redirect()->intended($this->redirectPath());

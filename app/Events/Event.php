@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace TCableBilling\Events;
 
 abstract class Event
 {
