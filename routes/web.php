@@ -32,4 +32,4 @@ Route::group(['middleware' => 'auth'], function(){
 Route::get( '/', 'HomeController@rootPath' );
 Route::get( '/login', [ 'as' => 'getLogin', 'uses' => 'LoginController@showLoginForm' ] );
 Route::post( '/login', [ 'as' => 'postLogin', 'uses' => 'LoginController@login' ] );
-Route::get( 'logout', 'Auth\LoginController@logout' );
+Route::get( 'logout', 'LoginController@logout' );
