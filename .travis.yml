@@ -12,5 +12,7 @@ before_script:
   - composer install --no-interaction
 
 script:
-  - php artisan clear-compiled
-  - vendor/bin/phpunit
+    - php artisan migrate
+    - php artisan db:seed
+    - php artisan clear-compiled
+    - vendor/bin/phpunit
