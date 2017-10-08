@@ -4,12 +4,9 @@ namespace TCableBilling\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use TCableBilling\Http\Requests;
-use TCableBilling\Http\Controllers\Controller;
-
-use TCableBilling\Payment;
-use TCableBilling\Client;
-use TCableBilling\Billing;
+use TCableBilling\Http\Models\Payment;
+use TCableBilling\Http\Models\Client;
+use TCableBilling\Http\Models\Billing;
 
 class PaymentsController extends Controller
 {
@@ -26,7 +23,9 @@ class PaymentsController extends Controller
         $clients = [];
 
         foreach ( Client::all() as $client) {
-            $clients[$client->id] = $client->area_name->code . '-' . sprintf("%'.03d\n", $client->id) . ' ' . $client->name;
+            $clients[$client->id] = $client->area_name->code
+                                    . '-' . sprintf("%'.03d\n", $client->id)
+                                    . ' ' . $client->name;
         }
 
         $client_id = \Input::get('client_id');
@@ -49,7 +48,9 @@ class PaymentsController extends Controller
     {
         $clients = [];
         foreach ( Client::all() as $client) {
-            $clients[$client->id] = $client->area_name->code . '-' . sprintf("%'.03d\n", $client->id) . ' ' . $client->name;
+            $clients[$client->id] = $client->area_name->code
+                                    . '-' . sprintf("%'.03d\n", $client->id)
+                                    . ' ' . $client->name;
         }
         $billings = [];
         foreach ( Billing::all() as $billing) {
@@ -67,7 +68,7 @@ class PaymentsController extends Controller
     public function store(Request $request)
     {
         Payment::create( $request->all() );
-        \Alert::success('Your requested payment has been created.', 'Payment Created !');
+        \Alert::success( 'Your requested payment has been created.', 'Payment Created !' );
         return \Redirect::to( 'payments' );
     }
 
@@ -92,7 +93,9 @@ class PaymentsController extends Controller
     {
         $clients = [];
         foreach ( Client::all() as $client) {
-            $clients[$client->id] = $client->area_name->code . '-' . sprintf("%'.03d\n", $client->id) . ' ' . $client->name;
+            $clients[$client->id] = $client->area_name->code
+                                    . '-' . sprintf("%'.03d\n", $client->id)
+                                    . ' ' . $client->name;
         }
         $payment = Payment::findOrFail($id);
         $billings = [];

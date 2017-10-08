@@ -4,10 +4,7 @@ namespace TCableBilling\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use TCableBilling\Http\Requests;
-use TCableBilling\Http\Controllers\Controller;
-
-use TCableBilling\Package;
+use TCableBilling\Http\Models\Package;
 
 class PackagesController extends Controller
 {

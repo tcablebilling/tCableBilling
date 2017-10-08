@@ -4,11 +4,8 @@ namespace TCableBilling\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use TCableBilling\Http\Requests;
-use TCableBilling\Http\Controllers\Controller;
-
-use TCableBilling\Client;
-use TCableBilling\Billing;
+use TCableBilling\Http\Models\Client;
+use TCableBilling\Http\Models\Billing;
 
 class BillingsController extends Controller {
 	/**
@@ -21,7 +18,9 @@ class BillingsController extends Controller {
 		$client_id = null;
 		$clients   = [ ];
 		foreach ( Client::all() as $client ) {
-			$clients[ $client->id ] = $client->area_name->code . '-' . sprintf("%'.03d\n", $client->id) . ' ' . $client->name;
+			$clients[ $client->id ] = $client->area_name->code
+			                          . '-' . sprintf( "%'.03d\n", $client->id )
+			                          . ' ' . $client->name;
 		}
 		$client_id = \Input::get( 'client_id' );
 		if ( $client_id != null ) {
@@ -61,36 +60,30 @@ class BillingsController extends Controller {
 				$data = array(
 					'client_id'   => $client->id,
 					'bill_amount' => $package[0]->fee,
-					'month'       => date( 'Ymd', strtotime( "+1 month", strtotime( date( 'Ym' ).'01' ) ) )
+					'month'       => date(
+						'Ymd',
+						strtotime(
+							"+1 month",
+							strtotime( date( 'Ym' ).'01' )
+						)
+					)
 				);
 				$billing->create( $data );
 			}
 		}
-		// for ($i = 0; $i <= 100; $i++) {
-		// 	$clients = Client::where('client_status', '=', 'Active')->get();
-		// 	$data = array();
-		// 	$created_at = \DB::table( 'billings' )->orderBy( 'created_at', 'desc' )->first();
-		// 	$date = 0;
-		// 	$date = date( 'Ym', strtotime(\DB::table( 'billings' )->orderBy( 'created_at', 'desc' )->first()->month)).'01';
-		// 	foreach ( $clients as $client ) {
-		// 		$package = \DB::table( 'packages' )->where( 'id', '=', $client->package_id )->get();
-		// 		$data = array(
-		// 			'client_id'   => $client->id,
-		// 			'bill_amount' => $package[0]->fee,
-		// 			'month'       => date( 'Ymd', strtotime( "+1 month", strtotime( $date ) ) ),
-		// 			'created_at'	=> date( 'Y-m-d h:i:s', strtotime( $date ) ),
-		// 			'updated_at'	=> date( 'Y-m-d h:i:s', strtotime( $date ) )
-		// 		);
-		// 		$billing->create( $data );
-		// 	}
-		// }
+
 		if ( env('DB_CONNECTION') == 'sqlite' ) {
 			$database = storage_path('database.sqlite');
-			$backup_database = env('DB_BACKUP_DIR', storage_path()) . date( 'Y-m-d-H-i-s' ) . '_datatbase.sqlite';
+			$backup_database = env( 'DB_BACKUP_DIR', storage_path() )
+			                   . date( 'Y-m-d-H-i-s' )
+			                   . '_datatbase.sqlite';
 			copy($database, $backup_database);
 		}
 
-        \Alert::success('Monthly bill for all clients has been generated.<br/>Monthly database backup also completed.', 'Bill & Backup Done!')->html('true')->persistent('Close');
+        \Alert::success(
+        	'Monthly bill for all clients has been generated.<br/>Monthly database backup also completed.',
+	        'Bill & Backup Done!'
+        )->html('true')->persistent('Close');
 		return \Redirect::to( 'home' );
 	}
 

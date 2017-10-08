@@ -4,10 +4,8 @@ namespace TCableBilling\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use TCableBilling\Http\Requests;
-use TCableBilling\Http\Controllers\Controller;
+use TCableBilling\Http\Models\User;
 
-use TCableBilling\User;
 class UsersController extends Controller
 {
     /**
