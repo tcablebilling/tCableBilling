@@ -3,6 +3,7 @@
 namespace TCableBilling\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use TCableBilling\Http\Models\Area;
 
 /**

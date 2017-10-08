@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 use TCableBilling\Http\Models\User;
 
+/**
+ * Class UsersController
+ *
+ * @package TCableBilling\Http\Controllers
+ */
 class UsersController extends Controller
 {
     /**

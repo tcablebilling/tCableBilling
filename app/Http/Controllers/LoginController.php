@@ -5,6 +5,11 @@ namespace TCableBilling\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
+/**
+ * Class LoginController
+ *
+ * @package TCableBilling\Http\Controllers
+ */
 class LoginController extends Controller
 {
     /*

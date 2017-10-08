@@ -8,6 +8,11 @@ use TCableBilling\Http\Models\Payment;
 use TCableBilling\Http\Models\Client;
 use TCableBilling\Http\Models\Billing;
 
+/**
+ * Class PaymentsController
+ *
+ * @package TCableBilling\Http\Controllers
+ */
 class PaymentsController extends Controller
 {
     /**
