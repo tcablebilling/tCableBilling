@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 use TCableBilling\Http\Models\Client;
 use TCableBilling\Http\Models\Billing;
 
+/**
+ * Class BillingsController
+ *
+ * @package TCableBilling\Http\Controllers
+ */
 class BillingsController extends Controller {
 	/**
 	 * Display a listing of the resource.
@@ -14,20 +19,32 @@ class BillingsController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index() {
-		$billings = Billing::with('billCumulative', 'paidCumulative', 'clientDetails', 'clientPayments');
+		$billings = Billing::with(
+			'billCumulative',
+			'paidCumulative',
+			'clientDetails',
+			'clientPayments'
+		);
+		
 		$client_id = null;
 		$clients   = [ ];
 		foreach ( Client::all() as $client ) {
 			$clients[ $client->id ] = $client->area_name->code
-			                          . '-' . sprintf( "%'.03d\n", $client->id )
-			                          . ' ' . $client->name;
+									. '-' . sprintf(
+									"%'.03d\n",
+										$client->id
+									). ' ' . $client->name;
 		}
 		$client_id = \Input::get( 'client_id' );
 		if ( $client_id != null ) {
 			$billings =$billings->where( 'client_id', $client_id );
 		}
-		$billings = $billings->orderBy('id','desc')->paginate(159);
-		return view( 'billings', compact( 'billings', 'client_id', 'clients' ) );
+		$billings = $billings->orderBy('id','desc')
+		                     ->paginate(159);
+		return view(
+			'billings',
+			compact( 'billings', 'client_id', 'clients' )
+		);
 	}
 
 	/**
@@ -49,14 +66,18 @@ class BillingsController extends Controller {
 	public function store( Billing $billing ) {
 		$clients = Client::where('client_status', '=', 'Active')->get();
 		$data = array();
-		$created_at = \DB::table( 'billings' )->orderBy( 'created_at', 'desc' )->first();
+		$created_at =   \DB::table( 'billings' )
+						->orderBy( 'created_at', 'desc' )
+						->first();
 		$date = 0;
 		if ( $created_at ) {
 			$date = date( 'Ym', strtotime( $created_at->created_at ) );
 		}
 		if ( date( 'Ym' ) != $date ) {
 			foreach ( $clients as $client ) {
-				$package = \DB::table( 'packages' )->where( 'id', '=', $client->package_id )->get();
+				$package =    \DB::table( 'packages' )
+				              ->where( 'id', '=', $client->package_id )
+				              ->get();
 				$data = array(
 					'client_id'   => $client->id,
 					'bill_amount' => $package[0]->fee,
@@ -81,7 +102,8 @@ class BillingsController extends Controller {
 		}
 
         \Alert::success(
-        	'Monthly bill for all clients has been generated.<br/>Monthly database backup also completed.',
+        	'Monthly bill for all clients has been generated.<br/>
+			Monthly database backup also completed.',
 	        'Bill & Backup Done!'
         )->html('true')->persistent('Close');
 		return \Redirect::to( 'home' );
@@ -131,10 +153,16 @@ class BillingsController extends Controller {
 	public function destroy( $id ) {
         $billing = Billing::findOrFail($id);
         $billing->delete();
-        \Alert::info('Your requested bill has been deleted.', 'Bill Deleted !');
+        \Alert::info(
+        	'Your requested bill has been deleted.',
+	        'Bill Deleted !'
+        );
         return \Redirect::to('/billings');
 	}
-
+	
+	/**
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+	 */
 	public function individualClient()
 	{
 		$input = explode('-', \Input::get( 'range' ), 2);
@@ -147,17 +175,37 @@ class BillingsController extends Controller {
 			}
 		}
 		$from_month = date('Ym', strtotime( $input_fm ));
-		$to_month = date( 'Ymd', strtotime( date( 'Y-m-d', strtotime( $input_tm ) ) ) );
+		$to_month = date(
+			'Ymd',
+			strtotime(
+				date( 'Y-m-d', strtotime( $input_tm ) )
+			)
+		);
 		$client_id = null;
 		$clients   = [ ];
 		foreach ( Client::all() as $client ) {
-			$clients[ $client->id ] = $client->area_name->code . '-' . sprintf("%'.03d\n", $client->id) . ' ' . $client->name;
+			$clients[ $client->id ] = $client->area_name
+				                            ->code . '-' . sprintf(
+											    "%'.03d\n",
+											    $client->id
+											) . ' ' . $client->name;
 		}
 		$client_id = \Input::get( 'client_id' );
 		$billings = Billing::with('billCumulative', 'paidCumulative');
-		$billings = $billings->where( 'client_id', $client_id )->orderBy( 'id', 'DESC' )->whereBetween('month', array( $from_month, $to_month))->paginate( 150 );
-		return view('individual_bill', compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' ));
-		// $pdf = PDF::loadView('invoices.client', compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' ));
-		// return $pdf->download('invoice.pdf');
+		$billings = $billings
+			->where( 'client_id', $client_id )
+			->orderBy( 'id', 'DESC' )
+			->whereBetween('month', array( $from_month, $to_month))
+			->paginate( 150 );
+		return view(
+			'individual_bill',
+			compact(
+				'billings',
+				'client_id',
+				'clients',
+				'input_fm',
+				'input_tm'
+			)
+		);
 	}
 }

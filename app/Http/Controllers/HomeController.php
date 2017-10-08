@@ -56,9 +56,9 @@ class HomeController extends Controller
         $employee_salary = Employee::all()->sum('salary');
 
         foreach ( Client::all() as $client ) {
-            $clients[ $client->id ] = $client->area_name->code .
-                                      '-' . sprintf("%'.03d\n", $client->id) .
-                                      ' ' . $client->name;
+            $clients[$client->id] = $client->area_name->code .
+								'-' . sprintf("%'.03d\n", $client->id) .
+								' ' . $client->name;
         }
 
         $button = Billing::orderBy( 'created_at', 'DESC' )->first();
@@ -77,6 +77,10 @@ class HomeController extends Controller
         );
 
     }
+	
+	/**
+	 * @return mixed
+	 */
     public function billMonthly()
     {
         // $date = strtotime('+1 month', strtotime(date('Ym').'01'));
@@ -94,6 +98,10 @@ class HomeController extends Controller
         return $pdf->download(date('Y-m-d').'.pdf');
         //return view('invoices.monthly', compact('billings'));
     }
+	
+	/**
+	 * @return mixed
+	 */
     public function clientCustom()
     {
         $input = explode('-', \Input::get( 'month_range' ), 2);
@@ -111,7 +119,15 @@ class HomeController extends Controller
 
         $from_month = date('Ym', strtotime( $input_fm ));
 
-        $to_month = date( 'Ymd', strtotime( date( 'Y-m-d', strtotime( $input_tm ) ) ) );
+        $to_month = date(
+        	'Ymd',
+	        strtotime(
+	        	date(
+	        		'Y-m-d',
+			        strtotime( $input_tm )
+		        )
+	        )
+        );
 
         $client_id = null;
 
@@ -119,8 +135,8 @@ class HomeController extends Controller
 
         foreach ( Client::all() as $client ) {
             $clients[ $client->id ] = $client->area_name->code .
-                                      '-' . sprintf("%'.03d\n", $client->id) .
-                                      ' ' . $client->name;
+					'-' . sprintf("%'.03d\n", $client->id) .
+					' ' . $client->name;
         }
 
         $client_id = \Input::get( 'client_id' );
@@ -140,18 +156,26 @@ class HomeController extends Controller
             \Alert::error('No Data Found !')->persistent("Close");
             return \Redirect::to('home');
         }
-
-        // return view('invoices.client', compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' ));
+        
 	    $pdf = \PDF::loadView(
 	    	'invoices.client',
-		    compact( 'billings', 'client_id', 'clients', 'input_fm', 'input_tm' )
+		    compact(
+		    	'billings',
+			    'client_id',
+			    'clients',
+			    'input_fm',
+			    'input_tm'
+		    )
 	    );
 
         $name = date('Y-m-d') . '-' . $client_id;
 
         return $pdf->download( $name . '.pdf' );
     }
-
+	
+	/**
+	 * @return mixed
+	 */
     public function dbBackup()
     {
         if (\Auth::user()->role != 'Admin')
@@ -160,7 +184,9 @@ class HomeController extends Controller
         if (file_exists($file)) {
             header('Content-Description: File Transfer');
             header('Content-Type: application/octet-stream');
-            header('Content-Disposition: attachment; filename="'.basename($file).'"');
+            header('Content-Disposition: attachment; filename="'
+                   . basename($file) . '"'
+            );
             header('Expires: 0');
             header('Cache-Control: must-revalidate');
             header('Pragma: public');
@@ -169,7 +195,10 @@ class HomeController extends Controller
             exit;
         }
     }
-
+	
+	/**
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+	 */
     public function rootPath()
     {
         if( \Auth::check() )

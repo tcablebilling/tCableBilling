@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 use TCableBilling\Http\Models\Employee;
 
+/**
+ * Class EmployeesController
+ *
+ * @package TCableBilling\Http\Controllers
+ */
 class EmployeesController extends Controller
 {
     /**
@@ -38,7 +43,10 @@ class EmployeesController extends Controller
     public function store(Request $request)
     {
         Employee::create($request->all());
-        \Alert::success('Your requested employee has been created.', 'Employee Created !');
+        \Alert::success(
+        	'Your requested employee has been created.',
+	        'Employee Created !'
+        );
         return redirect('/employees');
     }
 
@@ -77,7 +85,10 @@ class EmployeesController extends Controller
         $employee = Employee::findOrFail($id);
         $employee->fill(\Input::all());
         $employee->save();
-        \Alert::success('Your requested employee has been updated.', 'Employee Updated !');
+        \Alert::success(
+        	'Your requested employee has been updated.',
+	        'Employee Updated !'
+        );
         return \Redirect::to('/employees');
     }
 
@@ -91,7 +102,10 @@ class EmployeesController extends Controller
     {
         $employee = Employee::findOrFail($id);
         $employee->delete();
-        \Alert::info('Your requested employee info has been deleted.', 'Employee Deleted !');
+        \Alert::info(
+        	'Your requested employee info has been deleted.',
+	        'Employee Deleted !'
+        );
         return \Redirect::to('/employees');
     }
 }

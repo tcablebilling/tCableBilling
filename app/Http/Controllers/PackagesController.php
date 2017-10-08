@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 use TCableBilling\Http\Models\Package;
 
+/**
+ * Class PackagesController
+ *
+ * @package TCableBilling\Http\Controllers
+ */
 class PackagesController extends Controller
 {
     /**
@@ -38,7 +43,10 @@ class PackagesController extends Controller
     public function store(Package $package, Request $request)
     {
         $package->create($request->all());
-        \Alert::success('Your requested package has been created.', 'Package Created !');
+        \Alert::success(
+        	'Your requested package has been created.',
+	        'Package Created !'
+        );
         return redirect('/packages');
     }
 
@@ -77,7 +85,10 @@ class PackagesController extends Controller
         $package = Package::findOrFail($id);
         $package->fill(\Input::all());
         $package->save();
-        \Alert::success('Your requested package info has been updated.', 'Package Updated !');
+        \Alert::success(
+        	'Your requested package info has been updated.',
+	        'Package Updated !'
+        );
         return \Redirect::to('/packages');
     }
 
@@ -91,7 +102,10 @@ class PackagesController extends Controller
     {
         $package = Package::findOrFail($id);
         $package->delete();
-        \Alert::info('Your requested package has been deleted.', 'Package Deleted !');
+        \Alert::info(
+        	'Your requested package has been deleted.',
+	        'Package Deleted !'
+        );
         return \Redirect::to('/packages');
     }
 }

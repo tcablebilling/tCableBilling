@@ -26,12 +26,11 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/home';
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+	
+	/**
+	 * LoginController constructor.
+	 * Create a new controller instance.
+	 */
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
@@ -51,7 +50,10 @@ class LoginController extends Controller
 	 * Handle a login request to the application.
 	 *
 	 * @param  \Illuminate\Http\Request  $request
-	 * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Illuminate\Http\JsonResponse
+	 *
+	 * @return \Illuminate\Http\RedirectResponse |
+	 *         \Illuminate\Http\Response |
+	 *         \Illuminate\Http\JsonResponse
 	 */
 	public function login(Request $request)
 	{
@@ -64,7 +66,10 @@ class LoginController extends Controller
 		}
 		
 		if ($this->attemptLogin($request)) {
-			\Alert::success('You just logged in.', 'Welcome !')->persistent('Close');
+			\Alert::success(
+				'You just logged in.',
+				'Welcome !'
+			)->persistent('Close');
 			return $this->sendLoginResponse($request);
 		}
 		

@@ -8,6 +8,11 @@ use TCableBilling\Http\Models\Client;
 use TCableBilling\Http\Models\Package;
 use TCableBilling\Http\Models\Area;
 
+/**
+ * Class ClientsController
+ *
+ * @package TCableBilling\Http\Controllers
+ */
 class ClientsController extends Controller
 {
     /**
@@ -17,7 +22,8 @@ class ClientsController extends Controller
      */
     public function index()
     {
-        $clients = Client::with('area_name', 'package')->paginate(150);
+        $clients = Client::with('area_name', 'package')
+                         ->paginate(150);
         return view('clients.all', compact('clients'));
     }
 
@@ -47,10 +53,14 @@ class ClientsController extends Controller
             $area_names[$area->id] = $area->name;
         }
         foreach ($areas as $area) {
-            $area_codes[$area->id] = $area->code . '-' . sprintf("%'.03d", $max_id);
+            $area_codes[$area->id] = $area->code
+                                     . '-' . sprintf("%'.03d", $max_id);
         }
         $area_codes = json_encode($area_codes);
-        return view( 'clients.create', compact( 'package_names', 'area_names', 'area_codes' ) );
+        return view(
+        	'clients.create',
+	        compact( 'package_names', 'area_names', 'area_codes' )
+        );
     }
 
     /**
@@ -62,7 +72,10 @@ class ClientsController extends Controller
     public function store(Client $client, Request $request)
     {
         $client->create($request->all());
-        \Alert::success('Your requested client has been created.', 'Client Created !');
+        \Alert::success(
+        	'Your requested client has been created.',
+	        'Client Created !'
+        );
         return redirect('/clients');
     }
 
@@ -104,7 +117,10 @@ class ClientsController extends Controller
 
 
         $client = Client::findOrFail($id);
-        return view('clients.edit', compact('client', 'package_names', 'area_names'));
+        return view(
+        	'clients.edit',
+	        compact('client', 'package_names', 'area_names')
+        );
     }
 
     /**
@@ -119,7 +135,10 @@ class ClientsController extends Controller
         $client = Client::findOrFail($id);
         $client->fill(\Input::all());
         $client->save();
-        \Alert::success('Your requested client info has been updated.', 'Client Info Updated !');
+        \Alert::success(
+        	'Your requested client info has been updated.',
+	        'Client Info Updated !'
+        );
         return \Redirect::to('/clients');
     }
 
@@ -133,7 +152,10 @@ class ClientsController extends Controller
     {
         $client = Client::findOrFail($id);
 		$client->delete();
-        \Alert::info('Your requested client has been deleted.', 'Client Deleted !');
+        \Alert::info(
+        	'Your requested client has been deleted.',
+	        'Client Deleted !'
+        );
         return \Redirect::to('/clients');
     }
 }

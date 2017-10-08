@@ -17,26 +17,38 @@ class PaymentsController extends Controller
      */
     public function index()
     {
-        $payments = Payment::with('clientDetails')->orderBy('id', 'DESC')->paginate(150);
+        $payments = Payment::with('clientDetails')
+                           ->orderBy('id', 'DESC')
+                           ->paginate(150);
 
         $client_id = null;
         $clients = [];
 
         foreach ( Client::all() as $client) {
             $clients[$client->id] = $client->area_name->code
-                                    . '-' . sprintf("%'.03d\n", $client->id)
-                                    . ' ' . $client->name;
+                                    . '-' . sprintf(
+                                    	"%'.03d\n",
+	                                    $client->id
+	                                ) . ' ' . $client->name;
         }
 
         $client_id = \Input::get('client_id');
 
         if ( $client_id != null ) {
-            $payments = Payment::where('client_id', $client_id)->orderBy('id', 'DESC')->paginate(150);
-            return view('payments.all', compact('payments', 'client_id', 'clients'));
+            $payments = Payment::where('client_id', $client_id)
+                               ->orderBy('id', 'DESC')
+                               ->paginate(150);
+            return view(
+            	'payments.all',
+	            compact('payments', 'client_id', 'clients')
+            );
         }
 
 
-        return view( 'payments.all', compact( 'payments', 'client_id', 'clients' ) );
+        return view(
+        	'payments.all',
+	        compact( 'payments', 'client_id', 'clients' )
+        );
     }
 
     /**
@@ -49,14 +61,19 @@ class PaymentsController extends Controller
         $clients = [];
         foreach ( Client::all() as $client) {
             $clients[$client->id] = $client->area_name->code
-                                    . '-' . sprintf("%'.03d\n", $client->id)
-                                    . ' ' . $client->name;
+                                    . '-' . sprintf(
+                                    	"%'.03d\n",
+	                                    $client->id
+	                                ) . ' ' . $client->name;
         }
         $billings = [];
         foreach ( Billing::all() as $billing) {
             $billings[$billing->id] = sprintf("%'.05d\n", $billing->id);
         }
-        return view( 'payments.create', compact('clients', 'billings') );
+        return view(
+        	'payments.create',
+	        compact('clients', 'billings')
+        );
     }
 
     /**
@@ -68,7 +85,10 @@ class PaymentsController extends Controller
     public function store(Request $request)
     {
         Payment::create( $request->all() );
-        \Alert::success( 'Your requested payment has been created.', 'Payment Created !' );
+        \Alert::success(
+        	'Your requested payment has been created.',
+	        'Payment Created !'
+        );
         return \Redirect::to( 'payments' );
     }
 
@@ -94,15 +114,20 @@ class PaymentsController extends Controller
         $clients = [];
         foreach ( Client::all() as $client) {
             $clients[$client->id] = $client->area_name->code
-                                    . '-' . sprintf("%'.03d\n", $client->id)
-                                    . ' ' . $client->name;
+                                    . '-' . sprintf(
+                                    	"%'.03d\n",
+	                                    $client->id
+	                                ) . ' ' . $client->name;
         }
         $payment = Payment::findOrFail($id);
         $billings = [];
         foreach ( Billing::all() as $billing) {
             $billings[$billing->id] = sprintf("%'.05d\n", $billing->id);
         }
-        return view('payments.edit', compact('payment', 'clients', 'billings'));
+        return view(
+        	'payments.edit',
+	        compact('payment', 'clients', 'billings')
+        );
     }
 
     /**
@@ -117,7 +142,10 @@ class PaymentsController extends Controller
         $payment = Payment::findOrFail($id);
         $payment->fill(\Input::all());
         $payment->save();
-        \Alert::success('Your requested payment has been updated.', 'Payment Updated !');
+        \Alert::success(
+        	'Your requested payment has been updated.',
+	        'Payment Updated !'
+        );
         return \Redirect::to('/payments');
     }
 
@@ -131,7 +159,10 @@ class PaymentsController extends Controller
     {
         $payment = Payment::findOrFail($id);
         $payment->delete();
-        \Alert::info('Your requested payment has been deleted.', 'Payment Deleted !');
+        \Alert::info(
+        	'Your requested payment has been deleted.',
+	        'Payment Deleted !'
+        );
         return \Redirect::to('/payments');
     }
 }
