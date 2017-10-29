@@ -14,7 +14,14 @@
 Route::group(
 	[ 'middleware' => 'auth' ],
 	function () {
-		Route::get( '/home', [ 'as' => 'home', 'uses' => 'HomeController@index' ] );
+		Route::get(
+			'/home',
+			[
+				'as' => 'home',
+				'uses' => 'HomeController@index',
+			]
+		);
+
 		Route::get(
 			'/print-m',
 			[ 'as' => 'print-m', 'uses' => 'HomeController@billMonthly' ]
