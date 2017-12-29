@@ -24,8 +24,12 @@ Route::group(
 
 		Route::get(
 			'/print-m',
-			[ 'as' => 'print-m', 'uses' => 'HomeController@billMonthly' ]
+			[
+				'as' => 'print-m',
+				'uses' => 'HomeController@billMonthly',
+			]
 		);
+
 		Route::get(
 			'/print-custom',
 			[
