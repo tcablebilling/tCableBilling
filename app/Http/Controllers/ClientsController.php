@@ -32,7 +32,7 @@ class ClientsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Client $client)
+    public function create( Client $client )
     {
         /*
          * Getting all package names and ids in one array
@@ -51,12 +51,13 @@ class ClientsController extends Controller
         $area_codes = [];
         foreach ($areas as $area) {
             $area_names[$area->id] = $area->name;
+	        $area_codes[$area->id] = $area->code
+	                                 . '-'
+	                                 . sprintf( "%'.03d", $max_id );
         }
-        foreach ($areas as $area) {
-            $area_codes[$area->id] = $area->code
-                                     . '-' . sprintf("%'.03d", $max_id);
-        }
-        $area_codes = json_encode($area_codes);
+
+        $area_codes = json_encode( $area_codes );
+
         return view(
         	'clients.create',
 	        compact( 'package_names', 'area_names', 'area_codes' )
