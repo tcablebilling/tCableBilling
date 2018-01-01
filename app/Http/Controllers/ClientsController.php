@@ -70,7 +70,7 @@ class ClientsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Client $client, Request $request)
+    public function store( Client $client, Request $request )
     {
         $client->create($request->all());
         \Alert::success(
