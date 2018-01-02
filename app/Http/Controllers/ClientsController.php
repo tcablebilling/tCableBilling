@@ -72,12 +72,12 @@ class ClientsController extends Controller
      */
     public function store( Client $client, Request $request )
     {
-        $client->create($request->all());
+        $client->create( $request->all() );
         \Alert::success(
         	'Your requested client has been created.',
 	        'Client Created !'
         );
-        return redirect('/clients');
+        return redirect( '/clients' );
     }
 
     /**
@@ -86,9 +86,9 @@ class ClientsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show( $id )
     {
-        return view('clients.index');
+        return view( 'clients.index' );
     }
 
     /**
@@ -97,14 +97,14 @@ class ClientsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit( $id )
     {
         /*
          * Getting all package names and ids in one array
          */
         $packages = Package::all();
         $package_names = [];
-        foreach ($packages as $package) {
+        foreach ( $packages as $package ) {
             $package_names[$package->id] = $package->name;
         }
         /*
@@ -133,8 +133,7 @@ class ClientsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $client = Client::findOrFail($id);
-        $client->fill(\Input::all());
+        $client = Client::findOrFail( $id )->fill( \Input::all() );
         $client->save();
         \Alert::success(
         	'Your requested client info has been updated.',
@@ -149,14 +148,16 @@ class ClientsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy( $id )
     {
-        $client = Client::findOrFail($id);
-		$client->delete();
+        // Deleting client.
+    	Client::findOrFail( $id )->delete();
+
         \Alert::info(
         	'Your requested client has been deleted.',
 	        'Client Deleted !'
         );
+
         return \Redirect::to('/clients');
     }
 }
