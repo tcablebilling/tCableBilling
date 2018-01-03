@@ -133,12 +133,14 @@ class ClientsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $client = Client::findOrFail( $id )->fill( \Input::all() );
-        $client->save();
+    	// Updating clients
+        Client::findOrFail( $id )->fill( \Input::all() )->save();
+
         \Alert::success(
         	'Your requested client info has been updated.',
 	        'Client Info Updated !'
         );
+
         return \Redirect::to('/clients');
     }
 
