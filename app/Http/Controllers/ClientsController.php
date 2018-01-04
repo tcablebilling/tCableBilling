@@ -64,12 +64,14 @@ class ClientsController extends Controller
         );
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+	/**
+	 * Store a newly created resource in storage.
+	 *
+	 * @param \TCableBilling\Http\Models\Client $client
+	 * @param \Illuminate\Http\Request          $request
+	 *
+	 * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+	 */
     public function store( Client $client, Request $request )
     {
         $client->create( $request->all() );
@@ -107,6 +109,7 @@ class ClientsController extends Controller
         foreach ( $packages as $package ) {
             $package_names[$package->id] = $package->name;
         }
+
         /*
          * Getting all area names and ids in one array
          */
@@ -116,8 +119,7 @@ class ClientsController extends Controller
             $area_names[$area->id] = $area->name;
         }
 
-
-        $client = Client::findOrFail($id);
+        $client = Client::findOrFail( $id );
         return view(
         	'clients.edit',
 	        compact('client', 'package_names', 'area_names')
