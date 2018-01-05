@@ -32,7 +32,7 @@ class ClientsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create( Client $client )
+    public function create()
     {
         /*
          * Getting all package names and ids in one array
