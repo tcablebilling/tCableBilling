@@ -24,7 +24,7 @@ class ClientsController extends Controller
     {
         $clients = Client::with('area_name', 'package')
                          ->paginate(150);
-        return view('clients.all', compact('clients'));
+        return view('clients.all', compact( 'clients' ) );
     }
 
     /**
