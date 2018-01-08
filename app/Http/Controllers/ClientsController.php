@@ -60,7 +60,11 @@ class ClientsController extends Controller
 
         return view(
         	'clients.create',
-	        compact( 'package_names', 'area_names', 'area_codes' )
+	        compact(
+	        	'package_names',
+		        'area_names',
+		        'area_codes'
+	        )
         );
     }
 
