@@ -22,7 +22,7 @@ class ClientsController extends Controller
      */
     public function index()
     {
-        $clients = Client::with('area_name', 'package')
+        $clients = Client::with( 'area_name', 'package' )
                          ->paginate(150);
         return view(
         	'clients.all',
@@ -99,7 +99,8 @@ class ClientsController extends Controller
      */
     public function show( $id )
     {
-        return view( 'clients.index' );
+        // No individual client page, so redirecting to index.
+    	return view( 'clients.index' );
     }
 
     /**
