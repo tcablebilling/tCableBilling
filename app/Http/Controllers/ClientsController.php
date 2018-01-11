@@ -47,6 +47,7 @@ class ClientsController extends Controller
         foreach ($packages as $package) {
             $package_names[$package->id] = $package->name;
         }
+
         /*
          * Getting all area names and ids in one array
          */
@@ -84,10 +85,12 @@ class ClientsController extends Controller
     public function store( Client $client, Request $request )
     {
         $client->create( $request->all() );
+
         \Alert::success(
         	'Your requested client has been created.',
 	        'Client Created !'
         );
+
         return redirect( '/clients' );
     }
 
@@ -143,7 +146,7 @@ class ClientsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update( Request $request, $id )
     {
     	// Updating clients
         Client::findOrFail( $id )->fill( \Input::all() )->save();

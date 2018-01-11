@@ -27,23 +27,33 @@ class BillingsController extends Controller {
 		);
 		
 		$client_id = null;
-		$clients   = [ ];
+		$clients   = [];
 		foreach ( Client::all() as $client ) {
 			$clients[ $client->id ] = $client->area_name->code
-									. '-' . sprintf(
-									"%'.03d\n",
-										$client->id
-									). ' ' . $client->name;
+			                          . '-'
+			                          . sprintf(
+										"%'.03d\n",
+											$client->id
+										)
+			                          . ' '
+			                          . $client->name;
 		}
+
 		$client_id = \Input::get( 'client_id' );
+
 		if ( $client_id != null ) {
 			$billings =$billings->where( 'client_id', $client_id );
 		}
-		$billings = $billings->orderBy('id','desc')
-		                     ->paginate(159);
+
+		$billings = $billings->orderBy( 'id','desc' )
+		                     ->paginate( 159 );
 		return view(
 			'billings',
-			compact( 'billings', 'client_id', 'clients' )
+			compact(
+				'billings',
+				'client_id',
+				'clients'
+			)
 		);
 	}
 
