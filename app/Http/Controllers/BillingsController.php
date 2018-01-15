@@ -105,7 +105,7 @@ class BillingsController extends Controller {
 			}
 		}
 
-		if ( env( 'DB_CONNECTION' ) == 'sqlite' ) {
+		if ( 'sqlite' === env( 'DB_CONNECTION' ) ) {
 			$database        = storage_path( 'database.sqlite' );
 			$backup_database = env( 'DB_BACKUP_DIR', storage_path() )
 			                   . date( 'Y-m-d-H-i-s' )
@@ -118,8 +118,8 @@ class BillingsController extends Controller {
 			Monthly database backup also completed.',
 			'Bill & Backup Done!'
 		)
-		      ->html( 'true' )
-		      ->persistent( 'Close' );
+		->html( 'true' )
+		->persistent( 'Close' );
 
 		return \Redirect::to( 'home' );
 	}
