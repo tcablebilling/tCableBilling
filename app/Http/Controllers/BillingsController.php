@@ -132,7 +132,7 @@ class BillingsController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function show( $id ) {
-
+		// No individual billing view, so redirecting to index.
 		return \Redirect::to( 'billings' );
 	}
 
