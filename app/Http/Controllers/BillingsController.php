@@ -127,11 +127,9 @@ class BillingsController extends Controller {
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  int $id
-	 *
 	 * @return \Illuminate\Http\Response
 	 */
-	public function show( $id ) {
+	public function show() {
 		// No individual billing view, so redirecting to index.
 		return \Redirect::to( 'billings' );
 	}
@@ -139,12 +137,10 @@ class BillingsController extends Controller {
 	/**
 	 * Show the form for editing the specified resource.
 	 *
-	 * @param  int $id
-	 *
 	 * @return \Illuminate\Http\Response
 	 */
-	public function edit( $id ) {
-
+	public function edit() {
+		// No individual billing view, so redirecting to index.
 		return \Redirect::to( 'billings' );
 	}
 
