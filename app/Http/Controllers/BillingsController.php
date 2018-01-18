@@ -165,9 +165,8 @@ class BillingsController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function destroy( $id ) {
-
-		$billing = Billing::findOrFail( $id );
-		$billing->delete();
+		// Deleting billing record.
+		Billing::findOrFail( $id )->delete();
 		\Alert::info(
 			'Your requested bill has been deleted.',
 			'Bill Deleted !'
