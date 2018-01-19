@@ -199,11 +199,14 @@ class BillingsController extends Controller {
 		$client_id  = null;
 		$clients    = [];
 		foreach ( Client::all() as $client ) {
-			$clients[ $client->id ] = $client->area_name
-				                          ->code . '-' . sprintf(
+			$clients[ $client->id ] = $client->area_name->code
+			                          . '-'
+			                          . sprintf(
 				                          "%'.03d\n",
 				                          $client->id
-			                          ) . ' ' . $client->name;
+			                          )
+			                          . ' '
+			                          . $client->name;
 		}
 		$client_id = \Input::get( 'client_id' );
 		$billings  = Billing::with( 'billCumulative', 'paidCumulative' );
