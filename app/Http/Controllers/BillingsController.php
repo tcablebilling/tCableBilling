@@ -196,7 +196,6 @@ class BillingsController extends Controller {
 				date( 'Y-m-d', strtotime( $input_tm ) )
 			)
 		);
-		$client_id  = null;
 		$clients    = [];
 		foreach ( Client::all() as $client ) {
 			$clients[ $client->id ] = $client->area_name->code
@@ -213,8 +212,13 @@ class BillingsController extends Controller {
 		$billings  = $billings
 			->where( 'client_id', $client_id )
 			->orderBy( 'id', 'DESC' )
-			->whereBetween( 'month', [ $from_month, $to_month ] )
-			->paginate( 150 );
+			->whereBetween(
+				'month',
+				[
+					$from_month,
+					$to_month
+				]
+			)->paginate( 150 );
 
 		return view(
 			'individual_bill',
