@@ -153,7 +153,7 @@ class BillingsController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function update( Request $request, $id ) {
-
+		// Also no update will work for the billings, so redirecting to index.
 		return \Redirect::to( 'billings' );
 	}
 
@@ -167,6 +167,7 @@ class BillingsController extends Controller {
 	public function destroy( $id ) {
 		// Deleting billing record.
 		Billing::findOrFail( $id )->delete();
+
 		\Alert::info(
 			'Your requested bill has been deleted.',
 			'Bill Deleted !'
