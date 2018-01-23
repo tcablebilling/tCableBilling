@@ -20,10 +20,18 @@ class UsersController extends Controller
      */
     public function index()
     {
-        if ('Admin' !== \Auth::user()->role )
-            return \Redirect::to('home');
+        if ( 'Admin' !== \Auth::user()->role ) {
+	        return \Redirect::to( 'home' );
+        }
+
         $users = User::paginate(150);
-        return view('users.all', compact('users'));
+
+        return view(
+        	'users.all',
+	        compact(
+	        	'users'
+	        )
+        );
     }
 
     /**
