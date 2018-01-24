@@ -41,9 +41,11 @@ class UsersController extends Controller
      */
     public function create()
     {
-        if (\Auth::user()->role != 'Admin')
-            return \Redirect::to('home');
-        return view('users.create');
+        if ( 'Admin' !== \Auth::user()->role ) {
+	        return \Redirect::to( 'home' );
+        }
+
+        return view( 'users.create' );
     }
 
     /**
@@ -52,7 +54,7 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store( Request $request )
     {
         if (\Auth::user()->role != 'Admin')
             return \Redirect::to('home');
