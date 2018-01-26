@@ -56,18 +56,27 @@ class UsersController extends Controller
      */
     public function store( Request $request )
     {
-        if (\Auth::user()->role != 'Admin')
-            return \Redirect::to('home');
-        $user = new User;
-        $user->name = \Input::get('name');
-        $user->username = \Input::get('username');
-        $user->email = \Input::get('email');
-        $user->role = \Input::get('role');
-        $user->password = bcrypt(\Input::get('password'));
-        if (\Input::get('password') == \Input::get('password_confirmation')) {
-            $user->save();
-            \Alert::success('Your requested user has been created.', 'User Created !');
+        if ( 'Admin' !== \Auth::user()->role ) {
+	        return \Redirect::to( 'home' );
         }
+
+        $user = new User();
+        $user->name = \Input::get( 'name' );
+        $user->username = \Input::get( 'username' );
+        $user->email = \Input::get( 'email' );
+        $user->role = \Input::get( 'role' );
+        $user->password = bcrypt( \Input::get( 'password' ) );
+
+        if (
+        	\Input::get( 'password' ) === \Input::get( 'password_confirmation' )
+        ) {
+            $user->save();
+            \Alert::success(
+            	'Your requested user has been created.',
+	            'User Created !'
+            );
+        }
+
         return \Redirect::to('/users');
     }
 
@@ -77,9 +86,9 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show( $id )
     {
-        return \Redirect::to('home');
+        return \Redirect::to( 'home' );
     }
 
     /**
@@ -88,7 +97,7 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit( $id )
     {
         if (\Auth::user()->role != 'Admin')
             return \Redirect::to('home');
