@@ -99,8 +99,10 @@ class UsersController extends Controller
      */
     public function edit( $id )
     {
-        if ( 'Admin' != \Auth::user()->role )
-            return \Redirect::to('home');
+        if ( 'Admin' !== \Auth::user()->role ) {
+	        return \Redirect::to('home');
+        }
+
         $user = User::findOrFail($id);
         return view('users.edit', compact('user'));
     }
