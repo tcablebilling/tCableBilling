@@ -6,3 +6,5 @@ Homestead.json
 npm-debug.log
 .idea/
 composer.lock
+storage/*
+!storage/laravel.log
